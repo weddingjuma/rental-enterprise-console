@@ -1,0 +1,1260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="row message read selected MessageComponent"
+>
+    <div
+        className="col-xs-1"
+    >
+        <div
+            className="row"
+        >
+            <div
+                className="col-xs-2"
+            >
+                <input
+                    checked="checked"
+                    className="checkBox"
+                    name="checkbox"
+                    onChange={[Function]}
+                    type="checkbox"
+                />
+            </div>
+            <div
+                className="col-xs-2"
+            >
+                <i
+                    className="star fa fa-star "
+                    onClick={[Function]}
+                />
+            </div>
+        </div>
+    </div>
+    <div
+        className="col-xs-11"
+    >
+        <span
+            className="label label-warning"
+        >
+            dev
+        </span>
+        <span
+            className="label label-warning"
+        >
+            personal
+        </span>
+        <a
+            className="msg"
+            href="."
+            onClick={[Function]}
+        >
+            You can't input the protocol without calculating the mobile RSS protocol!
+        </a>
+    </div>
+</div>,
+  "nodes": Array [
+    <div
+      className="row message read selected MessageComponent"
+>
+      <div
+            className="col-xs-1"
+      >
+            <div
+                  className="row"
+            >
+                  <div
+                        className="col-xs-2"
+                  >
+                        <input
+                              checked="checked"
+                              className="checkBox"
+                              name="checkbox"
+                              onChange={[Function]}
+                              type="checkbox"
+                        />
+                  </div>
+                  <div
+                        className="col-xs-2"
+                  >
+                        <i
+                              className="star fa fa-star "
+                              onClick={[Function]}
+                        />
+                  </div>
+            </div>
+      </div>
+      <div
+            className="col-xs-11"
+      >
+            <span
+                  className="label label-warning"
+            >
+                  dev
+            </span>
+            <span
+                  className="label label-warning"
+            >
+                  personal
+            </span>
+            <a
+                  className="msg"
+                  href="."
+                  onClick={[Function]}
+            >
+                  You can't input the protocol without calculating the mobile RSS protocol!
+            </a>
+      </div>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <MessageComponent
+        checkItem={[Function]}
+        message={
+                Object {
+                        "id": 1,
+                        "labels": Array [
+                          "dev",
+                          "personal",
+                        ],
+                        "read": true,
+                        "starred": true,
+                        "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+                      }
+        }
+        onDeselectMessage={[Function]}
+        onMarkAsReadMessage={[Function]}
+        onSelectMessage={[Function]}
+        onStarMessage={[Function]}
+        onUnstarMessage={[Function]}
+        selected={true}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "checkItem": [Function],
+          "message": Object {
+            "id": 1,
+            "labels": Array [
+              "dev",
+              "personal",
+            ],
+            "read": true,
+            "starred": true,
+            "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+          },
+          "onDeselectMessage": [Function],
+          "onMarkAsReadMessage": [Function],
+          "onSelectMessage": [Function],
+          "onStarMessage": [Function],
+          "onUnstarMessage": [Function],
+          "selected": true,
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="row message read selected MessageComponent"
+>
+          <div
+                    className="col-xs-1"
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-2"
+                              >
+                                        <input
+                                                  checked="checked"
+                                                  className="checkBox"
+                                                  name="checkbox"
+                                                  onChange={[Function]}
+                                                  type="checkbox"
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-2"
+                              >
+                                        <i
+                                                  className="star fa fa-star "
+                                                  onClick={[Function]}
+                                        />
+                              </div>
+                    </div>
+          </div>
+          <div
+                    className="col-xs-11"
+          >
+                    <span
+                              className="label label-warning"
+                    >
+                              dev
+                    </span>
+                    <span
+                              className="label label-warning"
+                    >
+                              personal
+                    </span>
+                    <a
+                              className="msg"
+                              href="."
+                              onClick={[Function]}
+                    >
+                              You can't input the protocol without calculating the mobile RSS protocol!
+                    </a>
+          </div>
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div
+          className="row message read selected MessageComponent"
+>
+          <div
+                    className="col-xs-1"
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-2"
+                              >
+                                        <input
+                                                  checked="checked"
+                                                  className="checkBox"
+                                                  name="checkbox"
+                                                  onChange={[Function]}
+                                                  type="checkbox"
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-2"
+                              >
+                                        <i
+                                                  className="star fa fa-star "
+                                                  onClick={[Function]}
+                                        />
+                              </div>
+                    </div>
+          </div>
+          <div
+                    className="col-xs-11"
+          >
+                    <span
+                              className="label label-warning"
+                    >
+                              dev
+                    </span>
+                    <span
+                              className="label label-warning"
+                    >
+                              personal
+                    </span>
+                    <a
+                              className="msg"
+                              href="."
+                              onClick={[Function]}
+                    >
+                              You can't input the protocol without calculating the mobile RSS protocol!
+                    </a>
+          </div>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <MessageComponent
+    checkItem={[Function]}
+    message={
+        Object {
+            "id": 1,
+            "labels": Array [
+              "dev",
+              "personal",
+            ],
+            "read": true,
+            "starred": true,
+            "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+          }
+    }
+    onDeselectMessage={[Function]}
+    onMarkAsReadMessage={[Function]}
+    onSelectMessage={[Function]}
+    onStarMessage={[Function]}
+    onUnstarMessage={[Function]}
+    selected={true}
+/>,
+}
+`;
+
+exports[` 2`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <MessageComponent
+        checkItem={[Function]}
+        message={
+            Object {
+                "id": 1,
+                "labels": Array [
+                  "dev",
+                  "personal",
+                ],
+                "read": false,
+                "starred": true,
+                "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+              }
+        }
+        onDeselectMessage={[Function]}
+        onMarkAsReadMessage={[Function]}
+        onSelectMessage={[Function]}
+        onStarMessage={[Function]}
+        onUnstarMessage={[Function]}
+        selected={true}
+    />
+    <MessageComponent
+        checkItem={[Function]}
+        message={
+            Object {
+                "id": 2,
+                "labels": Array [],
+                "read": false,
+                "starred": false,
+                "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
+              }
+        }
+        onDeselectMessage={[Function]}
+        onMarkAsReadMessage={[Function]}
+        onSelectMessage={[Function]}
+        onStarMessage={[Function]}
+        onUnstarMessage={[Function]}
+        selected={false}
+    />
+    <MessageComponent
+        checkItem={[Function]}
+        message={
+            Object {
+                "id": 3,
+                "labels": Array [
+                  "dev",
+                ],
+                "read": false,
+                "starred": true,
+                "subject": "Use the 1080p HTTP feed, then you can parse the cross-platform hard drive!",
+              }
+        }
+        onDeselectMessage={[Function]}
+        onMarkAsReadMessage={[Function]}
+        onSelectMessage={[Function]}
+        onStarMessage={[Function]}
+        onUnstarMessage={[Function]}
+        selected={false}
+    />
+    <MessageComponent
+        checkItem={[Function]}
+        message={
+            Object {
+                "id": 4,
+                "labels": Array [],
+                "read": false,
+                "selected": true,
+                "starred": false,
+                "subject": "We need to program the primary TCP hard drive!",
+              }
+        }
+        onDeselectMessage={[Function]}
+        onMarkAsReadMessage={[Function]}
+        onSelectMessage={[Function]}
+        onStarMessage={[Function]}
+        onUnstarMessage={[Function]}
+        selected={false}
+    />
+    <MessageComponent
+        checkItem={[Function]}
+        message={
+            Object {
+                "id": 5,
+                "labels": Array [
+                  "personal",
+                ],
+                "read": false,
+                "starred": false,
+                "subject": "If we override the interface, we can get to the HTTP feed through the virtual EXE interface!",
+              }
+        }
+        onDeselectMessage={[Function]}
+        onMarkAsReadMessage={[Function]}
+        onSelectMessage={[Function]}
+        onStarMessage={[Function]}
+        onUnstarMessage={[Function]}
+        selected={false}
+    />
+    <MessageComponent
+        checkItem={[Function]}
+        message={
+            Object {
+                "id": 6,
+                "labels": Array [],
+                "read": false,
+                "starred": true,
+                "subject": "We need to back up the wireless GB driver!",
+              }
+        }
+        onDeselectMessage={[Function]}
+        onMarkAsReadMessage={[Function]}
+        onSelectMessage={[Function]}
+        onStarMessage={[Function]}
+        onUnstarMessage={[Function]}
+        selected={false}
+    />
+    <MessageComponent
+        checkItem={[Function]}
+        message={
+            Object {
+                "id": 7,
+                "labels": Array [
+                  "dev",
+                  "personal",
+                ],
+                "read": false,
+                "starred": false,
+                "subject": "We need to index the mobile PCI bus!",
+              }
+        }
+        onDeselectMessage={[Function]}
+        onMarkAsReadMessage={[Function]}
+        onSelectMessage={[Function]}
+        onStarMessage={[Function]}
+        onUnstarMessage={[Function]}
+        selected={false}
+    />
+    <MessageComponent
+        checkItem={[Function]}
+        message={
+            Object {
+                "id": 8,
+                "labels": Array [],
+                "read": false,
+                "starred": true,
+                "subject": "If we connect the sensor, we can get to the HDD port through the redundant IB firewall!",
+              }
+        }
+        onDeselectMessage={[Function]}
+        onMarkAsReadMessage={[Function]}
+        onSelectMessage={[Function]}
+        onStarMessage={[Function]}
+        onUnstarMessage={[Function]}
+        selected={false}
+    />
+</div>,
+  "nodes": Array [
+    <div>
+      <MessageComponent
+            checkItem={[Function]}
+            message={
+                  Object {
+                        "id": 1,
+                        "labels": Array [
+                          "dev",
+                          "personal",
+                        ],
+                        "read": false,
+                        "starred": true,
+                        "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+                      }
+            }
+            onDeselectMessage={[Function]}
+            onMarkAsReadMessage={[Function]}
+            onSelectMessage={[Function]}
+            onStarMessage={[Function]}
+            onUnstarMessage={[Function]}
+            selected={true}
+      />
+      <MessageComponent
+            checkItem={[Function]}
+            message={
+                  Object {
+                        "id": 2,
+                        "labels": Array [],
+                        "read": false,
+                        "starred": false,
+                        "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
+                      }
+            }
+            onDeselectMessage={[Function]}
+            onMarkAsReadMessage={[Function]}
+            onSelectMessage={[Function]}
+            onStarMessage={[Function]}
+            onUnstarMessage={[Function]}
+            selected={false}
+      />
+      <MessageComponent
+            checkItem={[Function]}
+            message={
+                  Object {
+                        "id": 3,
+                        "labels": Array [
+                          "dev",
+                        ],
+                        "read": false,
+                        "starred": true,
+                        "subject": "Use the 1080p HTTP feed, then you can parse the cross-platform hard drive!",
+                      }
+            }
+            onDeselectMessage={[Function]}
+            onMarkAsReadMessage={[Function]}
+            onSelectMessage={[Function]}
+            onStarMessage={[Function]}
+            onUnstarMessage={[Function]}
+            selected={false}
+      />
+      <MessageComponent
+            checkItem={[Function]}
+            message={
+                  Object {
+                        "id": 4,
+                        "labels": Array [],
+                        "read": false,
+                        "selected": true,
+                        "starred": false,
+                        "subject": "We need to program the primary TCP hard drive!",
+                      }
+            }
+            onDeselectMessage={[Function]}
+            onMarkAsReadMessage={[Function]}
+            onSelectMessage={[Function]}
+            onStarMessage={[Function]}
+            onUnstarMessage={[Function]}
+            selected={false}
+      />
+      <MessageComponent
+            checkItem={[Function]}
+            message={
+                  Object {
+                        "id": 5,
+                        "labels": Array [
+                          "personal",
+                        ],
+                        "read": false,
+                        "starred": false,
+                        "subject": "If we override the interface, we can get to the HTTP feed through the virtual EXE interface!",
+                      }
+            }
+            onDeselectMessage={[Function]}
+            onMarkAsReadMessage={[Function]}
+            onSelectMessage={[Function]}
+            onStarMessage={[Function]}
+            onUnstarMessage={[Function]}
+            selected={false}
+      />
+      <MessageComponent
+            checkItem={[Function]}
+            message={
+                  Object {
+                        "id": 6,
+                        "labels": Array [],
+                        "read": false,
+                        "starred": true,
+                        "subject": "We need to back up the wireless GB driver!",
+                      }
+            }
+            onDeselectMessage={[Function]}
+            onMarkAsReadMessage={[Function]}
+            onSelectMessage={[Function]}
+            onStarMessage={[Function]}
+            onUnstarMessage={[Function]}
+            selected={false}
+      />
+      <MessageComponent
+            checkItem={[Function]}
+            message={
+                  Object {
+                        "id": 7,
+                        "labels": Array [
+                          "dev",
+                          "personal",
+                        ],
+                        "read": false,
+                        "starred": false,
+                        "subject": "We need to index the mobile PCI bus!",
+                      }
+            }
+            onDeselectMessage={[Function]}
+            onMarkAsReadMessage={[Function]}
+            onSelectMessage={[Function]}
+            onStarMessage={[Function]}
+            onUnstarMessage={[Function]}
+            selected={false}
+      />
+      <MessageComponent
+            checkItem={[Function]}
+            message={
+                  Object {
+                        "id": 8,
+                        "labels": Array [],
+                        "read": false,
+                        "starred": true,
+                        "subject": "If we connect the sensor, we can get to the HDD port through the redundant IB firewall!",
+                      }
+            }
+            onDeselectMessage={[Function]}
+            onMarkAsReadMessage={[Function]}
+            onSelectMessage={[Function]}
+            onStarMessage={[Function]}
+            onUnstarMessage={[Function]}
+            selected={false}
+      />
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <MessagesComponent
+        checkItem={[Function]}
+        messages={
+                Array [
+                        Object {
+                          "id": 1,
+                          "labels": Array [
+                            "dev",
+                            "personal",
+                          ],
+                          "read": false,
+                          "starred": true,
+                          "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+                        },
+                        Object {
+                          "id": 2,
+                          "labels": Array [],
+                          "read": false,
+                          "starred": false,
+                          "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
+                        },
+                        Object {
+                          "id": 3,
+                          "labels": Array [
+                            "dev",
+                          ],
+                          "read": false,
+                          "starred": true,
+                          "subject": "Use the 1080p HTTP feed, then you can parse the cross-platform hard drive!",
+                        },
+                        Object {
+                          "id": 4,
+                          "labels": Array [],
+                          "read": false,
+                          "selected": true,
+                          "starred": false,
+                          "subject": "We need to program the primary TCP hard drive!",
+                        },
+                        Object {
+                          "id": 5,
+                          "labels": Array [
+                            "personal",
+                          ],
+                          "read": false,
+                          "starred": false,
+                          "subject": "If we override the interface, we can get to the HTTP feed through the virtual EXE interface!",
+                        },
+                        Object {
+                          "id": 6,
+                          "labels": Array [],
+                          "read": false,
+                          "starred": true,
+                          "subject": "We need to back up the wireless GB driver!",
+                        },
+                        Object {
+                          "id": 7,
+                          "labels": Array [
+                            "dev",
+                            "personal",
+                          ],
+                          "read": false,
+                          "starred": false,
+                          "subject": "We need to index the mobile PCI bus!",
+                        },
+                        Object {
+                          "id": 8,
+                          "labels": Array [],
+                          "read": false,
+                          "starred": true,
+                          "subject": "If we connect the sensor, we can get to the HDD port through the redundant IB firewall!",
+                        },
+                      ]
+        }
+        onDeselectMessage={[Function]}
+        onMarkAsReadMessage={[Function]}
+        onSelectMessage={[Function]}
+        onStarMessage={[Function]}
+        onUnstarMessage={[Function]}
+        selectedMessageIds={
+                Array [
+                        1,
+                      ]
+        }
+/>,
+      "_debugID": 5,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "checkItem": [Function],
+          "messages": Array [
+            Object {
+              "id": 1,
+              "labels": Array [
+                "dev",
+                "personal",
+              ],
+              "read": false,
+              "starred": true,
+              "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+            },
+            Object {
+              "id": 2,
+              "labels": Array [],
+              "read": false,
+              "starred": false,
+              "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
+            },
+            Object {
+              "id": 3,
+              "labels": Array [
+                "dev",
+              ],
+              "read": false,
+              "starred": true,
+              "subject": "Use the 1080p HTTP feed, then you can parse the cross-platform hard drive!",
+            },
+            Object {
+              "id": 4,
+              "labels": Array [],
+              "read": false,
+              "selected": true,
+              "starred": false,
+              "subject": "We need to program the primary TCP hard drive!",
+            },
+            Object {
+              "id": 5,
+              "labels": Array [
+                "personal",
+              ],
+              "read": false,
+              "starred": false,
+              "subject": "If we override the interface, we can get to the HTTP feed through the virtual EXE interface!",
+            },
+            Object {
+              "id": 6,
+              "labels": Array [],
+              "read": false,
+              "starred": true,
+              "subject": "We need to back up the wireless GB driver!",
+            },
+            Object {
+              "id": 7,
+              "labels": Array [
+                "dev",
+                "personal",
+              ],
+              "read": false,
+              "starred": false,
+              "subject": "We need to index the mobile PCI bus!",
+            },
+            Object {
+              "id": 8,
+              "labels": Array [],
+              "read": false,
+              "starred": true,
+              "subject": "If we connect the sensor, we can get to the HDD port through the redundant IB firewall!",
+            },
+          ],
+          "onDeselectMessage": [Function],
+          "onMarkAsReadMessage": [Function],
+          "onSelectMessage": [Function],
+          "onStarMessage": [Function],
+          "onUnstarMessage": [Function],
+          "selectedMessageIds": Array [
+            1,
+          ],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 3,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div>
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 1,
+                                        "labels": Array [
+                                          "dev",
+                                          "personal",
+                                        ],
+                                        "read": false,
+                                        "starred": true,
+                                        "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={true}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 2,
+                                        "labels": Array [],
+                                        "read": false,
+                                        "starred": false,
+                                        "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 3,
+                                        "labels": Array [
+                                          "dev",
+                                        ],
+                                        "read": false,
+                                        "starred": true,
+                                        "subject": "Use the 1080p HTTP feed, then you can parse the cross-platform hard drive!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 4,
+                                        "labels": Array [],
+                                        "read": false,
+                                        "selected": true,
+                                        "starred": false,
+                                        "subject": "We need to program the primary TCP hard drive!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 5,
+                                        "labels": Array [
+                                          "personal",
+                                        ],
+                                        "read": false,
+                                        "starred": false,
+                                        "subject": "If we override the interface, we can get to the HTTP feed through the virtual EXE interface!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 6,
+                                        "labels": Array [],
+                                        "read": false,
+                                        "starred": true,
+                                        "subject": "We need to back up the wireless GB driver!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 7,
+                                        "labels": Array [
+                                          "dev",
+                                          "personal",
+                                        ],
+                                        "read": false,
+                                        "starred": false,
+                                        "subject": "We need to index the mobile PCI bus!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 8,
+                                        "labels": Array [],
+                                        "read": false,
+                                        "starred": true,
+                                        "subject": "If we connect the sensor, we can get to the HDD port through the redundant IB firewall!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+</div>,
+        "_debugID": 6,
+        "_renderedOutput": <div>
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 1,
+                                        "labels": Array [
+                                          "dev",
+                                          "personal",
+                                        ],
+                                        "read": false,
+                                        "starred": true,
+                                        "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={true}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 2,
+                                        "labels": Array [],
+                                        "read": false,
+                                        "starred": false,
+                                        "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 3,
+                                        "labels": Array [
+                                          "dev",
+                                        ],
+                                        "read": false,
+                                        "starred": true,
+                                        "subject": "Use the 1080p HTTP feed, then you can parse the cross-platform hard drive!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 4,
+                                        "labels": Array [],
+                                        "read": false,
+                                        "selected": true,
+                                        "starred": false,
+                                        "subject": "We need to program the primary TCP hard drive!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 5,
+                                        "labels": Array [
+                                          "personal",
+                                        ],
+                                        "read": false,
+                                        "starred": false,
+                                        "subject": "If we override the interface, we can get to the HTTP feed through the virtual EXE interface!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 6,
+                                        "labels": Array [],
+                                        "read": false,
+                                        "starred": true,
+                                        "subject": "We need to back up the wireless GB driver!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 7,
+                                        "labels": Array [
+                                          "dev",
+                                          "personal",
+                                        ],
+                                        "read": false,
+                                        "starred": false,
+                                        "subject": "We need to index the mobile PCI bus!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+          <MessageComponent
+                    checkItem={[Function]}
+                    message={
+                              Object {
+                                        "id": 8,
+                                        "labels": Array [],
+                                        "read": false,
+                                        "starred": true,
+                                        "subject": "If we connect the sensor, we can get to the HDD port through the redundant IB firewall!",
+                                      }
+                    }
+                    onDeselectMessage={[Function]}
+                    onMarkAsReadMessage={[Function]}
+                    onSelectMessage={[Function]}
+                    onStarMessage={[Function]}
+                    onUnstarMessage={[Function]}
+                    selected={false}
+          />
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <MessagesComponent
+    checkItem={[Function]}
+    messages={
+        Array [
+            Object {
+              "id": 1,
+              "labels": Array [
+                "dev",
+                "personal",
+              ],
+              "read": false,
+              "starred": true,
+              "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
+            },
+            Object {
+              "id": 2,
+              "labels": Array [],
+              "read": false,
+              "starred": false,
+              "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
+            },
+            Object {
+              "id": 3,
+              "labels": Array [
+                "dev",
+              ],
+              "read": false,
+              "starred": true,
+              "subject": "Use the 1080p HTTP feed, then you can parse the cross-platform hard drive!",
+            },
+            Object {
+              "id": 4,
+              "labels": Array [],
+              "read": false,
+              "selected": true,
+              "starred": false,
+              "subject": "We need to program the primary TCP hard drive!",
+            },
+            Object {
+              "id": 5,
+              "labels": Array [
+                "personal",
+              ],
+              "read": false,
+              "starred": false,
+              "subject": "If we override the interface, we can get to the HTTP feed through the virtual EXE interface!",
+            },
+            Object {
+              "id": 6,
+              "labels": Array [],
+              "read": false,
+              "starred": true,
+              "subject": "We need to back up the wireless GB driver!",
+            },
+            Object {
+              "id": 7,
+              "labels": Array [
+                "dev",
+                "personal",
+              ],
+              "read": false,
+              "starred": false,
+              "subject": "We need to index the mobile PCI bus!",
+            },
+            Object {
+              "id": 8,
+              "labels": Array [],
+              "read": false,
+              "starred": true,
+              "subject": "If we connect the sensor, we can get to the HDD port through the redundant IB firewall!",
+            },
+          ]
+    }
+    onDeselectMessage={[Function]}
+    onMarkAsReadMessage={[Function]}
+    onSelectMessage={[Function]}
+    onStarMessage={[Function]}
+    onUnstarMessage={[Function]}
+    selectedMessageIds={
+        Array [
+            1,
+          ]
+    }
+/>,
+}
+`;
