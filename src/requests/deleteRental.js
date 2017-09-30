@@ -1,5 +1,5 @@
 export default function deleteRental(rentalId, { databaseId, token }) {
-  //console.log('deteMessag');
+  ////console.log('deteMessag');
   return fetch(`https://api.airtable.com/v0/${databaseId}/rentals/${rentalId}`, {
     method: 'DELETE',
     headers: {
@@ -8,9 +8,9 @@ export default function deleteRental(rentalId, { databaseId, token }) {
   })
     .then(response => response.json())
     .then(data => {
-      // console.log(messageId);
-      console.log('deleteRental Method');
-      // console.log(data);
+      // //console.log(messageId);
+////console.log('deleteRental Method');
+      // //console.log(data);
       return data;
     }); // end of then
 } // end of function

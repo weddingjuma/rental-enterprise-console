@@ -2,9 +2,9 @@ import updateMessage from '../../requests/updateMessage';
 
 export default function updateMessageProcess(itemId, updateType, labels) {
   return (dispatch, getState, env) => {
-    //console.log('DELETE PROCESS');
+    ////console.log('DELETE PROCESS');
     // dispatch({ type: 'CREATE_MESSAGE' });
-    //console.log('hi ' + updateType);
+    ////console.log('hi ' + updateType);
     let changes = {};
     if (updateType === 'star') {
       changes = { starred: true };
@@ -24,9 +24,9 @@ export default function updateMessageProcess(itemId, updateType, labels) {
       token: env.AIRTABLE_TOKEN
     }) // set the session from the updated message
       .then(message => {
-        console.log('upProcess: ' + itemId);
-        console.log(updateType);
-        console.log(message);
+        //console.log('upProcess: ' + itemId);
+        //console.log(updateType);
+        //console.log(message);
 
         dispatch({ type: 'UPDATE_MESSAGE', itemId, updateType, message });
         return message;

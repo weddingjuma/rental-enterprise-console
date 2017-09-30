@@ -26,8 +26,8 @@ function mapStateToProps(state, ownProps) {
 // move dispatch from App.js and remove 'this.props.store'
 // for private method names '_name', rename them to what is to be passed
 function mapDispatchToProps(dispatch, ownProps) {
-  // console.log(ownProps);
-  // console.log(ownProps.selectedMessageIds);
+  // //console.log(ownProps);
+  // //console.log(ownProps.selectedMessageIds);
   return {
     // onMount
     // DB Processes

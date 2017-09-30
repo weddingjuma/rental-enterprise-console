@@ -12,14 +12,14 @@ import BusinessItemDetailComponent from './BusinessItemDetailComponent';
 export default function BusinessDetailPageLayout({ rental = {}, showForm2, onShowForm2, updateRental, deleteRental }) {
   //
 
-  console.log('BUSINESS DETAIL LAYOUT.....................');
-  //console.log(props);
-  console.log(rental);
-  console.log(showForm2);
+  //console.log('BUSINESS DETAIL LAYOUT.....................');
+  ////console.log(props);
+  //console.log(rental);
+  //console.log(showForm2);
 
-  console.log(onShowForm2);
-  console.log(updateRental);
-  console.log(deleteRental);
+  //console.log(onShowForm2);
+  //console.log(updateRental);
+  //console.log(deleteRental);
   let title = 'Details Report';
   // let mockRental = {
   //   address: 'THIS IS MOCK DATA WILL GET LIVE DATA SOON!',

@@ -1,8 +1,8 @@
 export default function createRental(rental, { databaseId, token }) {
-  //console.log('updateMessage');
+  ////console.log('updateMessage');
 
-  console.log('CREATE_RENTALS FUNC');
-  console.log(rental);
+  //console.log('CREATE_RENTALS FUNC');
+  //console.log(rental);
 
   rental = {
     // id: $form.id.value ? $form.id.value : $form.id.placeholder,
@@ -35,7 +35,7 @@ export default function createRental(rental, { databaseId, token }) {
     .then(handleErrors)
     .then(response => response.json())
     .then(record => {
-      console.log(record);
+////console.log(record);
       return {
         id: record.id,
         address: record.fields.address,
@@ -54,18 +54,18 @@ export default function createRental(rental, { databaseId, token }) {
       };
     })
     .then(rental => {
-      //console.log('UpdateMsg message');
-      //console.log(message);
+      ////console.log('UpdateMsg message');
+      ////console.log(message);
       return rental;
     })
     .catch(function(error) {
-      console.log(error);
+////console.log(error);
     });
 } // end of function
 
 function handleErrors(response) {
   if (!response.ok) {
-    console.log(response);
+////console.log(response);
     throw Error(response.status + ' ' + response.statusText + ' error');
   }
   return response;

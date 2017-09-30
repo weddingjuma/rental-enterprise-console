@@ -1,5 +1,5 @@
 export default function createMessage(message) {
-  //console.log('updateMessage');
+  ////console.log('updateMessage');
 
   return fetch('https://api.airtable.com/v0/appnspObUvyNgSocu/messages/', {
     method: 'POST',
@@ -13,8 +13,8 @@ export default function createMessage(message) {
   })
     .then(response => response.json())
     .then(record => {
-      // console.log('create Record');
-      // console.log(record);
+      // //console.log('create Record');
+      // //console.log(record);
       return {
         id: record.id,
         body: record.fields.body,
@@ -25,8 +25,8 @@ export default function createMessage(message) {
       };
     })
     .then(message => {
-      //console.log('UpdateMsg message');
-      //console.log(message);
+      ////console.log('UpdateMsg message');
+      ////console.log(message);
       return message;
     });
 } // end of function

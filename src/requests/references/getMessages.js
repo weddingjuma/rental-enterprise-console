@@ -13,7 +13,7 @@ export default function getMessages({ databaseId, token }) {
     .then(handleErrors)
     .then(response => response.json())
     .then(data => {
-      //console.log(data);
+      ////console.log(data);
       return data.records.map(record => ({
         id: record.id,
         body: record.fields.body,
@@ -24,19 +24,19 @@ export default function getMessages({ databaseId, token }) {
       }));
     }) // end of then
     .then(messages => {
-      //console.log('FINAL');
-      //console.log(messages);
+      ////console.log('FINAL');
+      ////console.log(messages);
       return messages;
     })
     .catch(function(error) {
-      console.log('error ' + error.message);
+      //console.log('error ' + error.message);
       return [{ id: 'error', subject: error.message }];
     });
 } // end of function
 
 function handleErrors(response) {
   if (!response.ok) {
-    console.log(response);
+    //console.log(response);
     throw Error(response.status + ' ' + response.statusText + ' error');
   }
   return response;

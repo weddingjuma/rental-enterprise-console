@@ -112,7 +112,7 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 // };
 //
 // let onMarkAsReadMessage = function(itemId) {
-//   console.log('READ');
+//   //console.log('READ');
 //   let matchedObject = messages.find(function(message) {
 //     if (message.id === itemId) {
 //       return message.id;
@@ -124,13 +124,13 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 // };
 //
 // let onOpenComposeForm = function() {
-//   console.log('onOpenComposeForm');
+//   //console.log('onOpenComposeForm');
 //   showComposeForm = true;
 //   render();
 // };
 //
 // let onSelectAllMessages = function() {
-//   console.log('onSelectAllMessages');
+//   //console.log('onSelectAllMessages');
 //   let arr2 = [];
 //
 //   arr2 = messages.map(function(message) {
@@ -139,24 +139,24 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 //   }, 0);
 //
 //   selectedMessageIds = selectedMessageIds.concat(arr2); //[1, 2];
-//   console.log('SelecAll ' + selectedMessageIds);
+//   //console.log('SelecAll ' + selectedMessageIds);
 //   selectedMessageCount = selectedMessageIds.length;
 //
 //   render();
 // };
 //
 // let onDeselectAllMessages = function() {
-//   console.log('onDeselectAllMessages');
+//   //console.log('onDeselectAllMessages');
 //   selectedMessageIds = [];
 //   selectedMessageCount = selectedMessageIds.length;
-//   console.log(selectedMessageIds);
+//   //console.log(selectedMessageIds);
 //   render();
 //   selectedMessageCount = 1;
-//   console.log('xxxxxx' + selectedMessageCount);
+//   //console.log('xxxxxx' + selectedMessageCount);
 // };
 //
 // let onMarkAsReadSelectedMessages = function() {
-//   console.log('onMarkAsReadSelectedMessages');
+//   //console.log('onMarkAsReadSelectedMessages');
 //   messages.forEach(function(message) {
 //     message.read = true;
 //   });
@@ -164,7 +164,7 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 // };
 //
 // let onMarkAsUnreadSelectedMessages = function() {
-//   console.log('onMarkAsUnreadSelectedMessagesi');
+//   //console.log('onMarkAsUnreadSelectedMessagesi');
 //   messages.forEach(function(message) {
 //     message.read = false;
 //   });
@@ -172,8 +172,8 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 // };
 //
 // let onApplyLabelSelectedMessages = function(label) {
-//   console.log('onApplyLabelSelectedMessages');
-//   console.log(label);
+//   //console.log('onApplyLabelSelectedMessages');
+//   //console.log(label);
 //   //
 //   selectedMessageIds.forEach(function(messageId) {
 //     messages.forEach(function(message) {
@@ -189,7 +189,7 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 // };
 //
 // let onRemoveLabelSelectedMessages = function(label) {
-//   console.log('onRemoveLabelSelectedMessages');
+//   //console.log('onRemoveLabelSelectedMessages');
 //   selectedMessageIds.forEach(function(messageId) {
 //     messages.forEach(function(message) {
 //       if (message.id === messageId) {
@@ -204,7 +204,7 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 // };
 //
 // let onDeleteSelectedMessages = function() {
-//   console.log('onDeleteSelectedMessages');
+//   //console.log('onDeleteSelectedMessages');
 //   selectedMessageIds.forEach(function(messageId) {
 //     // messages.forEach(function(message) {
 //     //   messag
@@ -212,7 +212,7 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 //
 //     messages.forEach(function(message, index) {
 //       if (message.id === messageId) {
-//         console.log(index);
+//   ////console.log(index);
 //         messages.splice(index, 1);
 //         return index;
 //       }
@@ -222,12 +222,12 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 // };
 //
 // let onSubmit = function({ subject, body }) {
-//   console.log('onSubmit ');
-//   // console.log('sub ' + subject);
-//   // console.log('body' + body);
+//   //console.log('onSubmit ');
+//   // //console.log('sub ' + subject);
+//   // //console.log('body' + body);
 //   //
 //   // add to the messages
-//   console.log(messages[messages.length - 1].id);
+//   //console.log(messages[messages.length - 1].id);
 //   let nextID = messages[messages.length - 1].id + 1;
 //   messages.unshift({
 //     id: nextID,
@@ -241,14 +241,14 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 // };
 //
 // let onCancel = function() {
-//   console.log('onCancel ');
+//   //console.log('onCancel ');
 //   showComposeForm = false;
 //
 //   render();
 // };
 //
 // let checkItem = function(itemId, type) {
-//   console.log('type: ' + type);
+//   //console.log('type: ' + type);
 //   render();
 // };
 // ///////////////////////////////////////////

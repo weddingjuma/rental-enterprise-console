@@ -13,10 +13,10 @@ export default function MessagesComponent({
   onMarkAsReadMessage
 }) {
   //
-  //console.log('MessagesComponent');
-  //console.log('SELECTED IDS on MESGSCOMP' + selectedMessageIds);
-  // console.log('messagesCOMP ' + messages);
-  // console.log(messages);
+  ////console.log('MessagesComponent');
+  ////console.log('SELECTED IDS on MESGSCOMP' + selectedMessageIds);
+  // //console.log('messagesCOMP ' + messages);
+  // //console.log(messages);
 
   return (
     // start of loop
@@ -25,7 +25,7 @@ export default function MessagesComponent({
         let selected = false;
 
         // if message.id === selectedIDs then set true
-        //console.log('array: ' + Array.isArray(selectedMessageIds));
+        ////console.log('array: ' + Array.isArray(selectedMessageIds));
 
         //////////////
 
@@ -36,11 +36,11 @@ export default function MessagesComponent({
             return selectedId === message.id;
           } // end of callback, return 100 if found, -1 if not
         );
-        //  console.log('INDEX ' + index);
+        //  //console.log('INDEX ' + index);
 
         if (index > -1) {
           // if array has the selectedID,
-          //console.log('SET TRUE >.............');
+          ////console.log('SET TRUE >.............');
           selected = true;
         } // end of if
 

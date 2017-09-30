@@ -6,7 +6,7 @@ import React from 'react';
 
 export default function UserPrefComponent({ item, onAddItem }) {
   if (!item) return null;
-  console.log('USERPREF FORM');
+  //console.log('USERPREF FORM');
   /*
    Local defined function
    1. create handleClick function to hande the event

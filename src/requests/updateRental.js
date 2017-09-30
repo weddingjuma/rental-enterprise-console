@@ -1,7 +1,7 @@
 export default function updateMessage(rentalId, changes, { databaseId, token }) {
-  console.log('UPDATEMESSAGE');
-  console.log(rentalId);
-  console.log(changes);
+  //console.log('UPDATEMESSAGE');
+  //console.log(rentalId);
+  //console.log(changes);
   changes = {
     // id: $form.id.value ? $form.id.value : $form.id.placeholder,
     address: changes.address,
@@ -36,8 +36,8 @@ export default function updateMessage(rentalId, changes, { databaseId, token }) 
   })
     .then(response => response.json())
     .then(record => {
-      console.log('updateRental Record');
-      console.log(changes);
+////console.log('updateRental Record');
+////console.log(changes);
       return {
         id: record.id,
         address: record.fields.address,
@@ -56,8 +56,8 @@ export default function updateMessage(rentalId, changes, { databaseId, token }) 
       };
     })
     .then(rental => {
-      //console.log('UpdateMsg message');
-      //console.log(message);
+      ////console.log('UpdateMsg message');
+      ////console.log(message);
       return rental;
     });
 } // end of function

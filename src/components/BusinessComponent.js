@@ -10,20 +10,20 @@ export default function BusinessComponent(props) {
   //   props.onShowForm();
   // }
 
-  console.log('BUSINESSCOMPONENT');
-  console.log(props.rentals);
+  //console.log('BUSINESSCOMPONENT');
+  //console.log(props.rentals);
   //let title = 'Propertie$';
   if (props.rentals && Array.isArray(props.rentals)) {
-    // console.log('hiya');
-    // console.log(rentals);
+    // //console.log('hiya');
+    // //console.log(rentals);
 
     return (
       <div className="menuItems BusinessComponent">
         {props.rentals.map((
           rental //
         ) => {
-          // console.log('looping.........................');
-          // console.log(props.search);
+          // //console.log('looping.........................');
+          // //console.log(props.search);
           return (
             <BusinessItemComponent
               key={rental.id}

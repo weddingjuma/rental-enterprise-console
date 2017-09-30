@@ -117,20 +117,20 @@ describe('wtnRootReducer', () => {
   //
   //   deepFreeze(currentState);
   //
-  //   // console.log('test');
-  //   // console.log(data.menuItems[0].id);
-  //   // console.log(data.menuItems[0]);
+  //   // //console.log('test');
+  //   // //console.log(data.menuItems[0].id);
+  //   // //console.log(data.menuItems[0]);
   //   // next state should have menu object in orderItems
   //   const nextState = {
   //     orderItems: [data.menuItems[0]],
   //     customerInfo: null,
   //     menuItems: [...data.menuItems]
   //   };
-  //   // console.log('test --------------------');
-  //   // console.log(currentState);
-  //   // console.log(rootReducer(currentState, action));
-  //   // console.log('next');
-  //   // console.log(nextState);
+  //   // //console.log('test --------------------');
+  //   // //console.log(currentState);
+  //   // //console.log(rootReducer(currentState, action));
+  //   // //console.log('next');
+  //   // //console.log(nextState);
   //
   //   expect(rootReducer(currentState, action)).toEqual(nextState);
   // }); // end of test

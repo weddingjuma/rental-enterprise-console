@@ -6,9 +6,9 @@ export default function ComposeFormComponent({ onSubmit, onCancel }) {
   function handleOnSubmit(event) {
     event.preventDefault();
     const $form = event.target;
-    // console.log('onSubmit');
-    // console.log($form.subject.value);
-    // console.log($form.subject.value);
+    // //console.log('onSubmit');
+    // //console.log($form.subject.value);
+    // //console.log($form.subject.value);
 
     onSubmit({
       subject: $form.subject.value, //

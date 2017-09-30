@@ -12,7 +12,7 @@ export default function MessageComponent({
 }) {
   //
   let readStatus = 'unread';
-  //console.log('message? ' + message.read);
+  ////console.log('message? ' + message.read);
   if (message.read === true) {
     readStatus = 'read';
   }
@@ -27,11 +27,11 @@ export default function MessageComponent({
     selectedStatus = '';
     checkStatus = '';
   }
-  //console.log('selected ' + selected);
+  ////console.log('selected ' + selected);
 
   function handleClick(event) {
     event.preventDefault();
-    //  console.log('starred: ' + message.id);
+    //  //console.log('starred: ' + message.id);
     if (message.starred) {
       onUnstarMessage(message.id);
     } else {
@@ -46,7 +46,7 @@ export default function MessageComponent({
   }
 
   function handleCheck(event) {
-    //  console.log('checkbox ' + message.id);
+    //  //console.log('checkbox ' + message.id);
     if (checkStatus === '') {
       //
       onSelectMessage(message.id);
@@ -57,15 +57,15 @@ export default function MessageComponent({
     //checkItem(message.id, 'check');
   }
 
-  // console.log('MessageCOmp Props: ' + selected);
-  // console.log(selected);
+  // //console.log('MessageCOmp Props: ' + selected);
+  // //console.log(selected);
   // if (checkStatus === 'checked') {
-  //   console.log(message.id + ' Checked on MsgComp: ' + checkStatus + '');
+  //   //console.log(message.id + ' Checked on MsgComp: ' + checkStatus + '');
   // }
   if (!message.labels) {
     message.labels = [];
   }
-  //console.log(message.subject + ' ' + message.starred);
+  ////console.log(message.subject + ' ' + message.starred);
   let responsible = '';
   if (message.id === 'error') {
     if (message.subject.substring(0, 3) === '404') {

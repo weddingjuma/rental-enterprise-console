@@ -5,7 +5,7 @@ import InboxPageLayout from './InboxPageLayout';
 export default function InboxPage(props) {
   //
 
-  //console.log('IndexPage SELECTED: ' + props.selectedMessageIds);
+  ////console.log('IndexPage SELECTED: ' + props.selectedMessageIds);
   return (
     <InboxPageLayout
       messages={props.messages} //

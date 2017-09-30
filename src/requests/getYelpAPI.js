@@ -1,31 +1,31 @@
 export default function getYelpAPI(pokemonId) {
-  console.log('getYelpAPI');
+  //console.log('getYelpAPI');
   let url = 'http://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=AIzaSyC9dI4xGP87NiHbsU9TbvxeV1nl9Y0GM4Y';
   return fetch(url, {
     mode: 'no-cors'
     // origin: `*`
   })
     .then(response => {
-      // console.log('getYelp response: ', response);
+      // //console.log('getYelp response: ', response);
       return response.json();
     })
     .then(data => {
-      console.log(data);
-      //console.log('this is rel data', data.sprites.front_default);
+////console.log(data);
+      ////console.log('this is rel data', data.sprites.front_default);
       return data;
     })
     .catch(error => {
-      console.log('Request failed', error);
+////console.log('Request failed', error);
     });
 }
 // export default function getYelpAPI(pokemonId) {
 //   return fetch(`http://pokeapi.co/api/v2/pokemon/${pokemonId}/`)
 //     .then(response => {
-//       console.log('getPokemonImage response: ', response);
+// ////console.log('getPokemonImage response: ', response);
 //       return response.json();
 //     })
 //     .then(data => {
-//       console.log('this is rel data', data.sprites.front_default);
+// ////console.log('this is rel data', data.sprites.front_default);
 //       return data;
 //     });
 // }

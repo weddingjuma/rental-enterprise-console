@@ -7,19 +7,19 @@ import React from 'react';
 export default function BusinessItemDetailComponent(props) {
   //  if (!userpref) return null;
 
-  console.log('BUSINESSITEM_DETAIL_COMPONENT');
-  console.log(props.rental);
-  console.log(props.rental.address);
-  console.log(props.rental.photourl);
-  console.log(props.rental.price);
-  console.log(props.rental.sqft);
+  //console.log('BUSINESSITEM_DETAIL_COMPONENT');
+  //console.log(props.rental);
+  //console.log(props.rental.address);
+  //console.log(props.rental.photourl);
+  //console.log(props.rental.price);
+  //console.log(props.rental.sqft);
 
   function handleClick(event) {
     event.preventDefault();
     //onAddItem(item.id);
     props.onShowForm2();
   }
-  //console.log('rental' + props.rental.photourl);
+  ////console.log('rental' + props.rental.photourl);
   let photourl = 'https://photos.zillowstatic.com/p_h/ISxbboalrrrdoj1000000000.jpg';
   if (props.rental.photourl !== 'undefined') {
     photourl = props.rental.photourl;

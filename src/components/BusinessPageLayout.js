@@ -8,9 +8,9 @@ import BusinessComponent from './BusinessComponent';
 
 export default function BusinessPageLayout(props) {
   //
-  console.log('BUSINESS LAYOUT');
-  console.log(props.rentals);
-  console.log(props.items);
+  //console.log('BUSINESS LAYOUT');
+  //console.log(props.rentals);
+  //console.log(props.items);
   let title = 'Report';
   return (
     <div className="PageLayout">

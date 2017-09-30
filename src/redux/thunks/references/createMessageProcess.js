@@ -9,9 +9,9 @@ export default function createMessageProcess(newMessage, showComposeForm) {
     })
       .then(newMessage => {
         dispatch({ type: 'CREATE_MESSAGE', newMessage: newMessage, showComposeForm: false });
-        console.log('createMsg');
-        console.log(getState());
-        console.log('bye');
+        //console.log('createMsg');
+        //console.log(getState());
+        //console.log('bye');
         return newMessage;
       })
       .catch(error => {

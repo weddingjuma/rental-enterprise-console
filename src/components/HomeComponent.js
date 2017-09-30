@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 */
 
 export default function HomeComponent(props) {
-  console.log('HOME_COMP');
-  console.log(props.title);
+  //console.log('HOME_COMP');
+  //console.log(props.title);
   return (
     <div>
       <header id="pageHeader" className="navbar-fixed">

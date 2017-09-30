@@ -15,8 +15,8 @@ export default function updateRentalProcess(updatedRental, showReport) {
       .then(updatedRental => {
         // set the STATE 'UPDATE_RENTAL' with the updateRental object
         dispatch({ type: 'UPDATE_RENTAL', updatedRental, showReport: true });
-        console.log('Update Rental ');
-        console.log(getState());
+        //console.log('Update Rental ');
+        //console.log(getState());
         return updateRental;
       })
       .catch(error => {

@@ -24,8 +24,8 @@ import updateRentalProcess from '../thunks/updateRentalProcess';
 
 // 4C) mapStateToProps function
 function mapStateToProps(state, ownProps) {
-  console.log('PAGECONTAINTER MAPTOSTATE');
-  console.log(state);
+  //console.log('PAGECONTAINTER MAPTOSTATE');
+  //console.log(state);
   return {
     rentals: state.rentals,
     items: state.items,
@@ -47,8 +47,8 @@ function mapStateToProps(state, ownProps) {
 // move dispatch from App.js and remove 'this.props.store'
 // for private method names '_name', rename them to what is to be passed
 function mapDispatchToProps(dispatch, ownProps) {
-  // console.log(ownProps);
-  // console.log(ownProps.selectedMessageIds);
+  // //console.log(ownProps);
+  // //console.log(ownProps.selectedMessageIds);
   return {
     // onMount
     // DB Processes
@@ -71,7 +71,7 @@ function mapDispatchToProps(dispatch, ownProps) {
     // 3 deleteRental
     deleteRental: rental => {
       let newRental = rental;
-      console.log('DELETE CONTAINER ', rental);
+      ////console.log('DELETE CONTAINER ', rental);
       return dispatch(deleteRentalProcess(newRental, true));
     },
 

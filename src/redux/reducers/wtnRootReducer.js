@@ -119,15 +119,15 @@ export default function wtnRootReducer(
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     case 'SET_SEARCH':
       // filter here/////////////////////
-      console.log('SET_SEARCH ......................', currentState.rentals);
-      console.log(currentState.search.price);
+      ////console.log('SET_SEARCH ......................', currentState.rentals);
+      ////console.log(currentState.search.price);
 
       // filter by price /////////////////////
       let filterRentals = currentState.rentals;
       if (currentState.search.price === 1000) {
-        console.log('PRICE FILTER .............................');
+        ////console.log('PRICE FILTER .............................');
         filterRentals = currentState.rentals.filter(rental => {
-          //console.log('PRICE/SEARCH ........................' + rental.price + ' ' + currentState.search.price);
+          ////console.log('PRICE/SEARCH ........................' + rental.price + ' ' + currentState.search.price);
           return Number(rental.price) > Number(currentState.search.price);
         });
       }
@@ -136,13 +136,13 @@ export default function wtnRootReducer(
 
     case 'SET_SEARCH_SORT':
       // filter here/////////////////////
-      console.log('SET_SEARCH_SORT ......................', currentState.rentals);
-      console.log(currentState.search.price);
+      ////console.log('SET_SEARCH_SORT ......................', currentState.rentals);
+      ////console.log(currentState.search.price);
 
       // sort by price /////////////////////
       // if (currentState.search.sort === 'price') {
       filterRentals = currentState.rentals;
-      console.log('PRICE SORT .............................', typeof filterRentals[0].price === 'number');
+      ////console.log('PRICE SORT .............................', typeof filterRentals[0].price === 'number');
       const foo = [...currentState.rentals];
       const newFilterRentals = foo.sort((a, b) => {
         return Number(a.price) - Number(b.price);
@@ -155,64 +155,64 @@ export default function wtnRootReducer(
         // return 0;
       });
       // }
-      console.log(filterRentals, 'this should be sorte');
+      ////console.log(filterRentals, 'this should be sorte');
 
       return { ...currentState, search: action.search, rentals: newFilterRentals };
 
     case 'SET_SEARCH_WORD':
       // filter here/////////////////////
-      console.log('SET_SEARCH_WORD......................', currentState.rentals);
-      console.log(currentState.search.price);
+      ////console.log('SET_SEARCH_WORD......................', currentState.rentals);
+      ////console.log(currentState.search.price);
 
       // // search by keyword //////////////////////////
       if (currentState.search.keyword !== 'all') {
-        console.log('KEYWORD SEARCH .............................');
+        ////console.log('KEYWORD SEARCH .............................');
         filterRentals = currentState.rentals;
 
         filterRentals = filterRentals.filter(rental => {
-          console.log('KEYWORD STUFF................');
-          console.log(rental.description.indexOf(currentState.search.keyword) >= 0);
+          ////console.log('KEYWORD STUFF................');
+          ////console.log(rental.description.indexOf(currentState.search.keyword) >= 0);
           return rental.description.indexOf(currentState.search.keyword) >= 0;
         });
-        console.log(filterRentals.length);
+        ////console.log(filterRentals.length);
       }
       return { ...currentState, search: action.search, rentals: filterRentals };
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     case 'RESET_SEARCH':
-      console.log('RESET SEARCH');
+      ////console.log('RESET SEARCH');
       return { ...currentState, rettals: action.rentals };
 
     case 'SHOW_FORM':
-      console.log('SHOW_FORM');
+      ////console.log('SHOW_FORM');
 
       return { ...currentState, showForm: action.showForm };
 
     case 'SHOW_FORM2':
-      console.log('SHOW_FORM2');
+      ////console.log('SHOW_FORM2');
 
       return { ...currentState, showForm2: action.showForm2 };
 
     case 'GET_PREFS':
-      console.log('GET_PREFS');
-      console.log(action.rentals);
+      ////console.log('GET_PREFS');
+      ////console.log(action.rentals);
 
       let resetSearch = {
         keyword: 'all',
         sort: 'all',
         price: 0
       };
-      console.log(currentState.search);
-      console.log(resetSearch);
+      ////console.log(currentState.search);
+      ////console.log(resetSearch);
 
       return { ...currentState, rentals: action.rentals, search: resetSearch };
     case 'CREATE_RENTAL':
-      console.log('CREATE_RENTAL');
+      ////console.log('CREATE_RENTAL');
 
       return { ...currentState, rentals: [action.newRental, ...currentState.rentals], showReport: action.showReport, showForm: action.showForm };
 
     // UPDATE_RENTAL /////////////////////////
     case 'UPDATE_RENTAL':
-      console.log('UPDATE_RENTAL');
+      ////console.log('UPDATE_RENTAL');
 
       // 1) get the current state of 'rentals'
       let newRentals = currentState.rentals;
@@ -223,13 +223,13 @@ export default function wtnRootReducer(
             ? action.updatedRental //(message.starred = true) //
             : rental
       );
-      console.log(newRentals);
+      ////console.log(newRentals);
       // 3) return the 'currentState' and 'rentals' with the 'newRentals'
       return { ...currentState, rentals: newRentals, showReport: action.showReport };
 
     //////////////////////////////////////////////////////////////////////////////////////////
     case 'GET_YELP':
-      console.log('rootReducer: GET_YELP with action ', action);
+      ////console.log('rootReducer: GET_YELP with action ', action);
       return { ...currentState, pokemonObj: action.pokemonObj };
 
     case 'GET_MESSAGES':
@@ -247,40 +247,40 @@ export default function wtnRootReducer(
       return { ...currentState, selectedMessagesIds: newSelectedMessageIds2, selectedMessageCount: currentState.selectedMessageCount - 1 };
 
     case 'SELECT_ALL_MESSAGES':
-      console.log('SELECTALL');
+      ////console.log('SELECTALL');
       let newArr = currentState.messages.map(message => message.id);
-      console.log(newArr);
-      //console.log(newArr.length);
+      ////console.log(newArr);
+      ////console.log(newArr.length);
       return { ...currentState, selectedMessageIds: newArr, selectedMessageCount: newArr.length };
 
     case 'DESELECT_ALL_MESSAGES':
-      console.log('DESELECT_ALL_MESSAGES');
+      ////console.log('DESELECT_ALL_MESSAGES');
 
       return { ...currentState, selectedMessageIds: [], selectedMessageCount: 0 };
 
     case 'MARK_ALL_UNREAD':
-      console.log('MARK_ALL_UNREAD');
+      ////console.log('MARK_ALL_UNREAD');
 
       return { ...currentState, selectedMessageIds: [], selectedMessageCount: 0 };
     case 'COMPOSE':
-      console.log('COMPOSE');
+      ////console.log('COMPOSE');
 
       return { ...currentState, showComposeForm: action.showComposeForm };
     case 'CREATE_MESSAGE':
-      console.log('CREATE_MESSAGE');
+      ////console.log('CREATE_MESSAGE');
 
       return { ...currentState, messages: [action.newMessage, ...currentState.messages], showComposeForm: action.showComposeForm };
 
     case 'DELETE_MESSAGE':
-      console.log('DELETE_MESSAGE');
+      ////console.log('DELETE_MESSAGE');
 
       let theState = currentState.messages.filter((message, index) => {
         //if (message.id !== action.itemId) {
         return message.id !== action.itemId;
         //}
       });
-      // console.log('theState');
-      // console.log(theState);
+      // //console.log('theState');
+      // //console.log(theState);
       return { ...currentState, messages: theState };
 
     case 'UPDATE_MESSAGE':
@@ -288,14 +288,14 @@ export default function wtnRootReducer(
       // 2 star
       // 3 unstar
       // 4 labels
-      console.log('rootReducer ' + action.type);
-      console.log(action.itemId);
-      console.log(action.message);
-      console.log(action.updateType);
+      ////console.log('rootReducer ' + action.type);
+      ////console.log(action.itemId);
+      ////console.log(action.message);
+      ////console.log(action.updateType);
 
       // delete later ok?
       currentState.selectedMessageIds.forEach(itemId => {
-        console.log('haha : ' + itemId);
+        ////console.log('haha : ' + itemId);
       });
 
       if (
@@ -314,14 +314,14 @@ export default function wtnRootReducer(
       ) {
         let newMessages = currentState.messages;
         // get a new array
-        console.log('Action type ' + action.updateType);
+        ////console.log('Action type ' + action.updateType);
         newMessages = newMessages.map(
           message =>
             message.id === action.itemId //
               ? action.message //(message.starred = true) //
               : message
         );
-        console.log(newMessages);
+        ////console.log(newMessages);
 
         return { ...currentState, messages: newMessages };
       } else {
@@ -338,7 +338,7 @@ export default function wtnRootReducer(
         //
         //   let selectedMessageIds = currentState.selectedMessageIds;
         //   selectedMessageIds.forEach(msgid => {
-        //     console.log('selected ids: ' + msgid);
+        // ////console.log('selected ids: ' + msgid);
         //
         //     updateMessage(msgid, {
         //       read: read
@@ -351,7 +351,7 @@ export default function wtnRootReducer(
         //               : message
         //         ); // end of map
         //       }); // end of then
-        //     console.log(newMessages);
+        // ////console.log(newMessages);
         //   });
         //
         //   return { ...currentState, messages: newMessages };

@@ -9,11 +9,11 @@ import CreateFormComponent from './CreateFormComponent';
 
 export default function CreateFormPageLayout(props) {
   //
-  console.log('CREATEFORM LAYOUT.............');
-  // console.log(props.rentals);
-  // console.log(props.items);
-  // console.log(props.rental);
-  // console.log(props);
+  //console.log('CREATEFORM LAYOUT.............');
+  // //console.log(props.rentals);
+  // //console.log(props.items);
+  // //console.log(props.rental);
+  // //console.log(props);
   let title = 'Create Property';
   let action = 'add';
 

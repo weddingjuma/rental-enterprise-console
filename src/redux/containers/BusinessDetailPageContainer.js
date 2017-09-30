@@ -16,8 +16,8 @@ import updateRentalProcess from '../thunks/updateRentalProcess';
 
 // 4C) mapStateToProps function
 function mapStateToProps(state, ownProps) {
-  console.log('BUSINESS DETAILS CONTAINER MAPTOSTATE');
-  console.log(state);
+  //console.log('BUSINESS DETAILS CONTAINER MAPTOSTATE');
+  //console.log(state);
 
   // 1 get the rental
   const { rentals } = state;
@@ -33,8 +33,8 @@ function mapStateToProps(state, ownProps) {
   // });
 
   const rental = rentals.find(theRental => theRental.id === rentalId);
-  console.log('rentals', rentals);
-  console.log('rental', rental);
+  //console.log('rentals', rentals);
+  //console.log('rental', rental);
 
   return {
     rental,
@@ -69,7 +69,7 @@ function mapDispatchToProps(dispatch, ownProps) {
 
     deleteRental: rental => {
       let newRental = rental;
-      console.log('DELETE CONTAINER ', rental);
+  ////console.log('DELETE CONTAINER ', rental);
       return dispatch(deleteRentalProcess(newRental, true));
     }
   };

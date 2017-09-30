@@ -12,8 +12,8 @@ export default function deleteMessages(messageId) {
   })
     .then(response => response.json())
     .then(data => {
-      // console.log(messageId);
-      // console.log(data);
+      // //console.log(messageId);
+      // //console.log(data);
       return data;
     }); // end of then
 } // end of function

@@ -8,10 +8,10 @@ import BusinessComponent from './BusinessComponent';
 
 export default function PageLayout(props) {
   //
-  console.log('PAGE LAYOUT');
-  // console.log(props.rentals);
-  // console.log(props.items);
-  console.log('SHOWFORM?', props);
+  //console.log('PAGE LAYOUT');
+  // //console.log(props.rentals);
+  // //console.log(props.items);
+  //console.log('SHOWFORM?', props);
   let title = 'add';
   let action = 'add';
 

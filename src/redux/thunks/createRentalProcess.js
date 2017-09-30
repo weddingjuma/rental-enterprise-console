@@ -9,9 +9,9 @@ export default function createRentalProcess(newRental, showReport) {
     })
       .then(newRental => {
         dispatch({ type: 'CREATE_RENTAL', newRental: newRental, showReport: true, showForm: false });
-        console.log('createRental');
-        console.log(getState());
-        console.log('bye');
+    ////console.log('createRental');
+    ////console.log(getState());
+    ////console.log('bye');
         return newRental;
       })
       .catch(error => {

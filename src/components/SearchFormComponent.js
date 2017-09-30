@@ -7,13 +7,13 @@ import React from 'react';
 
 export default function SearchFormComponent(props) {
   //  if (!props.item) return null;
-  console.log('SEARCHFORMCOMP');
-  // console.log(rentals);
-  console.log(props);
+  //console.log('SEARCHFORMCOMP');
+  // //console.log(rentals);
+  //console.log(props);
 
   // userprefs.forEach(function(pref, i) {
-  //   //console.log('hi');
-  //   console.log(pref.prefname);
+  //   ////console.log('hi');
+  //   //console.log(pref.prefname);
   // });
 
   /*

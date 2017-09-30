@@ -11,15 +11,15 @@ export default function CreateFormComponent(props) {
   //if (!item) return null;
   let action = props.action;
 
-  console.log('CREATE_FORM_COMPONENT >>>>>>>>>>>>>>>>' + action);
-  console.log(props);
+  //console.log('CREATE_FORM_COMPONENT >>>>>>>>>>>>>>>>' + action);
+  //console.log(props);
   let disabled = '';
   if (action === 'add') {
     disabled = 'disabled';
   }
   // userprefs.forEach(function(pref, i) {
-  //   //console.log('hi');
-  //   console.log(pref.prefname);
+  //   ////console.log('hi');
+  //   //console.log(pref.prefname);
   // });
   let random = Math.floor(Math.random() * 6) + 1;
   let random2 = Math.floor(Math.random() * 5);
@@ -54,7 +54,7 @@ export default function CreateFormComponent(props) {
     'Kenny Rogers lived here with his family.',
     "Van Damme's first home. Lowered due to damages from his kicks."
   ];
-  //console.log('random: ' + random);
+  ////console.log('random: ' + random);
 
   let theRental = {
     address: random + ' ' + street[random2],
@@ -77,8 +77,8 @@ export default function CreateFormComponent(props) {
   if (action === 'update') {
     theRental = props.rental;
   }
-  //  console.log(props.rental);
-  console.log('THERENTAL ', theRental);
+  //  //console.log(props.rental);
+  //console.log('THERENTAL ', theRental);
   /*
    Local defined function
    1. create handleClick function to hande the event
@@ -88,7 +88,7 @@ export default function CreateFormComponent(props) {
   function handleOnSubmit(event) {
     event.preventDefault();
     const $form = event.target;
-    //console.log('onSubmit', action);
+    ////console.log('onSubmit', action);
 
     let newRental = {};
     newRental = {
@@ -108,18 +108,18 @@ export default function CreateFormComponent(props) {
       heating: 'yes',
       parking: $form.parking.value ? $form.parking.value : $form.parking.placeholder
     };
-    console.log('xxxxxxxxxxxx', newRental);
+////console.log('xxxxxxxxxxxx', newRental);
     if (action === 'add') {
-      //console.log('ADD');
+      ////console.log('ADD');
       props.onSubmit(newRental).then(() => {
-        //console.log('the end');
+        ////console.log('the end');
         // <Redirect to="/" push />;
         //window.location = '/';
       });
     } else if (action === 'update') {
-      console.log('update call');
+////console.log('update call');
       props.updateRental(newRental).then(() => {
-        //console.log('the end');
+        ////console.log('the end');
         //  window.location = '/';
       });
     }
@@ -130,12 +130,12 @@ export default function CreateFormComponent(props) {
   function deleteItem(event) {
     event.preventDefault();
 
-    console.log('DELETE.............................');
-    // console.log(event.target.deleteButton.value);
+////console.log('DELETE.............................');
+    // //console.log(event.target.deleteButton.value);
 
     // event.form.deleteButton.value = 'disabled';
     props.deleteRental(props.rental).then(() => {
-      //console.log('the end');
+      ////console.log('the end');
       window.location = '/main';
     });
 
