@@ -13,6 +13,9 @@ import createRentalProcess from '../thunks/createRentalProcess';
 import deleteRentalProcess from '../thunks/deleteRentalProcess';
 import updateRentalProcess from '../thunks/updateRentalProcess';
 
+// 11/1
+import getByIdProcess from '../thunks/getByIdProcess';
+
 //
 // import getYelpAPIProcess from '../thunks/getYelpAPIProcess';
 //
@@ -24,8 +27,8 @@ import updateRentalProcess from '../thunks/updateRentalProcess';
 
 // 4C) mapStateToProps function
 function mapStateToProps(state, ownProps) {
-  //console.log('PAGECONTAINTER MAPTOSTATE');
-  //console.log(state);
+  console.log('PAGECONTAINTER MAPTOSTATE');
+  console.log(state);
   return {
     rentals: state.rentals,
     items: state.items,
@@ -80,6 +83,12 @@ function mapDispatchToProps(dispatch, ownProps) {
       // passing in the updated rental object to the PROCESS
       let updatedRental = rental;
       return dispatch(updateRentalProcess(updatedRental, true));
+    },
+
+    // 5 showRental  11/1
+    showRental: rental => {
+      let newRental = rental;
+      return dispatch(getByIdProcess(newRental, true));
     }
     //  onMount: () => dispatch(getMessagesProcess()),
     // MESSAGES METHODS

@@ -14,15 +14,18 @@ import getAllPrefsProcess from '../thunks/getAllPrefsProcess';
 import deleteRentalProcess from '../thunks/deleteRentalProcess';
 import updateRentalProcess from '../thunks/updateRentalProcess';
 
-// 4C) mapStateToProps function
+import getByIdProcess from '../thunks/getByIdProcess';
+
+// 4C) mapStateToProps function /////////////////////////////////////
 function mapStateToProps(state, ownProps) {
-  //console.log('BUSINESS DETAILS CONTAINER MAPTOSTATE');
-  //console.log(state);
+  console.log('4A BUSINESSDETAILSCONTAINER mapStateToProps');
+  console.log(state);
 
   // 1 get the rental
   const { rentals } = state;
   // 2 get the id from the parrams
   const { rentalId } = ownProps.match.params;
+  console.log('OWNPROPS ', ownProps);
   // 3 get the rental based on the rental id
 
   //const rental = rentals[rentalId] || 'null';
@@ -32,7 +35,7 @@ function mapStateToProps(state, ownProps) {
   //   if (theRental.id === rentalId) return theRental;
   // });
 
-  const rental = rentals.find(theRental => theRental.id === rentalId);
+  const rental = state.currentRental;
   //console.log('rentals', rentals);
   //console.log('rental', rental);
 
@@ -50,7 +53,11 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
+/////////////////////////////////////
 function mapDispatchToProps(dispatch, ownProps) {
+  console.log('4B BUSINESSDETAILSCONTAINER MapDIspatchToProps');
+  console.log(ownProps);
+
   return {
     /*
     for the BusinessDetails need
@@ -58,7 +65,9 @@ function mapDispatchToProps(dispatch, ownProps) {
     2) updateRental to update the record
     3) deleteRental to delete the record
     */
-    onMount: () => dispatch(getAllPrefsProcess()),
+    onMount: () => dispatch(getByIdProcess(ownProps.match.params.rentalId)),
+    // onMount: () => dispatch(getAllPrefsProcess()),
+
     onShowForm2: () => dispatch({ type: 'SHOW_FORM2', showForm2: true }),
 
     updateRental: rental => {
@@ -69,8 +78,13 @@ function mapDispatchToProps(dispatch, ownProps) {
 
     deleteRental: rental => {
       let newRental = rental;
-  ////console.log('DELETE CONTAINER ', rental);
+      ////console.log('DELETE CONTAINER ', rental);
       return dispatch(deleteRentalProcess(newRental, true));
+    },
+    showRental: rental => {
+      let newRental = rental;
+      ////console.log('DELETE CONTAINER ', rental);
+      return dispatch(getByIdProcess(newRental, true));
     }
   };
 }

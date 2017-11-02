@@ -10,8 +10,8 @@ export default function BusinessComponent(props) {
   //   props.onShowForm();
   // }
 
-  //console.log('BUSINESSCOMPONENT');
-  //console.log(props.rentals);
+  console.log('BUSINESSCOMPONENT');
+  console.log(props.rentals);
   //let title = 'Propertie$';
   if (props.rentals && Array.isArray(props.rentals)) {
     // //console.log('hiya');

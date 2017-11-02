@@ -42,7 +42,7 @@ export default function CreateFormComponent(props) {
     "Formerly home of the hair band Bed Bugs and Spider. Walls are still intact. Floors damaged by alcohol. Groupies' personal items are included for free. ",
     "Chris Rock's former home sold after her roast to mafia king William Shatner sued her for bad jokes about his toupee. ",
     'This home was owned by Edward Monroe who is the son of a famoust actress.',
-    "Don't miss this home! Once used to film Jacky Chan and Chris Tucker movie 'Slow Hour 2'",
+    "Do not miss this home! Once used to film Jacky Chan and Chris Tucker movie 'Slow Hour 2'",
     'Owned by former president Bill Clinton as a personal mancave.',
     'This is ready to move in for a big family!',
     "Oh no the didn'! This home has to go now!",
@@ -63,9 +63,9 @@ export default function CreateFormComponent(props) {
     city: city[random2],
     contactinfo: 'jonnybranstorm@mansionrents.com',
     contactname: 'Jimmy Mogul',
-    cooling: 'yes',
+    cooling: 'true',
     description: desc[randomDesc],
-    heating: 'yes',
+    heating: 'true',
     id: '',
     parking: '5 car garage',
     photourl: photourl,
@@ -105,10 +105,10 @@ export default function CreateFormComponent(props) {
       bath: $form.bath.value ? $form.bath.value : $form.bath.placeholder,
       price: $form.price.value ? $form.price.value : $form.price.placeholder,
       year: $form.year.value ? $form.year.value : $form.year.placeholder,
-      heating: 'yes',
+      heating: 'true',
       parking: $form.parking.value ? $form.parking.value : $form.parking.placeholder
     };
-////console.log('xxxxxxxxxxxx', newRental);
+    ////console.log('xxxxxxxxxxxx', newRental);
     if (action === 'add') {
       ////console.log('ADD');
       props.onSubmit(newRental).then(() => {
@@ -117,7 +117,7 @@ export default function CreateFormComponent(props) {
         //window.location = '/';
       });
     } else if (action === 'update') {
-////console.log('update call');
+      ////console.log('update call');
       props.updateRental(newRental).then(() => {
         ////console.log('the end');
         //  window.location = '/';
@@ -130,14 +130,14 @@ export default function CreateFormComponent(props) {
   function deleteItem(event) {
     event.preventDefault();
 
-////console.log('DELETE.............................');
+    ////console.log('DELETE.............................');
     // //console.log(event.target.deleteButton.value);
-
+    props.deleteRental(props.rental);
     // event.form.deleteButton.value = 'disabled';
-    props.deleteRental(props.rental).then(() => {
-      ////console.log('the end');
-      window.location = '/main';
-    });
+    // props.deleteRental(props.rental).then(() => {
+    //   console.log('the end');
+    //   //window.location = '/main';
+    // });
 
     //window.location = '/';
   }
@@ -242,10 +242,16 @@ export default function CreateFormComponent(props) {
           </div>
 
           <div className="input-field col s3">
-            <button name="deleteButton" disabled={disabled} className="btn waves-effect red waves-light" type="submit" onClick={deleteItem}>
-              Delete Rental Property
+            <button name="deleteButton" disabled={disabled} className="btn waves-effect red waves-light" type="submit">
+              <Link to="/main" onClick={deleteItem}>
+                Delete Rental Property
+              </Link>
               <i className="material-icons right"> </i>
             </button>
+
+            {/* <Route exact path="/main">
+              test
+            </Route> */}
           </div>
         </div>
       </form>

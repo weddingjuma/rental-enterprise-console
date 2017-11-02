@@ -1,5 +1,6 @@
 import env from '../env';
-export default function getAllPrefs({ databaseId, token }) {
+export default function getById(id) {
+  // fetch()
   // gets the Response object and chain it
   // get response.json() to parse it
   // return fetch('/data/messages.json') //
@@ -25,7 +26,7 @@ export default function getAllPrefs({ databaseId, token }) {
   //return fetch(`https://api.airtable.com/v0/${databaseId}/rentals`, {
   return (
     fetch(
-      `${env.API_BASE_URL}/rentals`,
+      `${env.API_BASE_URL}/rentals/${id}`,
       {
         // AIRTABLE `https://api.airtable.com/v0/${databaseId}/rentals`, {
         // comment out for APIs
@@ -36,7 +37,6 @@ export default function getAllPrefs({ databaseId, token }) {
     )
       .then(handleErrors)
       .then(response => {
-        //console.log('hi', response);
         return response.json();
       })
       // .then(data => {

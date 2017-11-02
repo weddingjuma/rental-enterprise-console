@@ -32,7 +32,7 @@ export default function BusinessItemComponent(props) {
     <div className="card MenuItem BusinessItemComponent" key={props.rental.id}>
       <div className="card-image">
         <Link className=" " to={`/reports/${props.rental.id}`}>
-          <img src={props.rental.photourl} alt="Nothing" />
+          <img src={props.rental.photoUrl} alt="Nothing" />
         </Link>
       </div>
       <div className="card-content">

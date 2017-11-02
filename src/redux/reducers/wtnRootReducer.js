@@ -14,6 +14,7 @@ export default function wtnRootReducer(
     showForm2: false,
     //1 rentals objects from DB store in state
     rentals: [],
+    currentRental: {},
 
     // 2. level
     level: 'admin',
@@ -205,6 +206,16 @@ export default function wtnRootReducer(
       ////console.log(resetSearch);
 
       return { ...currentState, rentals: action.rentals, search: resetSearch };
+    ////////////////////////////////
+    case 'GET_RENTAL':
+      ////console.log('GET_PREFS');
+      ////console.log(action.rentals);
+
+      ////console.log(currentState.search);
+      ////console.log(resetSearch);
+
+      return { ...currentState, currentRental: action.rental };
+
     case 'CREATE_RENTAL':
       ////console.log('CREATE_RENTAL');
 

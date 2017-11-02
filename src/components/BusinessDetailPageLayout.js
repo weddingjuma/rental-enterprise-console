@@ -9,13 +9,13 @@ import BusinessItemDetailComponent from './BusinessItemDetailComponent';
 // import UserPrefComponent from './UserPrefComponent';
 
 //export default function BusinessDetailPageLayout(props) {
-export default function BusinessDetailPageLayout({ rental = {}, showForm2, onShowForm2, updateRental, deleteRental }) {
+export default function BusinessDetailPageLayout({ rental = {}, showForm2, onShowForm2, updateRental, deleteRental, showRental }) {
   //
 
-  //console.log('BUSINESS DETAIL LAYOUT.....................');
-  ////console.log(props);
-  //console.log(rental);
-  //console.log(showForm2);
+  console.log('BUSINESS DETAIL LAYOUT.....................');
+  //console.log(props);
+  console.log(rental);
+  console.log(showForm2);
 
   //console.log(onShowForm2);
   //console.log(updateRental);
