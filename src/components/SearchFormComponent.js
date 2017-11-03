@@ -72,6 +72,17 @@ export default function SearchFormComponent(props) {
     //  alert('login');
     props.onShowLoginForm();
   }
+  let disabled = '';
+
+  if (props.userRole !== 'agent') {
+    disabled = 'disabled';
+  }
+
+  let disabled2 = '';
+
+  if (props.userRole === 'agent') {
+    disabled2 = 'disabled';
+  }
 
   return (
     <div className="row">
@@ -88,15 +99,20 @@ export default function SearchFormComponent(props) {
               <i className="material-icons right"> </i>
             </button>
           </div>
+
+          {/* show only if the role = agent  */}
+
           <div className="input-field col s3">
-            <button className="btn waves-effect waves-light yellow" onClick={handleEvent} name="action">
-              Create Property <i className="material-icons right"> </i>
+            <button disabled={disabled} className="btn waves-effect waves-light blue" onClick={handleEvent} name="action">
+              Create Property
+              <i className="material-icons right"> </i>
             </button>
           </div>
 
           <div className="input-field col s3">
-            <button className="btn waves-effect waves-light yellow" onClick={handleUser} name="action">
-              Create User <i className="material-icons right"> </i>
+            <button className="btn waves-effect waves-light blue" onClick={handleUser} name="action">
+              Create User
+              <i className="material-icons right"> </i>
             </button>
           </div>
         </div>
@@ -119,7 +135,7 @@ export default function SearchFormComponent(props) {
           </div>
 
           <div className="input-field col s3">
-            <button className="btn waves-effect waves-light Cyan" onClick={handleLogin} name="reset">
+            <button disabled={disabled2} className="btn waves-effect waves-light Cyan" onClick={handleLogin} name="reset">
               Login <i className="material-icons right"> </i>
             </button>
           </div>

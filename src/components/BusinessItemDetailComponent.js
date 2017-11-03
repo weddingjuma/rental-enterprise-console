@@ -25,6 +25,19 @@ export default function BusinessItemDetailComponent(props) {
     photourl = props.rental.photoUrl;
   }
 
+  let disabled = '';
+  let message = 'Update Rental as ' + props.userRole;
+
+  if (props.userRole === 'guest_role') {
+    disabled = 'disabled';
+    message = 'Only Agents Update';
+  }
+
+  if (props.authenticatedUser !== props.rental.agentId && props.userRole === 'agent') {
+    disabled = 'disabled';
+    message = 'Not Yours';
+  }
+
   return (
     // <div className="card MenuItem BusinessItemComponent">
     //   <div className="card-image">
@@ -98,8 +111,8 @@ export default function BusinessItemDetailComponent(props) {
                   <b> Heating: </b> {props.rental.cooling}
                 </td>
                 <td>
-                  <button name="deleteButton" className="btn waves-effect yellow waves-light" type="submit" onClick={handleClick}>
-                    Update Rental Property
+                  <button disabled={disabled} name="deleteButton" className="btn waves-effect blue waves-light" type="submit" onClick={handleClick}>
+                    {message}
                     <i className="material-icons right"> </i>
                   </button>
                 </td>
@@ -110,7 +123,7 @@ export default function BusinessItemDetailComponent(props) {
         </div>
         <div className="card-action">
           <p>
-            Agent: {props.rental.contactname} | <a href="mailto:{props.rental.contactinfo}">{props.rental.contactinfo}</a>
+            Agent ID: {props.rental.agentId} <a href="mailto:{props.rental.contactinfo}">{props.rental.contactinfo}</a>
           </p>
         </div>
       </div>

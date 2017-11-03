@@ -8,17 +8,22 @@ import BusinessComponent from './BusinessComponent';
 
 export default function BusinessPageLayout(props) {
   //
-  //console.log('BUSINESS LAYOUT');
-  //console.log(props.rentals);
+  console.log('BUSINESS LAYOUT................');
+  console.log(props.authenticatedUser);
   //console.log(props.items);
   let title = 'Report';
   return (
     <div className="PageLayout">
-      <HeaderComponent title={title} />
+      <HeaderComponent title={title} authenticatedUser={props.authenticatedUser} userRole={props.userRole} />
       {/* <CreateFormComponent rentals={props.rentals} item={{}} /> */}
-
-      <BusinessComponent rentals={props.rentals} items={props.items} onAddItem={props.onAddItem} />
-
+      {/* authenticatedUser={props.authenticatedUser} userRole={props.userRole} */}
+      <BusinessComponent
+        rentals={props.rentals}
+        items={props.items}
+        onAddItem={props.onAddItem}
+        authenticatedUser={props.authenticatedUser}
+        userRole={props.userRole}
+      />
       {/* <UserPrefComponent item={{}} /> */}
     </div>
   );

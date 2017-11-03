@@ -1,9 +1,10 @@
+import { isEmp } from '../utils/JSUtils';
 import env from '../env';
 
 export default function createUser(user, { databaseId, token }) {
   ////console.log('updateMessage');
 
-  console.log('CREATE_USER FUNC');
+  console.log('CREATE_USER FUNC........');
   console.log('BEFORE', user);
 
   // 1. get the 'user' object
@@ -15,8 +16,7 @@ export default function createUser(user, { databaseId, token }) {
     contact: user.contact,
     role: user.role
   };
-  console.log('AFTER', user);
-
+  console.log('AFTER...', user);
   return (
     fetch(`${env.API_BASE_URL}/users`, {
       // return fetch(`https://api.airtable.com/v0/${databaseId}/rentals`, {

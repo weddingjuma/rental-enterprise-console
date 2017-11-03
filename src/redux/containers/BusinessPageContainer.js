@@ -20,11 +20,15 @@ function mapStateToProps(state, ownProps) {
     rentals: state.rentals,
     items: state.items,
     item: state.item,
+    // authenticatedUser
+    authenticatedUser: state.authenticatedUser,
+    // userRole
+    userRole: state.userRole
     // old stuff
-    selectedMessageIds: state.selectedMessageIds,
-    selectedMessageCount: state.selectedMessageCount,
-    showComposeForm: state.showComposeForm,
-    messages: state.messages
+    // selectedMessageIds: state.selectedMessageIds,
+    // selectedMessageCount: state.selectedMessageCount,
+    // showComposeForm: state.showComposeForm,
+    // messages: state.messages
   };
 }
 

@@ -17,19 +17,29 @@ export default function HeaderComponent(props) {
     <header id="pageHeader" className="navbar-fixed">
       <nav className="blue">
         <div className="nav-wrapper">
-          <Link to="/" className="brand-logo">
+          <Link to="/main" className="brand-logo">
             &nbsp;&nbsp;Rental Enterprise Console - {props.title}
           </Link>
           <ul className="right hide-on-med-and-down">
             <li className="active">
-              <Link to="/main">Search & Report </Link>
+              <Link to="/main">
+                User: {props.authenticatedUser}
+              </Link>
             </li>
+            <li className="active">
+              <Link to="/main">
+                {' '}Role: {props.userRole}
+              </Link>
+            </li>
+            {/* <li className="active">
+              <Link to="/main">Search & Report </Link>
+            </li> */}
             {/* <li className="active">
               <a onClick={handleEvent}>Create Property</a>
             </li> */}
-            <li className="active">
+            {/* <li className="active">
               <Link to="/report/">Report Only</Link>
-            </li>
+            </li> */}
             {/* <li className="active">
               <a href="/admin/report">Admin Report</a>
             </li> */}

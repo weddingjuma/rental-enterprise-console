@@ -13,7 +13,7 @@ export default function createRental(rental, { databaseId, token }) {
     city: rental.city,
     state: 'CA',
     photoUrl: rental.photourl,
-    agentId: 1,
+    agentId: rental.agentId,
     // contactname: rental.contactname,
     // contactinfo: rental.contactinfo,
     description: rental.description,
@@ -28,12 +28,14 @@ export default function createRental(rental, { databaseId, token }) {
   };
   console.log('AFTER', rental);
 
+  token = localStorage.getItem('token');
+  console.log('TOKEN', token);
   return (
     fetch(`${env.API_BASE_URL}/rentals`, {
       // return fetch(`https://api.airtable.com/v0/${databaseId}/rentals`, {
       method: 'POST',
       headers: {
-        // Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(rental)

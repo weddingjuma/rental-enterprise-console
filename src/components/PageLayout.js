@@ -6,6 +6,8 @@ import CreateFormComponent from './CreateFormComponent';
 import BusinessComponent from './BusinessComponent';
 
 import CreateUserComponent from './CreateUserComponent';
+import LoginUserComponent from './LoginUserComponent';
+
 // import UserPrefComponent from './UserPrefComponent';
 
 export default function PageLayout(props) {
@@ -26,9 +28,15 @@ export default function PageLayout(props) {
 
   return (
     <div className="PageLayout">
-      <HeaderComponent onShowForm={props.onShowForm} title={'Search & Report'} />
-      TEST DATA {props.showUserForm} and LOGIN {props.showLoginForm}
-      authenticatedUser={props.authenticatedUser} userRole={props.userRole}
+      <HeaderComponent
+        onShowForm={props.onShowForm}
+        title={'Search & Report'}
+        //
+        authenticatedUser={props.authenticatedUser}
+        userRole={props.userRole}
+      />
+      {/* TEST DATA {props.showUserForm} and LOGIN {props.showLoginForm}
+      authenticatedUser={props.authenticatedUser} userRole={props.userRole} */}
       {/* <CreateFormComponent rentals={props.rentals} item={{}} /> */}
       {props.showForm &&
         <CreateFormComponent
@@ -37,13 +45,13 @@ export default function PageLayout(props) {
           deleteRental={props.deleteRental}
           updateRental={props.updateRental}
           onCancel={props.onCancel}
+          authenticatedUser={props.authenticatedUser}
+          userRole={props.userRole}
         />}
       {props.showLoginForm &&
-        <CreateFormComponent
-          action={action}
-          onSubmit={props.onSubmit}
-          deleteRental={props.deleteRental}
-          updateRental={props.updateRental}
+        <LoginUserComponent
+          loginUser={props.loginUser}
+          // for cancel
           onCancel={props.onCancel}
         />}
       {props.showUserForm &&
@@ -54,6 +62,8 @@ export default function PageLayout(props) {
           // deleteRental={props.deleteRental}
           // updateRental={props.updateRental}
           onCancel={props.onCancel}
+          authenticatedUser={props.authenticatedUser}
+          userRole={props.userRole}
         />}
       <SearchFormComponent
         setSearch={props.setSearch} //
@@ -66,12 +76,16 @@ export default function PageLayout(props) {
         item={{}}
         search={props.search}
         getPrefs={props.getPrefs}
+        authenticatedUser={props.authenticatedUser}
+        userRole={props.userRole}
       />
       <BusinessComponent
         search={props.search}
         rentals={props.rentals} //
         items={props.items}
         onAddItem={props.onAddItem}
+        authenticatedUser={props.authenticatedUser}
+        userRole={props.userRole}
       />
       {/* <UserPrefComponent item={{}} /> */}
     </div>

@@ -9,7 +9,7 @@ import BusinessItemDetailComponent from './BusinessItemDetailComponent';
 // import UserPrefComponent from './UserPrefComponent';
 
 //export default function BusinessDetailPageLayout(props) {
-export default function BusinessDetailPageLayout({ rental = {}, showForm2, onShowForm2, updateRental, deleteRental, showRental }) {
+export default function BusinessDetailPageLayout({ rental = {}, showForm2, onShowForm2, updateRental, deleteRental, showRental, authenticatedUser, userRole }) {
   //
 
   console.log('BUSINESS DETAIL LAYOUT.....................');
@@ -27,10 +27,18 @@ export default function BusinessDetailPageLayout({ rental = {}, showForm2, onSho
   // };
   return (
     <div className="PageLayout">
-      <HeaderComponent title={title} />
+      <HeaderComponent title={title} authenticatedUser={authenticatedUser} userRole={userRole} />
       {/* <CreateFormComponent rentals={props.rentals} item={{}} /> */}
 
-      <BusinessItemDetailComponent rental={rental} showForm2={showForm2} onShowForm2={onShowForm2} updateRental={updateRental} deleteRental={deleteRental} />
+      <BusinessItemDetailComponent
+        rental={rental}
+        showForm2={showForm2}
+        onShowForm2={onShowForm2}
+        updateRental={updateRental}
+        deleteRental={deleteRental}
+        authenticatedUser={authenticatedUser}
+        userRole={userRole}
+      />
       {/* show create if showForm2 is true /> */}
       {showForm2 &&
         <CreateFormComponent
@@ -39,6 +47,8 @@ export default function BusinessDetailPageLayout({ rental = {}, showForm2, onSho
           //  onSubmit={props.onSubmit}
           deleteRental={deleteRental}
           updateRental={updateRental}
+          authenticatedUser={authenticatedUser}
+          userRole={userRole}
           // onCancel={props.onCancel}
         />}
     </div>

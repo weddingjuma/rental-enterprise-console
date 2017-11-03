@@ -17,7 +17,7 @@ export default function CreateUserComponent(props) {
     disabled = 'disabled';
   }
 
-  let random = Math.floor(Math.random() * 30);
+  let random = Math.floor(Math.random() * 300);
   let theUser = {
     username: 'jake' + random,
     firstName: 'Jake',

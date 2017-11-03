@@ -11,8 +11,8 @@ export default function CreateFormComponent(props) {
   //if (!item) return null;
   let action = props.action;
 
-  //console.log('CREATE_FORM_COMPONENT >>>>>>>>>>>>>>>>' + action);
-  //console.log(props);
+  console.log('CREATE_FORM_COMPONENT >>>>>>>>>>>>>>>>' + action);
+  console.log(props);
   let disabled = '';
   if (action === 'add') {
     disabled = 'disabled';
@@ -32,14 +32,14 @@ export default function CreateFormComponent(props) {
 
   let photourl = '/images/' + randomImg + '.jpg';
   let desc = [
-    'This is a great home for the whole family. Owned by multi-billionaire Richard Brookstone and offered at a great discount! After selling his muli-billion empire, Richard is offering the average person one of his mansions at a great price. Bently and helicoptor included free of charge!!',
-    'After his highly publicized divorce, ex tennis star Ralph Pandi is renting his mansion he got at a celebrity auction at a great price. This property was dug up and shipped by helicoptor from LA! Rent now before he changes his mind to buy a BMW from Germany!',
-    'Of all the homes, this one owned by Eddie Merryment is being rented at a reduced price. Please contact the agent for a showing!',
-    'No this was not the home owned by Sandra Bullock, but she did put a bid on it. Be the lucky renter to rent this place for 12 months!',
-    'Fixer up...for the mega billionaire! Needs some new marble floor, upgrade wired system to bluetooth and upgrade the 10,000 watt stereo system to 100,000 watt 20.5 system!',
-    'Ric Flair owned home sold the Dwayne Johnson who is filming his new movie and needs a renter who can housesit this nice home. Almost free!',
-    'Look no further than this beautiful home owned by Hollywood celebrities and B+ rock stars. Managed by Michael Chang who is also a student at Galvanize.',
-    "Formerly home of the hair band Bed Bugs and Spider. Walls are still intact. Floors damaged by alcohol. Groupies' personal items are included for free. ",
+    'This is a great home for the whole family. Richard Brookstone and offered at a great discount!  ',
+    'After ex tennis star Ralph Pandi is renting his mansion he got at a celebrity auction at a great price.    ',
+    'Of homes owned by Eddie Merryment is being rented at a reduced price. Please contact the agent for a showing!',
+    'No this was not the home owned by Sandra Bullock, but she did put a bid on it. ',
+    ' Needs some new marble floor, upgrade wired system to bluetooth and upgrade the 10,000 watt stereo ',
+    'Ric Flair owned home sold the Dwayne Johnson who is filming his new movie and needs a renter who can housesit this nice home.  ',
+    'Look no further than this beautiful home owned by Hollywood celebrities and B+ rock stars who are also  students at Galvanize.',
+    'Formerly home of the hair band Bed Bugs and Spider. Walls are still intact. Floors damaged by alcohol.   ',
     "Chris Rock's former home sold after her roast to mafia king William Shatner sued her for bad jokes about his toupee. ",
     'This home was owned by Edward Monroe who is the son of a famoust actress.',
     "Do not miss this home! Once used to film Jacky Chan and Chris Tucker movie 'Slow Hour 2'",
@@ -71,7 +71,8 @@ export default function CreateFormComponent(props) {
     photourl: photourl,
     price: 3500 + random3,
     sqft: '15930',
-    year: '2001'
+    year: '2001',
+    agentId: props.authenticatedUser
   };
 
   if (action === 'update') {
@@ -106,7 +107,8 @@ export default function CreateFormComponent(props) {
       price: $form.price.value ? $form.price.value : $form.price.placeholder,
       year: $form.year.value ? $form.year.value : $form.year.placeholder,
       heating: 'true',
-      parking: $form.parking.value ? $form.parking.value : $form.parking.placeholder
+      parking: $form.parking.value ? $form.parking.value : $form.parking.placeholder,
+      agentId: $form.agentId.value ? $form.agentId.value : $form.agentId.placeholder
     };
     ////console.log('xxxxxxxxxxxx', newRental);
     if (action === 'add') {
@@ -230,6 +232,12 @@ export default function CreateFormComponent(props) {
             <input placeholder={theRental.parking} name="parking" id="searchParam" type="text" className="validate" />
             {/* <label for="parking"> </label> */}
             <input placeholder={theRental.id} name="id" id="searchParam" type="hidden" className="validate" />
+          </div>
+
+          <div className="input-field col s3">
+            Agent ID :
+            <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="text" className="validate" />
+            {/* <label for="parking"> </label> */}
           </div>
           {/* </div>
 

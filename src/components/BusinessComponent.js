@@ -11,7 +11,7 @@ export default function BusinessComponent(props) {
   // }
 
   console.log('BUSINESSCOMPONENT');
-  console.log(props.rentals);
+  console.log(props.authenticatedUser);
   //let title = 'Propertie$';
   if (props.rentals && Array.isArray(props.rentals)) {
     // //console.log('hiya');
@@ -19,6 +19,7 @@ export default function BusinessComponent(props) {
 
     return (
       <div className="menuItems BusinessComponent">
+        {/* authenticatedUser={props.authenticatedUser} userRole={props.userRole} */}
         {props.rentals.map((
           rental //
         ) => {
@@ -32,6 +33,8 @@ export default function BusinessComponent(props) {
               item={props.item} //
               onAddItem={props.onAddItem}
               onShowForm={props.onShowForm}
+              authenticatedUser={props.authenticatedUser}
+              userRole={props.userRole}
             />
           );
         })}

@@ -30,12 +30,13 @@ export default function updateMessage(rentalId, rental, { databaseId, token }) {
 
   console.log('RENTAL IN REQ API: ', rental);
   // return fetch(`https://api.airtable.com/v0/${databaseId}/rentals/${rentalId}`, {
-
+  token = localStorage.getItem('token');
+  console.log('TOKEN', token);
   return fetch(`${env.API_BASE_URL}/rentals/${rentalId}`, {
     method: 'PATCH',
 
     headers: {
-      //  Authorization: `Bearer ${token}`
+      Authorization: `Bearer ${token}`,
       //,
       'Content-Type': 'application/json'
     },

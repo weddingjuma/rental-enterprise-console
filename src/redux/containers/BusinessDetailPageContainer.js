@@ -41,7 +41,11 @@ function mapStateToProps(state, ownProps) {
 
   return {
     rental,
-    showForm2: state.showForm2
+    showForm2: state.showForm2,
+    // authenticatedUser
+    authenticatedUser: state.authenticatedUser,
+    // userRole
+    userRole: state.userRole
     // rentals: state.rentals,
     // items: state.items,
     // item: state.item,
