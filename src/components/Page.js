@@ -4,7 +4,7 @@ import PageLayout from './PageLayout';
 
 export default function Page(props) {
   //
-  //console.log('PAGE');
+  console.log('PAGE COMPONENT');
   // //console.log(props.rentals);
   //console.log(props);
 
@@ -13,10 +13,22 @@ export default function Page(props) {
     <PageLayout
       // PASS state stuff
       onShowForm={props.onShowForm}
+      showForm={props.showForm}
+      // user login form
+      onShowLoginForm={props.onShowLoginForm}
+      showLoginForm={props.showLoginForm}
+      loginUser={props.loginUser}
+      // User creation form
+      onShowUserForm={props.onShowUserForm}
+      showUserForm={props.showUserForm}
+      createUser={props.createUser}
+      // user Variables
+      authenticatedUser={props.authenticatedUser}
+      userRole={props.userRole}
+      // other
       onSubmit={props.onSubmit}
       deleteRental={props.deleteRental}
       updateRental={props.updateRental}
-      showForm={props.showForm}
       rentals={props.rentals}
       item={props.item}
       items={props.items}

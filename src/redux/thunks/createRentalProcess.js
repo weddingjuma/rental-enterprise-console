@@ -8,10 +8,10 @@ export default function createRentalProcess(newRental, showReport) {
       token: env.WTN_APP_AIRTABLE_TOKEN
     })
       .then(newRental => {
-        dispatch({ type: 'CREATE_RENTAL', newRental: newRental, showReport: true, showForm: false });
-    ////console.log('createRental');
-    ////console.log(getState());
-    ////console.log('bye');
+        dispatch({ type: 'CREATE_RENTAL', newRental: newRental, showReport: true, showForm: false, showUserForm: false });
+        ////console.log('createRental');
+        ////console.log(getState());
+        ////console.log('bye');
         return newRental;
       })
       .catch(error => {

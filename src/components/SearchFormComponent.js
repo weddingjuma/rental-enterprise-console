@@ -61,6 +61,18 @@ export default function SearchFormComponent(props) {
     props.getPrefs();
   }
 
+  function handleUser(event) {
+    event.preventDefault();
+    //alert('user');
+    props.onShowUserForm();
+  }
+
+  function handleLogin(event) {
+    event.preventDefault();
+    //  alert('login');
+    props.onShowLoginForm();
+  }
+
   return (
     <div className="row">
       <form className="col s12" onSubmit={handleKeyword}>
@@ -81,6 +93,12 @@ export default function SearchFormComponent(props) {
               Create Property <i className="material-icons right"> </i>
             </button>
           </div>
+
+          <div className="input-field col s3">
+            <button className="btn waves-effect waves-light yellow" onClick={handleUser} name="action">
+              Create User <i className="material-icons right"> </i>
+            </button>
+          </div>
         </div>
 
         <div className="row">
@@ -97,6 +115,12 @@ export default function SearchFormComponent(props) {
           <div className="input-field col s3">
             <button className="btn waves-effect waves-light Cyan" onClick={handleReset} name="reset">
               Reset <i className="material-icons right"> </i>
+            </button>
+          </div>
+
+          <div className="input-field col s3">
+            <button className="btn waves-effect waves-light Cyan" onClick={handleLogin} name="reset">
+              Login <i className="material-icons right"> </i>
             </button>
           </div>
         </div>

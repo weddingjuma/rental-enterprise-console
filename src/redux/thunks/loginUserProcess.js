@@ -1,6 +1,6 @@
-import getAllPrefs from '../../requests/getAllPrefs';
+import loginUser from '../../requests/loginUser';
 
-export default function getAllPrefsProcess() {
+export default function loginUserProcess(id, password) {
   //console.log('GETALLPREFSPROCESS');
 
   return (dispatch, getState, env) => {
@@ -9,13 +9,10 @@ export default function getAllPrefsProcess() {
     // //console.log(env.AIRTABLE_TOKEN);
     // //console.log(env.WTN_APP_AIRTABLE_DATABASE_ID);
     // //console.log(env.WTN_APP_AIRTABLE_TOKEN);
-    return getAllPrefs({
-      databaseId: env.WTN_APP_AIRTABLE_DATABASE_ID,
-      token: env.WTN_APP_AIRTABLE_TOKEN
-    })
-      .then(rentals => {
-        dispatch({ type: 'GET_PREFS', rentals, showUserForm: false });
-        return rentals;
+    return loginUser(id, password)
+      .then(user => {
+        dispatch({ type: 'LOGIN_USER', user });
+        return user;
       })
       .catch(error => {
         //dispatch({ type: 'CREATE_MESSAGE' });

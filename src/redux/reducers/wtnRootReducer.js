@@ -9,9 +9,18 @@
 export default function wtnRootReducer(
   currentState = {
     // INITIATE VARIABLES
-    //0 showForm
+    //0 showForms
+    // search rental form
     showForm: false,
+    //update rental form
     showForm2: false,
+
+    // login and user creation form
+    showLoginForm: false,
+    showUserForm: false,
+
+    authenticatedUser: 'guest_user',
+    userRole: 'guest_role',
     //1 rentals objects from DB store in state
     rentals: [],
     currentRental: {},
@@ -192,6 +201,28 @@ export default function wtnRootReducer(
       ////console.log('SHOW_FORM2');
 
       return { ...currentState, showForm2: action.showForm2 };
+    //////////////////////////////////////////////////////////////////////////////////////////
+
+    // D
+    case 'SHOW_USER_FORM':
+      console.log('SHOW_USER_FORM');
+
+      return { ...currentState, showUserForm: action.showUserForm };
+    // D
+    case 'CREATE_USER':
+      console.log('CREATE_USER');
+      return { ...currentState, showUserForm: action.showUserForm };
+    //////////////////////////////////////////////////////////////////////////////////////////
+    case 'SHOW_LOGIN_FORM':
+      console.log('SHOW_LOGIN_FORM');
+
+      return { ...currentState, showLoginForm: action.showLoginForm };
+    case 'LOGIN_USER':
+      console.log('SHOW_LOGIN_FORM');
+
+      return { ...currentState, authenticatedUser: action.authenticatedUser, userRole: action.userRole, showLoginForm: action.showLoginForm };
+
+    //////////////////////////////////////////////////////////////////////////////////////////
 
     case 'GET_PREFS':
       ////console.log('GET_PREFS');

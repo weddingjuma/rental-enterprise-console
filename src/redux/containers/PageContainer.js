@@ -13,6 +13,9 @@ import createRentalProcess from '../thunks/createRentalProcess';
 import deleteRentalProcess from '../thunks/deleteRentalProcess';
 import updateRentalProcess from '../thunks/updateRentalProcess';
 
+import loginUserProcess from '../thunks/loginUserProcess';
+import createUserProcess from '../thunks/createUserProcess';
+
 // 11/1
 import getByIdProcess from '../thunks/getByIdProcess';
 
@@ -34,6 +37,23 @@ function mapStateToProps(state, ownProps) {
     items: state.items,
     item: state.item,
     showForm: state.showForm,
+    /*
+    1) Show login form
+    2) Create user form
+    3) authenticatedUser
+    4) userRole
+    */
+
+    // user form
+    showUserForm: state.showUserForm,
+    // login form
+    showLoginForm: state.showLoginForm,
+
+    // authenticatedUser
+    authenticatedUser: state.authenticatedUser,
+    // userRole
+    userRole: state.userRole,
+
     search: state.search,
     setSearch: state.setSearch,
     setSearchSort: state.setSearchSort,
@@ -55,7 +75,7 @@ function mapDispatchToProps(dispatch, ownProps) {
   return {
     // onMount
     // DB Processes
-    // get all the prefs on mount getYelpAPIPocess()
+    // get all the prefs on mount
     onMount: () => dispatch(getAllPrefsProcess()),
     getPrefs: () => dispatch(getAllPrefsProcess()),
 
@@ -65,27 +85,45 @@ function mapDispatchToProps(dispatch, ownProps) {
     setSearchWord: newSearch => dispatch({ type: 'SET_SEARCH_WORD', search: newSearch }),
 
     onShowForm: () => dispatch({ type: 'SHOW_FORM', showForm: true }),
-    // 2 Create rental
+
+    //  show login user form
+    onShowUserForm: () => dispatch({ type: 'SHOW_USER_FORM', showUserForm: true }),
+
+    //  Show  Create user form
+    onShowLoginForm: () => dispatch({ type: 'SHOW_LOGIN_FORM', showLoginForm: true }),
+
+    // createUser 11/3/17
+    createUser: user => {
+      let newUser = user;
+      return dispatch(createUserProcess(newUser, true));
+    },
+
+    // loginUser 11/3/17
+    loginUser: user => {
+      let authUser = user;
+      return dispatch(loginUserProcess(authUser, true));
+    },
+    //   Create rental
     onSubmit: rental => {
       let newRental = rental;
       return dispatch(createRentalProcess(newRental, true));
     },
 
-    // 3 deleteRental
+    //  deleteRental
     deleteRental: rental => {
       let newRental = rental;
       ////console.log('DELETE CONTAINER ', rental);
       return dispatch(deleteRentalProcess(newRental, true));
     },
 
-    // 4 updateRental
+    //  updateRental
     updateRental: rental => {
       // passing in the updated rental object to the PROCESS
       let updatedRental = rental;
       return dispatch(updateRentalProcess(updatedRental, true));
     },
 
-    // 5 showRental  11/1
+    // showRental
     showRental: rental => {
       let newRental = rental;
       return dispatch(getByIdProcess(newRental, true));

@@ -147,7 +147,7 @@ export default function CreateFormComponent(props) {
       <form className="col s12" onSubmit={handleOnSubmit}>
         <div className="row">
           <div className="input-field col s3">
-            Street:
+            Street Address:
             <input placeholder={theRental.address} name="address" id="address" type="text" className="validate" />
             {/* <label for="address"> </label> */}
           </div>
@@ -162,7 +162,7 @@ export default function CreateFormComponent(props) {
         <div className="row"> */}
           <div className="input-field col s3">
             Photourl:
-            <input placeholder={theRental.photourl} name="photourl" id="businessType" type="text" className="validate" />
+            <input placeholder={photourl} name="photourl" id="businessType" type="text" className="validate" />
             {/* <label for="photourl"> </label> */}
           </div>
           <div className="input-field col s3">
