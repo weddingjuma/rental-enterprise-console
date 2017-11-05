@@ -46,13 +46,13 @@ export default function LoginUserComponent(props) {
     <div className="row">
       <form className="col s12" onSubmit={handleOnSubmit}>
         <div className="row">
-          <div className="input-field col s3">
+          <div className="input-field col s2">
             User ID :
             <input placeholder={theUser.username} name="username" id="username" type="text" className="validate" />
             {/* <label for="address"> </label> */}
           </div>
 
-          <div className="input-field col s3">
+          <div className="input-field col s2">
             Password:
             <input placeholder={theUser.password} name="password" type="password" className="validate" />
           </div>

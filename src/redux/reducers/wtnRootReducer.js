@@ -207,7 +207,7 @@ export default function wtnRootReducer(
     case 'SHOW_USER_FORM':
       console.log('SHOW_USER_FORM');
 
-      return { ...currentState, showUserForm: action.showUserForm };
+      return { ...currentState, showUserForm: action.showUserForm, showLoginForm: action.showLoginForm };
     // D
     case 'CREATE_USER':
       console.log('CREATE_USER');
@@ -216,7 +216,7 @@ export default function wtnRootReducer(
     case 'SHOW_LOGIN_FORM':
       console.log('SHOW_LOGIN_FORM');
 
-      return { ...currentState, showLoginForm: action.showLoginForm };
+      return { ...currentState, showLoginForm: action.showLoginForm, showUserForm: action.showUserForm };
     case 'LOGIN_USER':
       console.log('SHOW_LOGIN_FORM');
 
@@ -270,138 +270,106 @@ export default function wtnRootReducer(
       return { ...currentState, rentals: newRentals, showReport: action.showReport };
 
     //////////////////////////////////////////////////////////////////////////////////////////
-    case 'GET_YELP':
-      ////console.log('rootReducer: GET_YELP with action ', action);
-      return { ...currentState, pokemonObj: action.pokemonObj };
+    // case 'GET_YELP':
+    //   ////console.log('rootReducer: GET_YELP with action ', action);
+    //   return { ...currentState, pokemonObj: action.pokemonObj };
+    //
+    // case 'GET_MESSAGES':
+    //   return { ...currentState, messages: action.messages };
+    //
+    // case 'SELECT_MESSAGE':
+    //   const newSelectedMessageIds = currentState.selectedMessageIds;
+    //   newSelectedMessageIds.push(action.itemId);
+    //   return { ...currentState, selectedMessagesIds: newSelectedMessageIds, selectedMessageCount: currentState.selectedMessageCount + 1 };
+    //
+    // case 'DESELECT_MESSAGE':
+    //   const found = currentState.selectedMessageIds.indexOf(action.itemId);
+    //   const newSelectedMessageIds2 = currentState.selectedMessageIds;
+    //   newSelectedMessageIds2.splice(found, 1);
+    //   return { ...currentState, selectedMessagesIds: newSelectedMessageIds2, selectedMessageCount: currentState.selectedMessageCount - 1 };
+    //
+    // case 'SELECT_ALL_MESSAGES':
+    //   ////console.log('SELECTALL');
+    //   let newArr = currentState.messages.map(message => message.id);
+    //   ////console.log(newArr);
+    //   ////console.log(newArr.length);
+    //   return { ...currentState, selectedMessageIds: newArr, selectedMessageCount: newArr.length };
+    //
+    // case 'DESELECT_ALL_MESSAGES':
+    //   ////console.log('DESELECT_ALL_MESSAGES');
+    //
+    //   return { ...currentState, selectedMessageIds: [], selectedMessageCount: 0 };
+    //
+    // case 'MARK_ALL_UNREAD':
+    //   ////console.log('MARK_ALL_UNREAD');
+    //
+    //   return { ...currentState, selectedMessageIds: [], selectedMessageCount: 0 };
+    // case 'COMPOSE':
+    //   ////console.log('COMPOSE');
+    //
+    //   return { ...currentState, showComposeForm: action.showComposeForm };
+    // case 'CREATE_MESSAGE':
+    //   ////console.log('CREATE_MESSAGE');
+    //
+    //   return { ...currentState, messages: [action.newMessage, ...currentState.messages], showComposeForm: action.showComposeForm };
+    //
+    // case 'DELETE_MESSAGE':
+    //   ////console.log('DELETE_MESSAGE');
+    //
+    //   let theState = currentState.messages.filter((message, index) => {
+    //     //if (message.id !== action.itemId) {
+    //     return message.id !== action.itemId;
+    //     //}
+    //   });
+    //   // //console.log('theState');
+    //   // //console.log(theState);
+    //   return { ...currentState, messages: theState };
 
-    case 'GET_MESSAGES':
-      return { ...currentState, messages: action.messages };
+    // case 'UPDATE_MESSAGE':
+    //   // 1 ID
+    //   // 2 star
+    //   // 3 unstar
+    //   // 4 labels
+    //   ////console.log('rootReducer ' + action.type);
+    //   ////console.log(action.itemId);
+    //   ////console.log(action.message);
+    //   ////console.log(action.updateType);
+    //
+    //   // delete later ok?
+    //   currentState.selectedMessageIds.forEach(itemId => {
+    //     ////console.log('haha : ' + itemId);
+    //   });
 
-    case 'SELECT_MESSAGE':
-      const newSelectedMessageIds = currentState.selectedMessageIds;
-      newSelectedMessageIds.push(action.itemId);
-      return { ...currentState, selectedMessagesIds: newSelectedMessageIds, selectedMessageCount: currentState.selectedMessageCount + 1 };
-
-    case 'DESELECT_MESSAGE':
-      const found = currentState.selectedMessageIds.indexOf(action.itemId);
-      const newSelectedMessageIds2 = currentState.selectedMessageIds;
-      newSelectedMessageIds2.splice(found, 1);
-      return { ...currentState, selectedMessagesIds: newSelectedMessageIds2, selectedMessageCount: currentState.selectedMessageCount - 1 };
-
-    case 'SELECT_ALL_MESSAGES':
-      ////console.log('SELECTALL');
-      let newArr = currentState.messages.map(message => message.id);
-      ////console.log(newArr);
-      ////console.log(newArr.length);
-      return { ...currentState, selectedMessageIds: newArr, selectedMessageCount: newArr.length };
-
-    case 'DESELECT_ALL_MESSAGES':
-      ////console.log('DESELECT_ALL_MESSAGES');
-
-      return { ...currentState, selectedMessageIds: [], selectedMessageCount: 0 };
-
-    case 'MARK_ALL_UNREAD':
-      ////console.log('MARK_ALL_UNREAD');
-
-      return { ...currentState, selectedMessageIds: [], selectedMessageCount: 0 };
-    case 'COMPOSE':
-      ////console.log('COMPOSE');
-
-      return { ...currentState, showComposeForm: action.showComposeForm };
-    case 'CREATE_MESSAGE':
-      ////console.log('CREATE_MESSAGE');
-
-      return { ...currentState, messages: [action.newMessage, ...currentState.messages], showComposeForm: action.showComposeForm };
-
-    case 'DELETE_MESSAGE':
-      ////console.log('DELETE_MESSAGE');
-
-      let theState = currentState.messages.filter((message, index) => {
-        //if (message.id !== action.itemId) {
-        return message.id !== action.itemId;
-        //}
-      });
-      // //console.log('theState');
-      // //console.log(theState);
-      return { ...currentState, messages: theState };
-
-    case 'UPDATE_MESSAGE':
-      // 1 ID
-      // 2 star
-      // 3 unstar
-      // 4 labels
-      ////console.log('rootReducer ' + action.type);
-      ////console.log(action.itemId);
-      ////console.log(action.message);
-      ////console.log(action.updateType);
-
-      // delete later ok?
-      currentState.selectedMessageIds.forEach(itemId => {
-        ////console.log('haha : ' + itemId);
-      });
-
-      if (
-        action.updateType === 'dev' ||
-        action.updateType === 'personal' ||
-        action.updateType === 'gschool' ||
-        action.updateType === '-dev' ||
-        action.updateType === '-personal' ||
-        action.updateType === '-gschool' ||
-        action.updateType === 'star' ||
-        action.updateType === 'unstar' ||
-        action.updateType === 'read' ||
-        action.updateType === 'unread' ||
-        action.updateType === 'addLabel' ||
-        action.updateType === 'removeLabel'
-      ) {
-        let newMessages = currentState.messages;
-        // get a new array
-        ////console.log('Action type ' + action.updateType);
-        newMessages = newMessages.map(
-          message =>
-            message.id === action.itemId //
-              ? action.message //(message.starred = true) //
-              : message
-        );
-        ////console.log(newMessages);
-
-        return { ...currentState, messages: newMessages };
-      } else {
-        //
-        // else if (action.update === 'readSelected' || action.update === 'unreadSelected') {
-        //   //
-        //   // NOT GOING TO WORK AS reducer can't run Update, only PROCESSES can
-        //
-        //   let read = false;
-        //   if (action.update === 'readSelected') {
-        //     read = true;
-        //   }
-        //   let newMessages = currentState.messages;
-        //
-        //   let selectedMessageIds = currentState.selectedMessageIds;
-        //   selectedMessageIds.forEach(msgid => {
-        // ////console.log('selected ids: ' + msgid);
-        //
-        //     updateMessage(msgid, {
-        //       read: read
-        //     }) // end of updateMsg
-        //       .then(updatedMessage => {
-        //         newMessages = newMessages.map(
-        //           message =>
-        //             message.id === msgid //
-        //               ? updatedMessage //(message.read = false) //
-        //               : message
-        //         ); // end of map
-        //       }); // end of then
-        // ////console.log(newMessages);
-        //   });
-        //
-        //   return { ...currentState, messages: newMessages };
-        // }
-        // else break
-        //
-        break;
-      }
+    // if (
+    //   action.updateType === 'dev' ||
+    //   action.updateType === 'personal' ||
+    //   action.updateType === 'gschool' ||
+    //   action.updateType === '-dev' ||
+    //   action.updateType === '-personal' ||
+    //   action.updateType === '-gschool' ||
+    //   action.updateType === 'star' ||
+    //   action.updateType === 'unstar' ||
+    //   action.updateType === 'read' ||
+    //   action.updateType === 'unread' ||
+    //   action.updateType === 'addLabel' ||
+    //   action.updateType === 'removeLabel'
+    // ) {
+    //   let newMessages = currentState.messages;
+    //   // get a new array
+    //   ////console.log('Action type ' + action.updateType);
+    //   newMessages = newMessages.map(
+    //     message =>
+    //       message.id === action.itemId //
+    //         ? action.message //(message.starred = true) //
+    //         : message
+    //   );
+    //   ////console.log(newMessages);
+    //
+    //   return { ...currentState, messages: newMessages };
+    // } else {
+    //
+    //   break;
+    // }
 
     default:
       return currentState;

@@ -125,7 +125,7 @@ export default function SearchFormComponent(props) {
           </div>
           <div className="input-field col s3">
             <button className="btn waves-effect waves-light Cyan" onClick={handlePrice} name="price">
-              Show Only Homes Over $1000<i className="material-icons right"> </i>
+              Homes Over $1000<i className="material-icons right"> </i>
             </button>
           </div>
           <div className="input-field col s3">

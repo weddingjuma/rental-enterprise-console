@@ -73,28 +73,29 @@ export default function CreateUserComponent(props) {
     <div className="row">
       <form className="col s12" onSubmit={handleOnSubmit}>
         <div className="row">
-          <div className="input-field col s3">
+          <div className="input-field col s2">
             User ID :
             <input placeholder={theUser.username} name="username" id="username" type="text" className="validate" />
-            {/* <label for="address"> </label> */}
           </div>
-          <div className="input-field col s3">
+          <div className="input-field col s2">
             First Name:
             <input placeholder={theUser.firstName} name="firstName" type="text" className="validate" />
           </div>
-          <div className="input-field col s3">
+          <div className="input-field col s2">
             Last Name:
             <input placeholder={theUser.lastName} name="lastName" type="text" className="validate" />
           </div>
-          <div className="input-field col s3">
+        </div>
+        <div className="row">
+          <div className="input-field col s2">
             Contact:
             <input placeholder={theUser.contact} name="contact" type="text" className="validate" />
           </div>
-          <div className="input-field col s3">
+          <div className="input-field col s2">
             Role:
             <input placeholder={theUser.role} name="role" type="text" className="validate" />
           </div>
-          <div className="input-field col s3">
+          <div className="input-field col s2">
             Password:
             <input placeholder={theUser.password} name="password" type="text" className="validate" />
           </div>

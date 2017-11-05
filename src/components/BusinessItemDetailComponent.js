@@ -69,7 +69,7 @@ export default function BusinessItemDetailComponent(props) {
         <div className="card-image">
           <img src={photourl} alt="Nothing" />
           <span className="card-title">
-            {' '}{props.rental.address + ' ' + props.rental.city || 'N/A'}
+            {props.rental.address + ' ' + props.rental.city || 'N/A'}
           </span>
           {/* <h5 className="card-title">
             {props.rental.address + ' ' + props.rental.city || 'N/A'}

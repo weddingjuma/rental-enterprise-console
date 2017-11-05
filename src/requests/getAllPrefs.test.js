@@ -1,0 +1,1 @@
+import getAllPrefs from './getAllPrefs';

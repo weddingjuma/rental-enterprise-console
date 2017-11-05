@@ -1,8 +1,48 @@
-import rootReducer from './rootReducer';
+import rootReducer from './wtnRootReducer';
 
 import deepFreeze from 'deep-freeze';
 
 import data from '../../mock-data';
+
+/*
+CurrentState of VARIABLES
+
+showForm: false,
+showForm2: false,
+
+showLoginForm: false,
+showUserForm: false,
+
+authenticatedUser: 'guest_user',
+userRole: 'guest_role',
+
+rentals: [],
+currentRental: {},
+
+level: 'admin',
+search: {
+  keyword: 'all',
+  sort: 'all',
+  price: 0
+},
+*/
+/* ACTiONS
+
+SET_SEARCH
+SET_SEARCH_SORT
+SET_SEARCH_WORD
+RESET_SEARCH
+SHOW_FORM
+SHOW_FORM2
+SHOW_USER_FORM
+CREATE_USER
+SHOW_LOGIN_FORM
+LOGIN_USER
+GET_PREFS
+GET_RENTAL
+CREATE_RENTAL
+UPDATE_RENTAL
+*/
 
 describe('wtnRootReducer', () => {
   it('action.type GET_PREFS', () => {
@@ -24,7 +64,7 @@ describe('wtnRootReducer', () => {
       search: {
         keyword: 'all',
         sort: 'all',
-        price: 0
+        price: 1000
       }
     };
 
@@ -43,7 +83,7 @@ describe('wtnRootReducer', () => {
       search: {
         keyword: 'all',
         sort: 'all',
-        price: 0
+        price: 1000
       }
     };
 
@@ -57,7 +97,7 @@ describe('wtnRootReducer', () => {
       search: {
         keyword: 'all',
         sort: 'all',
-        price: 0
+        price: 1000
       }
     };
 
@@ -74,7 +114,7 @@ describe('wtnRootReducer', () => {
       search: {
         keyword: 'all',
         sort: 'all',
-        price: 0
+        price: 1000
       }
     };
 

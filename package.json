@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "deep-freeze": "0.0.1",
     "enzyme": "^2.9.1",
     "font-awesome": "^4.7.0",
     "jest-enzyme": "^3.8.2",

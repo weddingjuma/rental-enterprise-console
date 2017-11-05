@@ -87,10 +87,10 @@ function mapDispatchToProps(dispatch, ownProps) {
     onShowForm: () => dispatch({ type: 'SHOW_FORM', showForm: true }),
 
     //  show login user form
-    onShowUserForm: () => dispatch({ type: 'SHOW_USER_FORM', showUserForm: true }),
+    onShowUserForm: () => dispatch({ type: 'SHOW_USER_FORM', showUserForm: true, showLoginForm: false }),
 
     //  Show  Create user form
-    onShowLoginForm: () => dispatch({ type: 'SHOW_LOGIN_FORM', showLoginForm: true }),
+    onShowLoginForm: () => dispatch({ type: 'SHOW_LOGIN_FORM', showLoginForm: true, showUserForm: false }),
 
     // createUser 11/3/17
     createUser: user => {

@@ -5,7 +5,7 @@ import PageLayout from './PageLayout';
 export default function Page(props) {
   //
   console.log('PAGE COMPONENT');
-  // //console.log(props.rentals);
+  console.log('RENTALS: ', props.rentals);
   //console.log(props);
 
   ////console.log('IndexPage SELECTED: ' + props.selectedMessageIds);
