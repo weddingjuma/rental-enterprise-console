@@ -9,9 +9,7 @@ export default function createUserProcess(newUser, showReport) {
     })
       .then(newUser => {
         dispatch({ type: 'CREATE_USER', showReport: true, showUserForm: false });
-        ////console.log('createRental');
-        ////console.log(getState());
-        ////console.log('bye');
+
         return newUser;
       })
       .catch(error => {

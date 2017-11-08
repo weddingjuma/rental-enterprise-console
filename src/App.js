@@ -83,17 +83,17 @@ export default class App extends Component {
               {/* 6 <CreateUser with stuff  /> */}
               <Route
                 exact
-                path="/register"
+                path="/register" //
+                history={history}
                 render={props => <CreateUserContainer {...props} />}
-                // component={BusinessDetailPageContainer}
               />
 
               {/* 7 <Login with stuff  /> */}
               <Route
                 exact
-                path="/login"
+                path="/login" //
+                history={history}
                 render={props => <LoginUserContainer {...props} />}
-                // component={BusinessDetailPageContainer}
               />
               {/* <PageLayout item={{}} items={this.state.items} onAddItem={this.onAddItem} /> */}
             </Switch>

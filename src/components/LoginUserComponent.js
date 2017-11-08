@@ -1,22 +1,11 @@
 import React from 'react';
-// import { Route, Redirect } from 'react-router';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-/*
-// if not defined, show NA
-*/
+// For Redirect
+import createHistory from 'history/createBrowserHistory';
+const history = createHistory();
 
 export default function LoginUserComponent(props) {
-  //if (!item) return null;
-  ///let action = 'add';
-  //console.log('CREATE_FORM_COMPONENT >>>>>>>>>>>>>>>>' + action);
-  //console.log(props);
-  // let disabled = '';
-  // if (action === 'add') {
-  //   disabled = 'disabled';
-  // }
-
-  ///let random = Math.floor(Math.random() * 30);
   let theUser = {
     username: 'admin',
     password: 'welcome'
@@ -25,7 +14,6 @@ export default function LoginUserComponent(props) {
   function handleOnSubmit(event) {
     event.preventDefault();
     const $form = event.target;
-    ////console.log('onSubmit', action);
 
     let loginUser = {};
     loginUser = {
@@ -33,26 +21,24 @@ export default function LoginUserComponent(props) {
       password: $form.password.value ? $form.password.value : $form.password.placeholder
     };
 
-    //alert('user creation: ', newUser.username);
     console.log('USER LOGIN FORM', loginUser);
-    //alert('login user');
-    // UNCOMMENT TO CREATE USER
-    props.loginUser(loginUser).then(() => {});
+    console.log(props);
 
-    //window.location = '/';
+    props.loginUser(loginUser).then(() => {
+      props.history.push('/main');
+    });
   }
 
   return (
     <div className="row">
       <form className="col s12" onSubmit={handleOnSubmit}>
         <div className="row">
-          <div className="input-field col s2">
+          <div className="input-field col s3">
             User ID :
             <input placeholder={theUser.username} name="username" id="username" type="text" className="validate" />
-            {/* <label for="address"> </label> */}
           </div>
 
-          <div className="input-field col s2">
+          <div className="input-field col s3">
             Password:
             <input placeholder={theUser.password} name="password" type="password" className="validate" />
           </div>
@@ -66,7 +52,14 @@ export default function LoginUserComponent(props) {
             </button>
           </div>
 
-          <div className="input-field col s3" />
+          <div className="input-field col s3">
+            <Link to="/main">
+              <button className="btn waves-effect blue waves-light" type="submit" name="action">
+                Cancel
+                <i className="material-icons right"> </i>
+              </button>
+            </Link>
+          </div>
         </div>
       </form>
     </div>

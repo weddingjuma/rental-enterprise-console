@@ -19,15 +19,6 @@ import createUserProcess from '../thunks/createUserProcess';
 // 11/1
 import getByIdProcess from '../thunks/getByIdProcess';
 
-//
-// import getYelpAPIProcess from '../thunks/getYelpAPIProcess';
-//
-// import createMessageProcess from '../thunks/createMessageProcess';
-// import getMessagesProcess from '../thunks/getMessagesProcess';
-// //import deleteMessageProcess from '../thunks/deleteMessageProcess';
-// import updateMessageProcess from '../thunks/updateMessageProcess';
-// import updateMessagesProcess from '../thunks/updateMessagesProcess';
-
 // 4C) mapStateToProps function
 function mapStateToProps(state, ownProps) {
   console.log('PAGECONTAINTER MAPTOSTATE');
@@ -58,12 +49,12 @@ function mapStateToProps(state, ownProps) {
     setSearch: state.setSearch,
     setSearchSort: state.setSearchSort,
     setSearchWord: state.setSearchWord,
-    getPrefs: state.getPrefs,
+    getPrefs: state.getPrefs
     // old stuff
-    selectedMessageIds: state.selectedMessageIds,
-    selectedMessageCount: state.selectedMessageCount,
-    showComposeForm: state.showComposeForm,
-    messages: state.messages
+    // selectedMessageIds: state.selectedMessageIds,
+    // selectedMessageCount: state.selectedMessageCount,
+    // showComposeForm: state.showComposeForm,
+    // messages: state.messages
   };
 }
 // 5C) mapDispatchToProps functionto call the dispatches

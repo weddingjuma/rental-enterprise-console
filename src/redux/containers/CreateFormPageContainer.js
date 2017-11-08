@@ -37,12 +37,12 @@ function mapStateToProps(state, ownProps) {
 
     // Old Stuff
     items: state.items,
-    item: state.item,
+    item: state.item
     // old stuff
-    selectedMessageIds: state.selectedMessageIds,
-    selectedMessageCount: state.selectedMessageCount,
-    showComposeForm: state.showComposeForm,
-    messages: state.messages
+    // selectedMessageIds: state.selectedMessageIds,
+    // selectedMessageCount: state.selectedMessageCount,
+    // showComposeForm: state.showComposeForm,
+    // messages: state.messages
   };
 }
 

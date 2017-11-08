@@ -1,10 +1,10 @@
 import React from 'react';
 // import { Route, Redirect } from 'react-router';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-/*
-// if not defined, show NA
-*/
+// For Redirect
+import createHistory from 'history/createBrowserHistory';
+const history = createHistory();
 
 //export default function CreateFormComponent({ rental, deleteRental, onSubmit }) {
 export default function CreateUserComponent(props) {
@@ -47,48 +47,37 @@ export default function CreateUserComponent(props) {
     console.log('USER CREATION FORM', newUser);
     // UNCOMMENT TO CREATE USER
     props.createUser(newUser).then(() => {
-      ////console.log('the end');
-      // <Redirect to="/" push />;
-      //window.location = '/';
+      props.history.push('/main');
     });
-
-    //window.location = '/';
   }
-
-  // function deleteItem(event) {
-  //   event.preventDefault();
-  //
-  //   props.deleteRental(props.rental);
-  //
-  // }
 
   return (
     <div className="row">
       <form className="col s12" onSubmit={handleOnSubmit}>
         <div className="row">
-          <div className="input-field col s2">
+          <div className="input-field col s3">
             User ID :
             <input placeholder={theUser.username} name="username" id="username" type="text" className="validate" />
           </div>
-          <div className="input-field col s2">
+          <div className="input-field col s3">
             First Name:
             <input placeholder={theUser.firstName} name="firstName" type="text" className="validate" />
           </div>
-          <div className="input-field col s2">
+          <div className="input-field col s3">
             Last Name:
             <input placeholder={theUser.lastName} name="lastName" type="text" className="validate" />
           </div>
         </div>
         <div className="row">
-          <div className="input-field col s2">
+          <div className="input-field col s3">
             Contact:
             <input placeholder={theUser.contact} name="contact" type="text" className="validate" />
           </div>
-          <div className="input-field col s2">
+          <div className="input-field col s3">
             Role:
             <input placeholder={theUser.role} name="role" type="text" className="validate" />
           </div>
-          <div className="input-field col s2">
+          <div className="input-field col s3">
             Password:
             <input placeholder={theUser.password} name="password" type="text" className="validate" />
           </div>
@@ -102,7 +91,23 @@ export default function CreateUserComponent(props) {
             </button>
           </div>
 
-          <div className="input-field col s3" />
+          <div className="input-field col s3">
+            <Link to="/login">
+              <button className="btn waves-effect blue waves-light" type="submit" name="action">
+                Login
+                <i className="material-icons right"> </i>
+              </button>
+            </Link>
+          </div>
+
+          <div className="input-field col s3">
+            <Link to="/main">
+              <button className="btn waves-effect blue waves-light" type="submit" name="action">
+                Cancel
+                <i className="material-icons right"> </i>
+              </button>
+            </Link>
+          </div>
         </div>
       </form>
     </div>

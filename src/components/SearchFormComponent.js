@@ -110,17 +110,16 @@ export default function SearchFormComponent(props) {
           </div>
 
           <div className="input-field col s3">
-            <button className="btn waves-effect waves-light blue" onClick={handleUser} name="action">
+            {/* <button className="btn waves-effect waves-light blue" onClick={handleUser} name="action">
               Create User
               <i className="material-icons right"> </i>
-            </button>
+            </button> */}
 
-            {/* <Link to="/register " className="brand-logo">
+            <Link to="/register">
               <button className="btn waves-effect waves-light blue" name="action">
                 Create User
-                <i className="material-icons right"> </i>
-              </button> */}
-            {/* </Link> */}
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -142,9 +141,16 @@ export default function SearchFormComponent(props) {
           </div>
 
           <div className="input-field col s3">
-            <button disabled={disabled2} className="btn waves-effect waves-light Cyan" onClick={handleLogin} name="reset">
-              Login <i className="material-icons right"> </i>
-            </button>
+            {/*
+              <button disabled={disabled2} className="btn waves-effect waves-light Cyan" onClick={handleLogin} name="reset">
+                Login <i className="material-icons right"> </i>
+              </button>
+             */}
+            <Link to="/login">
+              <button disabled={disabled2} className="btn waves-effect waves-light Cyan" name="reset">
+                Login <i className="material-icons right"> </i>
+              </button>
+            </Link>
 
             {/* <Link to="/login " className="brand-logo">
               <button disabled={disabled2} className="btn waves-effect waves-light Cyan" name="login">

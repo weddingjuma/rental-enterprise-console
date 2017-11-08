@@ -24,11 +24,6 @@ function mapStateToProps(state, ownProps) {
     authenticatedUser: state.authenticatedUser,
     // userRole
     userRole: state.userRole
-    // old stuff
-    // selectedMessageIds: state.selectedMessageIds,
-    // selectedMessageCount: state.selectedMessageCount,
-    // showComposeForm: state.showComposeForm,
-    // messages: state.messages
   };
 }
 

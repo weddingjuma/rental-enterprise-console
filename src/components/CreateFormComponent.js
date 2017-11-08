@@ -4,8 +4,8 @@ import { Route, Redirect } from 'react-router';
 
 import { Link } from 'react-router-dom';
 
+// For Redirect
 import createHistory from 'history/createBrowserHistory';
-
 const history = createHistory();
 /*
 // if not defined, show NA
@@ -121,11 +121,12 @@ export default function CreateFormComponent(props) {
         ////console.log('the end');
         // <Redirect to="/" push />;
         //window.location = '/';
+        props.history.push('/main');
       });
     } else if (action === 'update') {
       ////console.log('update call');
       props.updateRental(newRental).then(() => {
-        // console.log('UPDATE HIST', history.location);
+        console.log('UPDATE HIST', history.location);
         props.history.push('/main');
         // console.log('HIST GO', history.location);
         //return <Redirect to "/main" />;
