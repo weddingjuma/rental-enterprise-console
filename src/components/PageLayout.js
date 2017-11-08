@@ -18,11 +18,11 @@ export default function PageLayout(props) {
   console.log(props.rentals);
   // //console.log(props.items);
   //console.log('SHOWFORM?', props);
-  let title = 'add';
+  ///  let title = 'add';
   let action = 'add';
 
   if (props.rental) {
-    title = 'Update ' + props.rental.address;
+    ///  title = 'Update ' + props.rental.address;
     action = 'update';
   }
 

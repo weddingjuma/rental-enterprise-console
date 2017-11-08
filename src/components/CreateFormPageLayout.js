@@ -9,8 +9,8 @@ import CreateFormComponent from './CreateFormComponent';
 
 export default function CreateFormPageLayout(props) {
   //
-  //console.log('CREATEFORM LAYOUT.............');
-  // //console.log(props.rentals);
+  console.log('CREATEFORM LAYOUT.............');
+  console.log(props.history);
   // //console.log(props.items);
   // //console.log(props.rental);
   // //console.log(props);
@@ -31,6 +31,7 @@ export default function CreateFormPageLayout(props) {
         deleteRental={props.deleteRental}
         updateRental={props.updateRental}
         onSubmit={props.onSubmit}
+        history={props.history}
       />
     </div>
   );

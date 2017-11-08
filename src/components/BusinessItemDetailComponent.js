@@ -66,16 +66,17 @@ export default function BusinessItemDetailComponent(props) {
 
     <div className="   BusinessItemDetailComponent">
       <div className="card">
-        <div className="card-image">
-          <img src={photourl} alt="Nothing" />
+        <div className="card-image2">
+          <img src={photourl} alt="Nothing" width="400" />
+        </div>
+        {/* <h5 className="card-title">
+            {props.rental.address + ' ' + props.rental.city || 'N/A'}
+          </h5> */}
+
+        <div className="card-content">
           <span className="card-title">
             {props.rental.address + ' ' + props.rental.city || 'N/A'}
           </span>
-          {/* <h5 className="card-title">
-            {props.rental.address + ' ' + props.rental.city || 'N/A'}
-          </h5> */}
-        </div>
-        <div className="card-content">
           <p>
             {props.rental.description}
           </p>

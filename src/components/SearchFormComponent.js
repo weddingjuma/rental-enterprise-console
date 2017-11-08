@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 /*
 // if not defined, show NA
@@ -114,6 +114,13 @@ export default function SearchFormComponent(props) {
               Create User
               <i className="material-icons right"> </i>
             </button>
+
+            {/* <Link to="/register " className="brand-logo">
+              <button className="btn waves-effect waves-light blue" name="action">
+                Create User
+                <i className="material-icons right"> </i>
+              </button> */}
+            {/* </Link> */}
           </div>
         </div>
 
@@ -138,6 +145,12 @@ export default function SearchFormComponent(props) {
             <button disabled={disabled2} className="btn waves-effect waves-light Cyan" onClick={handleLogin} name="reset">
               Login <i className="material-icons right"> </i>
             </button>
+
+            {/* <Link to="/login " className="brand-logo">
+              <button disabled={disabled2} className="btn waves-effect waves-light Cyan" name="login">
+                Login <i className="material-icons right"> </i>
+              </button>
+            </Link> */}
           </div>
         </div>
       </form>

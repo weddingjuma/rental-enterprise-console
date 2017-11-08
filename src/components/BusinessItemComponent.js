@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 
 export default function BusinessItemComponent(props) {
   //  if (!userpref) return null;
-  function handleEvent(event) {
-    event.preventDefault();
-    props.onShowForm();
-  }
+  // function handleEvent(event) {
+  //   event.preventDefault();
+  //   props.onShowForm();
+  // }
   //console.log('BUSINESSITEMCOMPONENT', props);
   ////console.log(rental);
   // //console.log(rental.address);

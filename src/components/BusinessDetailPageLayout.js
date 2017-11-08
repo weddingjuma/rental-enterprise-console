@@ -9,7 +9,17 @@ import BusinessItemDetailComponent from './BusinessItemDetailComponent';
 // import UserPrefComponent from './UserPrefComponent';
 
 //export default function BusinessDetailPageLayout(props) {
-export default function BusinessDetailPageLayout({ rental = {}, showForm2, onShowForm2, updateRental, deleteRental, showRental, authenticatedUser, userRole }) {
+export default function BusinessDetailPageLayout({
+  rental = {},
+  showForm2,
+  onShowForm2,
+  updateRental,
+  deleteRental,
+  showRental,
+  authenticatedUser,
+  userRole,
+  history
+}) {
   //
 
   console.log('BUSINESS DETAIL LAYOUT.....................');
@@ -49,6 +59,7 @@ export default function BusinessDetailPageLayout({ rental = {}, showForm2, onSho
           updateRental={updateRental}
           authenticatedUser={authenticatedUser}
           userRole={userRole}
+          history={history}
           // onCancel={props.onCancel}
         />}
     </div>

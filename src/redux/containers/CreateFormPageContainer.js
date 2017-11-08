@@ -2,6 +2,7 @@
 // 1) import the stuff
 import { compose, lifecycle } from 'recompose';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 // 2C) import the OrderPage we want to contain
 import CreateFormPageLayout from '../../components/CreateFormPageLayout';
 // import PageLayout from '../../components/PageLayout';
@@ -59,7 +60,7 @@ function mapDispatchToProps(dispatch, ownProps) {
     // 3 deleteRental
     deleteRental: rental => {
       let newRental = rental;
-  ////console.log('DELETE CONTAINER ', rental);
+      ////console.log('DELETE CONTAINER ', rental);
       return dispatch(deleteRentalProcess(newRental, true));
     },
 
@@ -80,4 +81,5 @@ const onDidMount = lifecycle({
   }
 });
 // 8) export compose
-export default compose(connectToStore, onDidMount)(CreateFormPageLayout);
+// export default compose(connectToStore, onDidMount)(CreateFormPageLayout);
+export default compose(connectToStore, onDidMount)(withRouter(CreateFormPageLayout));

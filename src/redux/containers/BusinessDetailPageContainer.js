@@ -10,7 +10,7 @@ import BusinessDetailPageLayout from '../../components/BusinessDetailPageLayout'
 // import PageLayout from '../../components/PageLayout';
 
 // 3C) import the Processes from the thunks
-import getAllPrefsProcess from '../thunks/getAllPrefsProcess';
+//import getAllPrefsProcess from '../thunks/getAllPrefsProcess';
 import deleteRentalProcess from '../thunks/deleteRentalProcess';
 import updateRentalProcess from '../thunks/updateRentalProcess';
 
@@ -22,9 +22,9 @@ function mapStateToProps(state, ownProps) {
   console.log(state);
 
   // 1 get the rental
-  const { rentals } = state;
+  ///  const { rentals } = state;
   // 2 get the id from the parrams
-  const { rentalId } = ownProps.match.params;
+  ///  const { rentalId } = ownProps.match.params;
   console.log('OWNPROPS ', ownProps);
   // 3 get the rental based on the rental id
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router';
-import { Link } from 'react-router-dom';
+// import { Route, Redirect } from 'react-router';
+// import { Link } from 'react-router-dom';
 
 /*
 // if not defined, show NA
@@ -8,17 +8,17 @@ import { Link } from 'react-router-dom';
 
 export default function LoginUserComponent(props) {
   //if (!item) return null;
-  let action = 'add';
+  ///let action = 'add';
   //console.log('CREATE_FORM_COMPONENT >>>>>>>>>>>>>>>>' + action);
   //console.log(props);
-  let disabled = '';
-  if (action === 'add') {
-    disabled = 'disabled';
-  }
+  // let disabled = '';
+  // if (action === 'add') {
+  //   disabled = 'disabled';
+  // }
 
-  let random = Math.floor(Math.random() * 30);
+  ///let random = Math.floor(Math.random() * 30);
   let theUser = {
-    username: 'jake',
+    username: 'admin',
     password: 'welcome'
   };
 

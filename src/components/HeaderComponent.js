@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 */
 
 export default function HeaderComponent(props) {
-  function handleEvent(event) {
-    event.preventDefault();
-    props.onShowForm();
-  }
+  // function handleEvent(event) {
+  //   event.preventDefault();
+  //   props.onShowForm();
+  // }
 
   //console.log('HEADERCOMP');
   //console.log(props.title);

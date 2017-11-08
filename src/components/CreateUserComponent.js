@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router';
-import { Link } from 'react-router-dom';
+// import { Route, Redirect } from 'react-router';
+// import { Link } from 'react-router-dom';
 
 /*
 // if not defined, show NA
@@ -9,13 +9,14 @@ import { Link } from 'react-router-dom';
 //export default function CreateFormComponent({ rental, deleteRental, onSubmit }) {
 export default function CreateUserComponent(props) {
   //if (!item) return null;
-  let action = 'add';
+  ///let action = 'add';
   //console.log('CREATE_FORM_COMPONENT >>>>>>>>>>>>>>>>' + action);
   //console.log(props);
-  let disabled = '';
-  if (action === 'add') {
-    disabled = 'disabled';
-  }
+
+  // let disabled = '';
+  // if (action === 'add') {
+  //   disabled = 'disabled';
+  // }
 
   let random = Math.floor(Math.random() * 300);
   let theUser = {
@@ -54,20 +55,12 @@ export default function CreateUserComponent(props) {
     //window.location = '/';
   }
 
-  function deleteItem(event) {
-    event.preventDefault();
-
-    ////console.log('DELETE.............................');
-    // //console.log(event.target.deleteButton.value);
-    props.deleteRental(props.rental);
-    // event.form.deleteButton.value = 'disabled';
-    // props.deleteRental(props.rental).then(() => {
-    //   console.log('the end');
-    //   //window.location = '/main';
-    // });
-
-    //window.location = '/';
-  }
+  // function deleteItem(event) {
+  //   event.preventDefault();
+  //
+  //   props.deleteRental(props.rental);
+  //
+  // }
 
   return (
     <div className="row">

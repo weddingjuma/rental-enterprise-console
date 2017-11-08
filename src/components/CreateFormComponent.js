@@ -1,12 +1,16 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router';
+// import { browserHistory } from 'react-router';
+
 import { Link } from 'react-router-dom';
 
+import createHistory from 'history/createBrowserHistory';
+
+const history = createHistory();
 /*
 // if not defined, show NA
 */
 
-//export default function CreateFormComponent({ rental, deleteRental, onSubmit }) {
 export default function CreateFormComponent(props) {
   //if (!item) return null;
   let action = props.action;
@@ -121,8 +125,11 @@ export default function CreateFormComponent(props) {
     } else if (action === 'update') {
       ////console.log('update call');
       props.updateRental(newRental).then(() => {
-        ////console.log('the end');
-        //  window.location = '/';
+        // console.log('UPDATE HIST', history.location);
+        props.history.push('/main');
+        // console.log('HIST GO', history.location);
+        //return <Redirect to "/main" />;
+        // window.location = '/main';
       });
     }
 
@@ -145,124 +152,129 @@ export default function CreateFormComponent(props) {
   }
 
   return (
-    <div className="row">
-      <form className="col s12" onSubmit={handleOnSubmit}>
-        <div className="row">
-          <div className="input-field col s3">
-            Street Address:
-            <input placeholder={theRental.address} name="address" id="address" type="text" className="validate" />
-            {/* <label for="address"> </label> */}
-          </div>
-          <div className="input-field col s3">
-            City:
-            <input placeholder={theRental.city} name="city" type="text" className="brand-logo center" />
-            {/* <label className="active" for="city" /> */}
-            {/* placeholder="City: (Leave blank for default)" id="city" type="text" className="validate" /> */}
-          </div>
-          {/* </div>
+    <router>
+      <div className="row">
+        <form className="col s12" onSubmit={handleOnSubmit}>
+          <div className="row">
+            <div className="input-field col s3">
+              Street Address:
+              <input placeholder={theRental.address} name="address" id="address" type="text" className="validate" />
+              {/* <label for="address"> </label> */}
+            </div>
+            <div className="input-field col s3">
+              City:
+              <input placeholder={theRental.city} name="city" type="text" className="brand-logo center" />
+              {/* <label className="active" for="city" /> */}
+              {/* placeholder="City: (Leave blank for default)" id="city" type="text" className="validate" /> */}
+            </div>
+            {/* </div>
 
         <div className="row"> */}
-          <div className="input-field col s3">
-            Photourl:
-            <input placeholder={photourl} name="photourl" id="businessType" type="text" className="validate" />
-            {/* <label for="photourl"> </label> */}
+            <div className="input-field col s3">
+              Photourl:
+              <input placeholder={photourl} name="photourl" id="businessType" type="text" className="validate" />
+              {/* <label for="photourl"> </label> */}
+            </div>
+            <div className="input-field col s3">
+              Sqft:
+              <input placeholder={theRental.sqft} name="sqft" id="searchParam" type="text" className="validate" />
+              {/* <label for="sqft"> </label> */}
+            </div>
           </div>
-          <div className="input-field col s3">
-            Sqft:
-            <input placeholder={theRental.sqft} name="sqft" id="searchParam" type="text" className="validate" />
-            {/* <label for="sqft"> </label> */}
-          </div>
-        </div>
 
-        <div className="row">
-          <div className="input-field col s3">
-            Contact Name:
-            <input placeholder={theRental.contactname} name="contactname" id="businessType" type="text" className="validate" />
-            {/* <label for="contactname"> </label> */}
-          </div>
-          <div className="input-field col s3">
-            Contact Info:
-            <input placeholder={theRental.contactinfo} name="contactinfo" id="searchParam" type="text" className="validate" />
-            {/* <label for="contactinfo"> </label> */}
-          </div>
-          {/* </div>
-
-        <div className="row"> */}
-          <div className="input-field col s3">
-            Description:
-            <input placeholder={theRental.description} name="description" id="businessType" type="text" className="validate" />
-            {/* <label for="description"> </label> */}
-          </div>
-          <div className="input-field col s3">
-            Heating/Cooling:
-            <input placeholder={theRental.cooling} name="cooling" id="searchParam" type="text" className="validate" />
-            {/* <label for="heating/cooling"> </label> */}
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="input-field col s3">
-            Bed:
-            <input placeholder={theRental.bed} name="bed" id="businessType" type="text" className="validate" />
-            {/* <label for="bed"> </label> */}
-          </div>
-          <div className="input-field col s3">
-            Bath:
-            <input placeholder={theRental.bath} name="bath" id="searchParam" type="text" className="validate" />
-            {/* <label for="bath"> </label> */}
-          </div>
-          {/* </div>
+          <div className="row">
+            <div className="input-field col s3">
+              Contact Name:
+              <input placeholder={theRental.contactname} name="contactname" id="businessType" type="text" className="validate" />
+              {/* <label for="contactname"> </label> */}
+            </div>
+            <div className="input-field col s3">
+              Contact Info:
+              <input placeholder={theRental.contactinfo} name="contactinfo" id="searchParam" type="text" className="validate" />
+              {/* <label for="contactinfo"> </label> */}
+            </div>
+            {/* </div>
 
         <div className="row"> */}
-          <div className="input-field col s3">
-            Price:
-            <input placeholder={theRental.price} name="price" id="businessType" type="text" className="validate" />
-            {/* <label for="price"> </label> */}
-          </div>
-          <div className="input-field col s3">
-            Year Built:
-            <input placeholder={theRental.year} name="year" id="searchParam" type="text" className="validate" />
-            {/* <label for="year"> </label> */}
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="input-field col s3">
-            Parking:
-            <input placeholder={theRental.parking} name="parking" id="searchParam" type="text" className="validate" />
-            {/* <label for="parking"> </label> */}
-            <input placeholder={theRental.id} name="id" id="searchParam" type="hidden" className="validate" />
+            <div className="input-field col s3">
+              Description:
+              <input placeholder={theRental.description} name="description" id="businessType" type="text" className="validate" />
+              {/* <label for="description"> </label> */}
+            </div>
+            <div className="input-field col s3">
+              Heating/Cooling:
+              <input placeholder={theRental.cooling} name="cooling" id="searchParam" type="text" className="validate" />
+              {/* <label for="heating/cooling"> </label> */}
+            </div>
           </div>
 
-          <div className="input-field col s3">
-            Agent ID :
-            <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="text" className="validate" />
-            {/* <label for="parking"> </label> */}
-          </div>
-          {/* </div>
+          <div className="row">
+            <div className="input-field col s3">
+              Bed:
+              <input placeholder={theRental.bed} name="bed" id="businessType" type="text" className="validate" />
+              {/* <label for="bed"> </label> */}
+            </div>
+            <div className="input-field col s3">
+              Bath:
+              <input placeholder={theRental.bath} name="bath" id="searchParam" type="text" className="validate" />
+              {/* <label for="bath"> </label> */}
+            </div>
+            {/* </div>
 
         <div className="row"> */}
-          <div className="input-field col s3">
-            <button className="btn waves-effect green waves-light" type="submit" name="action">
-              {action} Rental Property
-              <i className="material-icons right"> </i>
-            </button>
+            <div className="input-field col s3">
+              Price:
+              <input placeholder={theRental.price} name="price" id="businessType" type="text" className="validate" />
+              {/* <label for="price"> </label> */}
+            </div>
+            <div className="input-field col s3">
+              Year Built:
+              <input placeholder={theRental.year} name="year" id="searchParam" type="text" className="validate" />
+              {/* <label for="year"> </label> */}
+            </div>
           </div>
 
-          <div className="input-field col s3">
-            <button name="deleteButton" disabled={disabled} className="btn waves-effect red waves-light" type="submit">
-              <Link to="/main" onClick={deleteItem}>
-                Delete Rental Property
-              </Link>
-              <i className="material-icons right"> </i>
-            </button>
+          <div className="row">
+            <div className="input-field col s3">
+              Parking:
+              <input placeholder={theRental.parking} name="parking" id="searchParam" type="text" className="validate" />
+              {/* <label for="parking"> </label> */}
+              <input placeholder={theRental.id} name="id" id="searchParam" type="hidden" className="validate" />
+            </div>
 
-            {/* <Route exact path="/main">
+            <div className="input-field col s3">
+              Agent ID :
+              <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="text" className="validate" />
+              {/* <label for="parking"> </label> */}
+            </div>
+            {/* </div>
+
+        <div className="row"> */}
+            <div className="input-field col s3">
+              {/* <Link to="/main"> */}
+              <button className="btn waves-effect green waves-light" type="submit" name="action">
+                {action} Rental Property
+                <i className="material-icons right"> </i>
+              </button>
+              {/* </Link> */}
+            </div>
+
+            <div className="input-field col s3">
+              <button name="deleteButton" disabled={disabled} className="btn waves-effect red waves-light" type="submit">
+                <Link to="/main" onClick={deleteItem}>
+                  Delete Rental Property
+                </Link>
+                <i className="material-icons right"> </i>
+              </button>
+
+              {/* <Route exact path="/main">
               test
             </Route> */}
+            </div>
           </div>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+      <Route path="/main" />
+    </router>
   );
 }
