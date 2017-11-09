@@ -121,7 +121,7 @@ export default function wtnRootReducer(
       ////console.log(currentState.search.price);
 
       // filter by price /////////////////////
-      let filterRentals = currentState.rentals;
+      var filterRentals = currentState.rentals;
       if (currentState.search.price === 1000) {
         ////console.log('PRICE FILTER .............................');
         filterRentals = currentState.rentals.filter(rental => {
@@ -178,7 +178,7 @@ export default function wtnRootReducer(
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     case 'RESET_SEARCH':
       ////console.log('RESET SEARCH');
-      return { ...currentState, rettals: action.rentals };
+      return { ...currentState, rentals: action.rentals };
 
     case 'SHOW_FORM':
       ////console.log('SHOW_FORM');
