@@ -62,8 +62,8 @@ export default function getAllPrefs({ databaseId, token }) {
 
       // }) // end of then
       .then(rentals => {
-        console.log('RENTALS IN GETALLPREFS');
-        console.log(rentals);
+        // console.log('RENTALS IN GETALLPREFS');
+        // console.log(rentals);
         return rentals;
       })
       .catch(function(error) {

@@ -7,7 +7,7 @@ import getAllPrefs from '../../requests/getAllPrefs';
 import data from '../../mock-data';
 
 describe('getAllPrefsProcess', () => {
-  it('Calls getMenuItems API utility, returns array of menuItems, and dispatches GET_MENU_ITEMS action', () => {
+  it('Calls getAllPrefs API utility, returns array of rentals and dispatches GET_PREFS action, rentals and showUserForm to be false ', () => {
     const thunk = getAllPrefsProcess();
     expect(typeof thunk).toBe('function');
 
@@ -19,7 +19,7 @@ describe('getAllPrefsProcess', () => {
     return thunk(dispatch, getState, {}).then(rentals => {
       expect(getAllPrefs).toBeCalled();
       expect(rentals).toEqual([...data.rentals]);
-      expect(dispatch).toBeCalledWith({ type: 'GET_ALL_PREFS', rentals });
+      expect(dispatch).toBeCalledWith({ type: 'GET_PREFS', rentals, showUserForm: false });
     });
   });
 });

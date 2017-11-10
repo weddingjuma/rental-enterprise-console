@@ -62,8 +62,8 @@ export default function getById(id) {
 
       // }) // end of then
       .then(rentals => {
-        console.log('RENTALS IN GETALLPREFS');
-        console.log(rentals);
+        //  console.log('RENTAL IN GETBYID');
+        //  console.log(rentals);
         return rentals;
       })
       .catch(function(error) {
