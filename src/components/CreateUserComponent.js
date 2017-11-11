@@ -47,7 +47,7 @@ export default function CreateUserComponent(props) {
     console.log('USER CREATION FORM', newUser);
     // UNCOMMENT TO CREATE USER
     props.createUser(newUser).then(() => {
-      props.history.push('/main');
+      props.history.push('/login');
     });
   }
 

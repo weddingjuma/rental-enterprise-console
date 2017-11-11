@@ -14,7 +14,12 @@ import deleteRentalProcess from '../thunks/deleteRentalProcess';
 import updateRentalProcess from '../thunks/updateRentalProcess';
 
 import loginUserProcess from '../thunks/loginUserProcess';
+import logoutUserProcess from '../thunks/logoutUserProcess';
+
 import createUserProcess from '../thunks/createUserProcess';
+
+// withRouter for Redirection
+import { withRouter } from 'react-router-dom';
 
 // 11/1
 import getByIdProcess from '../thunks/getByIdProcess';
@@ -89,11 +94,14 @@ function mapDispatchToProps(dispatch, ownProps) {
       return dispatch(createUserProcess(newUser, true));
     },
 
-    // loginUser 11/3/17
+    // loginUser
     loginUser: user => {
       let authUser = user;
       return dispatch(loginUserProcess(authUser, true));
     },
+    // loutout User
+    logoutUser: () => dispatch(logoutUserProcess()),
+
     //   Create rental
     onSubmit: rental => {
       let newRental = rental;
@@ -171,4 +179,4 @@ const onDidMount = lifecycle({
   }
 });
 // 8) export compose
-export default compose(connectToStore, onDidMount)(Page);
+export default compose(connectToStore, onDidMount)(withRouter(Page));

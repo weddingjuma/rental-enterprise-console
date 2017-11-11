@@ -11,18 +11,18 @@ export default function loginUserProcess(id, password) {
     // //console.log(env.WTN_APP_AIRTABLE_DATABASE_ID);
     // //console.log(env.WTN_APP_AIRTABLE_TOKEN);
     return loginUser(id, password)
-      .then(token => {
-        console.log('LOGGEDIN TOKEN: ', token, '-', token.token);
+      .then(authentication => {
+        console.log('LOGGEDIN TOKEN: ', authentication, '-', authentication.token);
         // set token to localStorage
-        localStorage.setItem('token', token.token);
+        localStorage.setItem('token', authentication.token);
 
         // get the user ID
-        const { sub: user } = decode(token.token);
+        const { sub: user } = decode(authentication.token);
         console.log('USER ID', user);
         //
         // add 'token' to dispatch and return 'token' and user
-        dispatch({ type: 'LOGIN_USER', token: token.token, authenticatedUser: user, userRole: 'agent', showReport: true, showLoginForm: false });
-        return token.token;
+        dispatch({ type: 'LOGIN_USER', token: authentication.token, authenticatedUser: user, userRole: 'agent', showReport: true, showLoginForm: false });
+        return authentication.token;
       })
       .catch(error => {
         //dispatch({ type: 'CREATE_MESSAGE' });

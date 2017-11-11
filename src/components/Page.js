@@ -18,6 +18,7 @@ export default function Page(props) {
       onShowLoginForm={props.onShowLoginForm}
       showLoginForm={props.showLoginForm}
       loginUser={props.loginUser}
+      logoutUser={props.logoutUser}
       // User creation form
       onShowUserForm={props.onShowUserForm}
       showUserForm={props.showUserForm}
@@ -26,6 +27,7 @@ export default function Page(props) {
       authenticatedUser={props.authenticatedUser}
       userRole={props.userRole}
       // other
+      history={props.history}
       onSubmit={props.onSubmit}
       deleteRental={props.deleteRental}
       updateRental={props.updateRental}

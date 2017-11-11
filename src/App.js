@@ -28,9 +28,27 @@ import LoginUserContainer from './redux/containers/LoginUserContainer';
 import HomeComponent from './components/HomeComponent';
 
 import createBrowserHistory from 'history/createBrowserHistory';
+
+import { isEmpty } from './utils/empUtil';
+
 const history = createBrowserHistory();
 
 // 4) Set up store
+
+function getInitialState(authentication) {
+  return isEmpty(authentication)
+    ? {}
+    : {
+        // set up the state properies used for login
+        // 1 token
+        token: authentication.token,
+        // 2 user
+        authenticatedUser: authentication.user.id,
+        // 3 login as agent
+        userRole: 'agent'
+      };
+}
+
 const store = setupStore();
 // 5 - 6) Remove Process and Components
 
@@ -45,13 +63,19 @@ export default class App extends Component {
     return (
       // 4C STUFF
       <div className="App">
-        <Provider store={store}>
+        {/* <Provider store={store}> */}
+        <Provider store={setupStore(getInitialState(this.props.authentication))}>
           <Router>
             <Switch>
               {/* 1. Search Main Page  */}
               <Route exact path="/" component={HomeComponent} />
 
-              <Route exact path="/main" component={PageContainer} />
+              <Route
+                exact
+                path="/main" //
+                history={history}
+                component={PageContainer}
+              />
               {/* 2 Report Page BusinessPageContainer */}
               <Route exact path="/report/" component={BusinessPageContainer} />
               <Route exact path="/reports" component={BusinessPageContainer} />

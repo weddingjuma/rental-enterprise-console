@@ -13,9 +13,9 @@ import LoginUserComponent from './LoginUserComponent';
 export default function PageLayout(props) {
   //
   console.log('PAGE LAYOUT COMP');
-  console.log(props.showUserForm);
-  console.log(props.showLoginForm);
-  console.log(props.rentals);
+  console.log(props.logoutUser);
+  // console.log(props.showLoginForm);
+  // console.log(props.rentals);
   // //console.log(props.items);
   //console.log('SHOWFORM?', props);
   ///  let title = 'add';
@@ -47,12 +47,14 @@ export default function PageLayout(props) {
           onCancel={props.onCancel}
           authenticatedUser={props.authenticatedUser}
           userRole={props.userRole}
+          history={props.history}
         />}
       {props.showLoginForm &&
         <LoginUserComponent
           loginUser={props.loginUser}
           // for cancel
           onCancel={props.onCancel}
+          history={props.history}
         />}
       {props.showUserForm &&
         <CreateUserComponent
@@ -64,6 +66,7 @@ export default function PageLayout(props) {
           onCancel={props.onCancel}
           authenticatedUser={props.authenticatedUser}
           userRole={props.userRole}
+          history={props.history}
         />}
       <SearchFormComponent
         setSearch={props.setSearch} //
@@ -78,6 +81,8 @@ export default function PageLayout(props) {
         getPrefs={props.getPrefs}
         authenticatedUser={props.authenticatedUser}
         userRole={props.userRole}
+        logoutUser={props.logoutUser}
+        history={props.history}
       />
       <BusinessComponent
         search={props.search}
@@ -86,6 +91,7 @@ export default function PageLayout(props) {
         onAddItem={props.onAddItem}
         authenticatedUser={props.authenticatedUser}
         userRole={props.userRole}
+        history={props.history}
       />
       {/* <UserPrefComponent item={{}} /> */}
     </div>

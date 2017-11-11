@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-/*
-// if not defined, show NA
-*/
+// For Redirect
+import createHistory from 'history/createBrowserHistory';
+const history = createHistory();
 
 export default function SearchFormComponent(props) {
   //  if (!props.item) return null;
-  //console.log('SEARCHFORMCOMP');
+  console.log('SEARCHFORMCOMP');
+  console.log('Auth User ', props.authenticatedUser);
+
   // //console.log(rentals);
-  //console.log(props);
+  console.log(props);
 
   // userprefs.forEach(function(pref, i) {
   //   ////console.log('hi');
@@ -72,16 +74,31 @@ export default function SearchFormComponent(props) {
     //  alert('login');
     props.onShowLoginForm();
   }
+
+  function handleLoginout(event) {
+    event.preventDefault();
+    //alert('login or out');
+    if (props.authenticatedUser === 'guest_user') {
+      props.history.push('/login');
+    } else {
+      //  alert('loutout');
+      props.logoutUser();
+      props.history.push('/');
+    }
+  }
+
   let disabled = '';
 
   if (props.userRole !== 'agent') {
     disabled = 'disabled';
   }
 
-  let disabled2 = '';
+  let loginStatus = 'Login';
+  let goTo = 'login';
 
-  if (props.userRole === 'agent') {
-    disabled2 = 'disabled';
+  if (props.userRole !== 'guest_role') {
+    loginStatus = 'Logout';
+    goTo = '/';
   }
 
   return (
@@ -142,18 +159,18 @@ export default function SearchFormComponent(props) {
 
           <div className="input-field col s3">
             {/*
-              <button disabled={disabled2} className="btn waves-effect waves-light Cyan" onClick={handleLogin} name="reset">
+              <button disabled={loginStatus} className="btn waves-effect waves-light Cyan" onClick={handleLogin} name="reset">
                 Login <i className="material-icons right"> </i>
               </button>
              */}
-            <Link to="/login">
-              <button disabled={disabled2} className="btn waves-effect waves-light Cyan" name="reset">
-                Login <i className="material-icons right"> </i>
-              </button>
-            </Link>
+            {/* <Link to={goTo}> */}
+            <button className="btn waves-effect waves-light Cyan" onClick={handleLoginout} name="loginout">
+              {loginStatus} <i className="material-icons right"> </i>
+            </button>
+            {/* </Link> */}
 
             {/* <Link to="/login " className="brand-logo">
-              <button disabled={disabled2} className="btn waves-effect waves-light Cyan" name="login">
+              <button disabled={loginStatus} className="btn waves-effect waves-light Cyan" name="login">
                 Login <i className="material-icons right"> </i>
               </button>
             </Link> */}

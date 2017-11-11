@@ -205,6 +205,17 @@ export default function wtnRootReducer(
       console.log('SHOW_LOGIN_FORM');
 
       return { ...currentState, token: action.token, showLoginForm: action.showLoginForm, showUserForm: action.showUserForm };
+    case 'LOGOUT':
+      console.log('LOGOUT REDUCER');
+
+      return {
+        ...currentState,
+        token: action.token,
+        authenticatedUser: action.authenticatedUser,
+        userRole: action.userRole,
+        showLoginForm: action.showLoginForm
+      };
+
     case 'LOGIN_USER':
       console.log('LOGIN USER ' + action.token);
 

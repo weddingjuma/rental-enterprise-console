@@ -118,9 +118,6 @@ export default function CreateFormComponent(props) {
     if (action === 'add') {
       ////console.log('ADD');
       props.onSubmit(newRental).then(() => {
-        ////console.log('the end');
-        // <Redirect to="/" push />;
-        //window.location = '/';
         props.history.push('/main');
       });
     } else if (action === 'update') {
@@ -128,9 +125,6 @@ export default function CreateFormComponent(props) {
       props.updateRental(newRental).then(() => {
         console.log('UPDATE HIST', history.location);
         props.history.push('/main');
-        // console.log('HIST GO', history.location);
-        //return <Redirect to "/main" />;
-        // window.location = '/main';
       });
     }
 
@@ -143,13 +137,7 @@ export default function CreateFormComponent(props) {
     ////console.log('DELETE.............................');
     // //console.log(event.target.deleteButton.value);
     props.deleteRental(props.rental);
-    // event.form.deleteButton.value = 'disabled';
-    // props.deleteRental(props.rental).then(() => {
-    //   console.log('the end');
-    //   //window.location = '/main';
-    // });
-
-    //window.location = '/';
+    props.history.push('/main');
   }
 
   return (
@@ -241,12 +229,12 @@ export default function CreateFormComponent(props) {
               <input placeholder={theRental.parking} name="parking" id="searchParam" type="text" className="validate" />
               {/* <label for="parking"> </label> */}
               <input placeholder={theRental.id} name="id" id="searchParam" type="hidden" className="validate" />
+              <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="hidden" className="validate" />
             </div>
 
             <div className="input-field col s3">
-              Agent ID :
-              <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="text" className="validate" />
-              {/* <label for="parking"> </label> */}
+              {/* Agent ID :
+              <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="text" className="validate" /> */}
             </div>
             {/* </div>
 
