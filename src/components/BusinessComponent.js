@@ -11,7 +11,7 @@ export default function BusinessComponent(props) {
   // }
 
   console.log('BUSINESSCOMPONENT');
-  console.log(props.authenticatedUser);
+  console.log(props.rentals);
   //let title = 'Propertie$';
   if (props.rentals && Array.isArray(props.rentals)) {
     // //console.log('hiya');

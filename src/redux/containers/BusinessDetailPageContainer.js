@@ -45,15 +45,8 @@ function mapStateToProps(state, ownProps) {
     // authenticatedUser
     authenticatedUser: state.authenticatedUser,
     // userRole
-    userRole: state.userRole
-    // rentals: state.rentals,
-    // items: state.items,
-    // item: state.item,
-    // // old stuff
-    // selectedMessageIds: state.selectedMessageIds,
-    // selectedMessageCount: state.selectedMessageCount,
-    // showComposeForm: state.showComposeForm,
-    // messages: state.messages
+    userRole: state.userRole,
+    userName: state.userName
   };
 }
 

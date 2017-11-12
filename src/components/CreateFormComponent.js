@@ -146,13 +146,13 @@ export default function CreateFormComponent(props) {
         <form className="col s12" onSubmit={handleOnSubmit}>
           <div className="row">
             <div className="input-field col s3">
-              Street Address:
-              <input placeholder={theRental.address} name="address" id="address" type="text" className="validate" />
+              Street Address: {props.authenticatedUser}
+              <input required placeholder={theRental.address} name="address" id="address" type="text" className="validate" />
               {/* <label for="address"> </label> */}
             </div>
             <div className="input-field col s3">
               City:
-              <input placeholder={theRental.city} name="city" type="text" className="brand-logo center" />
+              <input required placeholder={theRental.city} name="city" type="text" className="brand-logo center" />
               {/* <label className="active" for="city" /> */}
               {/* placeholder="City: (Leave blank for default)" id="city" type="text" className="validate" /> */}
             </div>
@@ -213,7 +213,15 @@ export default function CreateFormComponent(props) {
         <div className="row"> */}
             <div className="input-field col s3">
               Price:
-              <input placeholder={theRental.price} name="price" id="businessType" type="text" className="validate" />
+              <input
+                required
+                placeholder={theRental.price}
+                name="price"
+                // patterns="\d{2}"
+                id="businessType"
+                type="number"
+                className="validate"
+              />
               {/* <label for="price"> </label> */}
             </div>
             <div className="input-field col s3">
@@ -228,11 +236,11 @@ export default function CreateFormComponent(props) {
               Parking:
               <input placeholder={theRental.parking} name="parking" id="searchParam" type="text" className="validate" />
               {/* <label for="parking"> </label> */}
-              <input placeholder={theRental.id} name="id" id="searchParam" type="hidden" className="validate" />
-              <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="hidden" className="validate" />
             </div>
 
             <div className="input-field col s3">
+              <input placeholder={theRental.id} name="id" id="searchParam" type="hidden" className="validate" />
+              <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="hidden" className="validate" />
               {/* Agent ID :
               <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="text" className="validate" /> */}
             </div>

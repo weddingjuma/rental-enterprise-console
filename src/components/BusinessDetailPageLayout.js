@@ -18,7 +18,8 @@ export default function BusinessDetailPageLayout({
   showRental,
   authenticatedUser,
   userRole,
-  history
+  history,
+  userName
 }) {
   //
 
@@ -37,7 +38,7 @@ export default function BusinessDetailPageLayout({
   // };
   return (
     <div className="PageLayout">
-      <HeaderComponent title={title} authenticatedUser={authenticatedUser} userRole={userRole} />
+      <HeaderComponent title={title} authenticatedUser={authenticatedUser} userRole={userRole} userName={userName} />
       {/* <CreateFormComponent rentals={props.rentals} item={{}} /> */}
 
       <BusinessItemDetailComponent
@@ -48,6 +49,7 @@ export default function BusinessDetailPageLayout({
         deleteRental={deleteRental}
         authenticatedUser={authenticatedUser}
         userRole={userRole}
+        userName={userName}
       />
       {/* show create if showForm2 is true /> */}
       {showForm2 &&
@@ -60,6 +62,7 @@ export default function BusinessDetailPageLayout({
           authenticatedUser={authenticatedUser}
           userRole={userRole}
           history={history}
+          userName={userName}
           // onCancel={props.onCancel}
         />}
     </div>

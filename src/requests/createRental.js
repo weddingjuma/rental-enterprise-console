@@ -42,8 +42,9 @@ export default function createRental(rental, { databaseId, token }) {
     })
       .then(handleErrors)
       .then(response => response.json())
+      // // Don't uncomment
       // .then(record => {
-      //   ////console.log(record);
+      //   console.log('RECORD', record);
       //   return {
       //     id: record.id,
       //     address: record.fields.address,
@@ -63,7 +64,7 @@ export default function createRental(rental, { databaseId, token }) {
       // })
       // .then(rental => {
       //   ////console.log('UpdateMsg message');
-      //   ////console.log(message);
+      //   console.log('RETURN RENTAL', rental);
       //   return rental;
       // })
       .catch(function(error) {

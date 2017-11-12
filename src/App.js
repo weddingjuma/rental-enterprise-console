@@ -35,6 +35,7 @@ const history = createBrowserHistory();
 
 // 4) Set up store
 const userName = localStorage.getItem('userName');
+
 function getInitialState(authentication) {
   return isEmpty(authentication)
     ? {
@@ -47,7 +48,7 @@ function getInitialState(authentication) {
         // 1 token
         token: authentication.token,
         // 2 user
-        authenticatedUser: authentication.user.id,
+        authenticatedUser: authentication.user,
         // 3 login as agent
         userRole: 'agent',
         userName: userName
@@ -65,6 +66,7 @@ export default class App extends Component {
   // <div tag w <Provider w store w <InboxPageContainer
 
   render() {
+    console.log('APP.js ', this.props.authentication);
     return (
       // 4C STUFF
       <div className="App">
