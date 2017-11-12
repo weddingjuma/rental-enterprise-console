@@ -5,15 +5,18 @@ import App from './App';
 import checkAuth from './utils/checkAuth';
 import env from './env';
 //import setupStore from './redux/setupStore';
+console.log('INDEX .......................................... ');
 
 //const store = setupStore();
 async function render() {
-  console.log('L1 ');
+  console.log('INDEX 2 ................');
   const authentication = await checkAuth({
     baseUrl: env.API_BASE_URL
   });
-  console.log('L2');
+  console.log('INDEX AUTH', authentication);
   ReactDOM.render(<App authentication={authentication} />, document.getElementById('root'));
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render();
+// comment out once auth is done
+//ReactDOM.render(<App />, document.getElementById('root'));

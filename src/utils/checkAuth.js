@@ -5,10 +5,14 @@ import { isEmpty } from '../utils/empUtil';
 
 export default async function checkAuth({ baseUrl }) {
   try {
-    const token = localStorage.getItem('token');
+    console.log('CHECK AUTH ............. ');
 
+    const token = localStorage.getItem('token');
+    console.log('CHECK AUTH TOKEN ', token);
     if (isEmpty(token)) {
       localStorage.removeItem('token');
+      localStorage.removeItem('userName');
+
       return null;
     }
 
@@ -16,6 +20,7 @@ export default async function checkAuth({ baseUrl }) {
 
     if (timeExpires * 1000 < Date.now()) {
       localStorage.removeItem('token');
+      localStorage.removeItem('userName');
       return null;
     }
 

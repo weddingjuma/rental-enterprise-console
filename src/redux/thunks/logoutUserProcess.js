@@ -14,9 +14,11 @@ export default function logoutUserProcess(id, password) {
       type: 'LOGOUT',
       token: undefined,
       authenticatedUser: 'guest_user',
-      userRole: 'guest_role'
+      userRole: 'guest_role',
+      userName: 'guest_user'
     }); // end of dispatch
     localStorage.removeItem('token');
+    localStorage.removeItem('userName');
     console.log('logout ', localStorage.getItem('token'));
     return 'hi';
     // )

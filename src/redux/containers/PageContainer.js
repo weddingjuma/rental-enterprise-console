@@ -49,6 +49,7 @@ function mapStateToProps(state, ownProps) {
     authenticatedUser: state.authenticatedUser,
     // userRole
     userRole: state.userRole,
+    userName: state.userName,
 
     search: state.search,
     setSearch: state.setSearch,

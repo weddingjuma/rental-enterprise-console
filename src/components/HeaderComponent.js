@@ -11,8 +11,8 @@ export default function HeaderComponent(props) {
   //   props.onShowForm();
   // }
 
-  //console.log('HEADERCOMP');
-  //console.log(props.title);
+  console.log('HEADERCOMP');
+  console.log(props);
   return (
     <header id="pageHeader" className="navbar-fixed">
       <nav className="blue">
@@ -23,7 +23,8 @@ export default function HeaderComponent(props) {
           <ul className="right hide-on-med-and-down">
             <li className="active">
               <Link to="/main">
-                User: {props.authenticatedUser}
+                User: {props.userName}
+                {/* | {props.authenticatedUser} */}
               </Link>
             </li>
             <li className="active">

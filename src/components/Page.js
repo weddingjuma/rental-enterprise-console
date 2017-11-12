@@ -5,8 +5,8 @@ import PageLayout from './PageLayout';
 export default function Page(props) {
   //
   console.log('PAGE COMPONENT');
-  console.log('RENTALS: ', props.rentals);
-  //console.log(props);
+  //console.log('RENTALS: ', props.rentals);
+  console.log(props);
 
   ////console.log('IndexPage SELECTED: ' + props.selectedMessageIds);
   return (
@@ -26,6 +26,7 @@ export default function Page(props) {
       // user Variables
       authenticatedUser={props.authenticatedUser}
       userRole={props.userRole}
+      userName={props.userName}
       // other
       history={props.history}
       onSubmit={props.onSubmit}

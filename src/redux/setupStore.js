@@ -11,8 +11,8 @@ import env from '../env';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const enhancers = composeEnhancers(applyMiddleware(thunkMiddleware.withExtraArgument(env)));
 
-export default function setupStore() {
-  return createStore(wtnRootReducer, enhancers);
+export default function setupStore(initialState = {}) {
+  return createStore(wtnRootReducer, initialState, enhancers);
 }
 
 // import { createStore } from 'redux';

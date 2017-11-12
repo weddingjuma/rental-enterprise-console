@@ -17,10 +17,13 @@ export default function PageLayout(props) {
         //
         authenticatedUser={props.authenticatedUser}
         userRole={props.userRole}
+        userName={props.userName}
       />
 
       <LoginUserComponent //
         loginUser={props.loginUser}
+        userRole={props.userRole}
+        userName={props.userName}
         history={props.history}
         onCancel={props.onCancel}
       />

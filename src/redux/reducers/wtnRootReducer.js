@@ -20,8 +20,9 @@ export default function wtnRootReducer(
     showLoginForm: false,
     showUserForm: false,
 
-    authenticatedUser: 'guest_user',
-    userRole: 'guest_role',
+    authenticatedUser: 'Bguest_user',
+    userRole: 'guest_roles',
+    userName: 'guest_user',
     //1 rentals objects from DB store in state
     rentals: [],
     currentRental: {},
@@ -34,7 +35,7 @@ export default function wtnRootReducer(
       keyword: 'all',
       sort: 'all',
       price: 0
-    },
+    }
     // search: {
     //   sort: 'random',
     //   filter: ['none'],
@@ -51,58 +52,58 @@ export default function wtnRootReducer(
     // Mock data items for search results
     //items: null,
 
-    items: [
-      {
-        id: 1,
-        name: 'Sushi Rama (Mock Data)',
-
-        address: '99 Jackson Rd',
-        phone: '555-555-5555',
-
-        imagePath: 'https://s3-media4.fl.yelpcdn.com/bphoto/7ULFF9NYu8n3etk1zy7cIg/o.jpg'
-      },
-      {
-        id: 2,
-        name: 'Pizza Table (Mock Data)',
-
-        address: '234 Jackson Rd',
-        phone: '777-555-5555',
-
-        imagePath: 'https://s3-media1.fl.yelpcdn.com/bphoto/NgLmAmeERhME1BML0Qpfig/o.jpg'
-      },
-      {
-        id: 3,
-        name: 'Way Out Burgers (Mock Data)',
-
-        address: '328 Jackson Rd',
-        phone: '125-555-5555',
-
-        imagePath: 'https://s3-media1.fl.yelpcdn.com/bphoto/_pFe5IkVh1TMoADBNAZowQ/o.jpg'
-      },
-      {
-        id: 4,
-        name: 'China Foodie (Mock Data)',
-
-        address: '992 Jackson Rd',
-        phone: '451-555-5555',
-
-        imagePath: 'https://s3-media4.fl.yelpcdn.com/bphoto/QkqPmnxOq3PDktu2BkG5QA/o.jpg'
-      },
-      {
-        id: 5,
-        name: 'Dennies (Mock Data)',
-
-        address: '919 Jackson Rd',
-        phone: '233-555-5555',
-
-        imagePath: 'https://s3-media1.fl.yelpcdn.com/bphoto/Y54tvkq8rmjvi4ZSg1c5oA/o.jpg'
-      }
-    ],
+    // items: [
+    //   {
+    //     id: 1,
+    //     name: 'Sushi Rama (Mock Data)',
+    //
+    //     address: '99 Jackson Rd',
+    //     phone: '555-555-5555',
+    //
+    //     imagePath: 'https://s3-media4.fl.yelpcdn.com/bphoto/7ULFF9NYu8n3etk1zy7cIg/o.jpg'
+    //   },
+    //   {
+    //     id: 2,
+    //     name: 'Pizza Table (Mock Data)',
+    //
+    //     address: '234 Jackson Rd',
+    //     phone: '777-555-5555',
+    //
+    //     imagePath: 'https://s3-media1.fl.yelpcdn.com/bphoto/NgLmAmeERhME1BML0Qpfig/o.jpg'
+    //   },
+    //   {
+    //     id: 3,
+    //     name: 'Way Out Burgers (Mock Data)',
+    //
+    //     address: '328 Jackson Rd',
+    //     phone: '125-555-5555',
+    //
+    //     imagePath: 'https://s3-media1.fl.yelpcdn.com/bphoto/_pFe5IkVh1TMoADBNAZowQ/o.jpg'
+    //   },
+    //   {
+    //     id: 4,
+    //     name: 'China Foodie (Mock Data)',
+    //
+    //     address: '992 Jackson Rd',
+    //     phone: '451-555-5555',
+    //
+    //     imagePath: 'https://s3-media4.fl.yelpcdn.com/bphoto/QkqPmnxOq3PDktu2BkG5QA/o.jpg'
+    //   },
+    //   {
+    //     id: 5,
+    //     name: 'Dennies (Mock Data)',
+    //
+    //     address: '919 Jackson Rd',
+    //     phone: '233-555-5555',
+    //
+    //     imagePath: 'https://s3-media1.fl.yelpcdn.com/bphoto/Y54tvkq8rmjvi4ZSg1c5oA/o.jpg'
+    //   }
+    // ],
 
     // this.props.store.subscribe(() => {
     //   this.setState(this.props.store.getState());
     // });
-    item: ''
+    // item: ''
 
     // selectedMessageIds: [],
     //
@@ -213,7 +214,8 @@ export default function wtnRootReducer(
         token: action.token,
         authenticatedUser: action.authenticatedUser,
         userRole: action.userRole,
-        showLoginForm: action.showLoginForm
+        showLoginForm: action.showLoginForm,
+        userName: action.userName
       };
 
     case 'LOGIN_USER':
@@ -224,6 +226,7 @@ export default function wtnRootReducer(
         token: action.token,
         authenticatedUser: action.authenticatedUser,
         userRole: action.userRole,
+        userName: action.userName,
         showLoginForm: action.showLoginForm
       };
 

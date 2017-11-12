@@ -5,7 +5,7 @@ import LoginPageLayout from './LoginPageLayout';
 export default function Page(props) {
   //
   console.log('LOGIN PAGE COMPONENT');
-  //console.log(props);
+  console.log(props);
 
   return (
     <LoginPageLayout //
@@ -13,6 +13,7 @@ export default function Page(props) {
       history={props.history}
       authenticatedUser={props.authenticatedUser}
       userRole={props.userRole}
+      userName={props.userName}
     />
   );
 }

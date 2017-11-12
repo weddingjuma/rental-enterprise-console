@@ -13,7 +13,7 @@ import LoginUserComponent from './LoginUserComponent';
 export default function PageLayout(props) {
   //
   console.log('PAGE LAYOUT COMP');
-  console.log(props.logoutUser);
+  console.log(props);
   // console.log(props.showLoginForm);
   // console.log(props.rentals);
   // //console.log(props.items);
@@ -34,6 +34,7 @@ export default function PageLayout(props) {
         //
         authenticatedUser={props.authenticatedUser}
         userRole={props.userRole}
+        userName={props.userName}
       />
       {/* TEST DATA {props.showUserForm} and LOGIN {props.showLoginForm}
       authenticatedUser={props.authenticatedUser} userRole={props.userRole} */}
@@ -47,6 +48,7 @@ export default function PageLayout(props) {
           onCancel={props.onCancel}
           authenticatedUser={props.authenticatedUser}
           userRole={props.userRole}
+          userName={props.userName}
           history={props.history}
         />}
       {props.showLoginForm &&
@@ -55,6 +57,8 @@ export default function PageLayout(props) {
           // for cancel
           onCancel={props.onCancel}
           history={props.history}
+          userRole={props.userRole}
+          userName={props.userName}
         />}
       {props.showUserForm &&
         <CreateUserComponent
@@ -66,6 +70,7 @@ export default function PageLayout(props) {
           onCancel={props.onCancel}
           authenticatedUser={props.authenticatedUser}
           userRole={props.userRole}
+          userName={props.userName}
           history={props.history}
         />}
       <SearchFormComponent
@@ -81,6 +86,7 @@ export default function PageLayout(props) {
         getPrefs={props.getPrefs}
         authenticatedUser={props.authenticatedUser}
         userRole={props.userRole}
+        userName={props.userName}
         logoutUser={props.logoutUser}
         history={props.history}
       />
@@ -91,6 +97,7 @@ export default function PageLayout(props) {
         onAddItem={props.onAddItem}
         authenticatedUser={props.authenticatedUser}
         userRole={props.userRole}
+        userName={props.userName}
         history={props.history}
       />
       {/* <UserPrefComponent item={{}} /> */}
