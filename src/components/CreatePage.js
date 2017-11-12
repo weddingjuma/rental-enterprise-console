@@ -15,6 +15,8 @@ export default function Page(props) {
       history={props.history}
       authenticatedUser={props.authenticatedUser}
       userRole={props.userRole}
+      userName={props.userName}
+      loginError={props.loginError}
     />
   );
 }

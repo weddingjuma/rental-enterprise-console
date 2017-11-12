@@ -35,7 +35,8 @@ export default function wtnRootReducer(
       keyword: 'all',
       sort: 'all',
       price: 0
-    }
+    },
+    loginError: ''
     // search: {
     //   sort: 'random',
     //   filter: ['none'],
@@ -230,6 +231,29 @@ export default function wtnRootReducer(
         showLoginForm: action.showLoginForm
       };
 
+    case 'LOGIN_ERROR':
+      console.log('LOGON ERROR ' + action.loginError);
+
+      return {
+        ...currentState,
+        loginError: action.loginError
+      };
+
+    case 'CREATE_USER_ERROR':
+      console.log('CREATE USER ERROR ' + action.loginError);
+
+      return {
+        ...currentState,
+        loginError: action.loginError
+      };
+
+    case 'LOGIN_RESET':
+      console.log('LOGIN_RESET ERROR ' + action.loginError);
+
+      return {
+        ...currentState,
+        loginError: action.loginError
+      };
     //////////////////////////////////////////////////////////////////////////////////////////
 
     case 'GET_PREFS':

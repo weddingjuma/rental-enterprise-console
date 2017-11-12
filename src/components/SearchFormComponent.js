@@ -81,9 +81,9 @@ export default function SearchFormComponent(props) {
     if (props.authenticatedUser === 'guest_user') {
       props.history.push('/login');
     } else {
-      //  alert('loutout');
+      //alert('loutout');
       props.logoutUser();
-      props.history.push('/');
+      props.history.push('/login');
     }
   }
 
@@ -94,11 +94,11 @@ export default function SearchFormComponent(props) {
   }
 
   let loginStatus = 'Login';
-  let goTo = 'login';
+  //let goTo = 'login';
 
   if (props.userRole !== 'guest_role') {
     loginStatus = 'Logout';
-    goTo = '/';
+    //goTo = '/main';
   }
 
   return (
@@ -106,7 +106,7 @@ export default function SearchFormComponent(props) {
       <form className="col s12" onSubmit={handleKeyword}>
         <div className="row">
           <div className="input-field col s3">
-            Keyword:<br />
+            Keyword :<br />
             <input name="keyword" placeholder="Keyword Search: oakland, mansion, condo" id="businessType" type="text" className="validate" />
           </div>
 
@@ -158,16 +158,9 @@ export default function SearchFormComponent(props) {
           </div>
 
           <div className="input-field col s3">
-            {/*
-              <button disabled={loginStatus} className="btn waves-effect waves-light Cyan" onClick={handleLogin} name="reset">
-                Login <i className="material-icons right"> </i>
-              </button>
-             */}
-            {/* <Link to={goTo}> */}
             <button className="btn waves-effect waves-light Cyan" onClick={handleLoginout} name="loginout">
               {loginStatus} <i className="material-icons right"> </i>
             </button>
-            {/* </Link> */}
 
             {/* <Link to="/login " className="brand-logo">
               <button disabled={loginStatus} className="btn waves-effect waves-light Cyan" name="login">

@@ -7,8 +7,8 @@ const history = createHistory();
 
 export default function LoginUserComponent(props) {
   let theUser = {
-    username: 'admin',
-    password: 'welcome'
+    username: '',
+    password: ''
   };
 
   function handleOnSubmit(event) {
@@ -24,9 +24,20 @@ export default function LoginUserComponent(props) {
     console.log('USER LOGIN FORM', loginUser);
     console.log(props);
 
-    props.loginUser(loginUser).then(() => {
-      props.history.push('/main');
+    props.loginUser(loginUser).then(msg => {
+      console.log('msg ', msg);
+      if (msg === 'loginError') {
+        props.history.push('/login');
+      } else {
+        props.history.push('/main');
+      }
     });
+  }
+
+  let errorMsg = '';
+
+  if (props.loginError === 'loginError') {
+    errorMsg = 'Invalid user ID and password.';
   }
 
   return (
@@ -34,13 +45,23 @@ export default function LoginUserComponent(props) {
       <form className="col s12" onSubmit={handleOnSubmit}>
         <div className="row">
           <div className="input-field col s3">
+            <h5>Login</h5>
+          </div>
+          <div className="input-field col s3">
+            <font color="red">
+              {errorMsg}
+            </font>
+          </div>
+        </div>
+        <div className="row">
+          <div className="input-field col s3">
             User ID :
-            <input placeholder={theUser.username} name="username" id="username" type="text" className="validate" />
+            <input required placeholder={theUser.username} name="username" id="username" type="text" className="validate" />
           </div>
 
           <div className="input-field col s3">
             Password:
-            <input placeholder={theUser.password} name="password" type="password" className="validate" />
+            <input required placeholder={theUser.password} name="password" type="password" className="validate" />
           </div>
         </div>
 

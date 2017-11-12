@@ -26,6 +26,7 @@ export default function PageLayout(props) {
         userName={props.userName}
         history={props.history}
         onCancel={props.onCancel}
+        loginError={props.loginError}
       />
     </div>
   );

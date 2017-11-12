@@ -21,8 +21,11 @@ function mapStateToProps(state, ownProps) {
     // authenticatedUser
     authenticatedUser: state.authenticatedUser,
     // userRole
-    userRole: state.userRole
+    userRole: state.userRole,
     //
+    userName: state.userName,
+
+    loginError: state.loginError
   };
 }
 // 5C) mapDispatchToProps functionto call the dispatches

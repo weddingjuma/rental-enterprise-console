@@ -8,19 +8,11 @@ const history = createHistory();
 
 //export default function CreateFormComponent({ rental, deleteRental, onSubmit }) {
 export default function CreateUserComponent(props) {
-  //if (!item) return null;
-  ///let action = 'add';
-  //console.log('CREATE_FORM_COMPONENT >>>>>>>>>>>>>>>>' + action);
-  //console.log(props);
-
-  // let disabled = '';
-  // if (action === 'add') {
-  //   disabled = 'disabled';
-  // }
-
+  console.log('CREATE USER COMP', props);
   let random = Math.floor(Math.random() * 300);
   let theUser = {
-    username: 'jake' + random,
+    // username: 'jake' + randm,
+    username: 'admin',
     firstName: 'Jake',
     lastName: 'Johnson',
     password: 'welcome',
@@ -46,9 +38,20 @@ export default function CreateUserComponent(props) {
     //alert('user creation: ', newUser.username);
     console.log('USER CREATION FORM', newUser);
     // UNCOMMENT TO CREATE USER
-    props.createUser(newUser).then(() => {
-      props.history.push('/login');
+    props.createUser(newUser).then(msg => {
+      console.log('MSG....', msg);
+      if (msg === 'createUserError') {
+        props.history.push('/register');
+      } else {
+        props.history.push('/login');
+      }
     });
+  }
+
+  let errorMsg = '';
+  console.log('loginError ', props.loginError);
+  if (props.loginError === 'createUserError') {
+    errorMsg = 'Invalid user ID. Use different ID.';
   }
 
   return (
@@ -56,30 +59,41 @@ export default function CreateUserComponent(props) {
       <form className="col s12" onSubmit={handleOnSubmit}>
         <div className="row">
           <div className="input-field col s3">
+            <h5>Create User</h5>
+          </div>
+          <div className="input-field col s3">
+            <font color="red">
+              {errorMsg}
+            </font>
+          </div>
+        </div>
+        <div className="row">
+          <div className="input-field col s3">
             User ID :
-            <input placeholder={theUser.username} name="username" id="username" type="text" className="validate" />
+            <input required placeholder={theUser.username} name="username" id="username" type="text" className="validate" />
           </div>
           <div className="input-field col s3">
             First Name:
-            <input placeholder={theUser.firstName} name="firstName" type="text" className="validate" />
+            <input required placeholder={theUser.firstName} name="firstName" type="text" className="validate" />
           </div>
           <div className="input-field col s3">
             Last Name:
-            <input placeholder={theUser.lastName} name="lastName" type="text" className="validate" />
+            <input required placeholder={theUser.lastName} name="lastName" type="text" className="validate" />
           </div>
         </div>
         <div className="row">
           <div className="input-field col s3">
             Contact:
-            <input placeholder={theUser.contact} name="contact" type="text" className="validate" />
+            <input required placeholder={theUser.contact} name="contact" type="text" className="validate" />
           </div>
-          <div className="input-field col s3">
+          {/* <div className="input-field col s3">
             Role:
-            <input placeholder={theUser.role} name="role" type="text" className="validate" />
-          </div>
+            <input placeholder={theUser.role} name="role" type="hidden" className="validate" />
+          </div> */}
           <div className="input-field col s3">
             Password:
-            <input placeholder={theUser.password} name="password" type="text" className="validate" />
+            <input required placeholder={theUser.password} name="password" type="text" className="validate" />
+            <input placeholder={theUser.role} name="role" type="hidden" className="validate" />
           </div>
         </div>
 
@@ -92,21 +106,27 @@ export default function CreateUserComponent(props) {
           </div>
 
           <div className="input-field col s3">
-            <Link to="/login">
-              <button className="btn waves-effect blue waves-light" type="submit" name="action">
-                Login
-                <i className="material-icons right"> </i>
-              </button>
-            </Link>
-          </div>
-
-          <div className="input-field col s3">
             <Link to="/main">
               <button className="btn waves-effect blue waves-light" type="submit" name="action">
                 Cancel
                 <i className="material-icons right"> </i>
               </button>
             </Link>
+            {/* <Link to="/login">
+              <button className="btn waves-effect blue waves-light" type="submit" name="action">
+                Login
+                <i className="material-icons right"> </i>
+              </button>
+            </Link> */}
+          </div>
+
+          <div className="input-field col s3">
+            {/* <Link to="/main">
+              <button className="btn waves-effect blue waves-light" type="submit" name="action">
+                Cancel
+                <i className="material-icons right"> </i>
+              </button>
+            </Link> */}
           </div>
         </div>
       </form>

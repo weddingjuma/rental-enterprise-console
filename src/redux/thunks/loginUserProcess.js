@@ -30,13 +30,15 @@ export default function loginUserProcess(id, password) {
           userRole: 'agent',
           userName: userName,
           showReport: true,
-          showLoginForm: false
+          showLoginForm: false,
+          loginError: ''
         });
         return authentication.token;
       })
       .catch(error => {
-        //dispatch({ type: 'CREATE_MESSAGE' });
-        localStorage.remove('token');
+        dispatch({ type: 'LOGIN_ERROR', loginError: 'loginError' });
+        return 'loginError';
+        //localStorage.remove('token');
       });
   };
 }

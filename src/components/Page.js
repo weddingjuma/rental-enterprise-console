@@ -19,6 +19,7 @@ export default function Page(props) {
       showLoginForm={props.showLoginForm}
       loginUser={props.loginUser}
       logoutUser={props.logoutUser}
+      loginError={props.loginError}
       // User creation form
       onShowUserForm={props.onShowUserForm}
       showUserForm={props.showUserForm}

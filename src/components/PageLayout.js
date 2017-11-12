@@ -35,6 +35,7 @@ export default function PageLayout(props) {
         authenticatedUser={props.authenticatedUser}
         userRole={props.userRole}
         userName={props.userName}
+        loginError={props.loginError}
       />
       {/* TEST DATA {props.showUserForm} and LOGIN {props.showLoginForm}
       authenticatedUser={props.authenticatedUser} userRole={props.userRole} */}
@@ -59,6 +60,7 @@ export default function PageLayout(props) {
           history={props.history}
           userRole={props.userRole}
           userName={props.userName}
+          loginError={props.loginError}
         />}
       {props.showUserForm &&
         <CreateUserComponent

@@ -44,6 +44,7 @@ function mapStateToProps(state, ownProps) {
     showUserForm: state.showUserForm,
     // login form
     showLoginForm: state.showLoginForm,
+    loginError: '',
 
     // authenticatedUser
     authenticatedUser: state.authenticatedUser,
@@ -56,6 +57,7 @@ function mapStateToProps(state, ownProps) {
     setSearchSort: state.setSearchSort,
     setSearchWord: state.setSearchWord,
     getPrefs: state.getPrefs
+
     // old stuff
     // selectedMessageIds: state.selectedMessageIds,
     // selectedMessageCount: state.selectedMessageCount,
