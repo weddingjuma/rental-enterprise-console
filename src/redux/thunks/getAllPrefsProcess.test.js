@@ -19,7 +19,7 @@ describe('getAllPrefsProcess', () => {
     return thunk(dispatch, getState, {}).then(rentals => {
       expect(getAllPrefs).toBeCalled();
       expect(rentals).toEqual([...data.rentals]);
-      expect(dispatch).toBeCalledWith({ type: 'GET_PREFS', rentals, showUserForm: false });
+      expect(dispatch).toBeCalledWith({ type: 'GET_PREFS', rentals, showUserForm: false, loginError: '' });
     });
   });
 });

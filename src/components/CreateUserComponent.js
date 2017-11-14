@@ -12,12 +12,12 @@ export default function CreateUserComponent(props) {
   let random = Math.floor(Math.random() * 300);
   let theUser = {
     // username: 'jake' + randm,
-    username: 'admin',
-    firstName: 'Jake',
-    lastName: 'Johnson',
-    password: 'welcome',
-    contact: 'jake@gmail.com',
-    role: 'agent'
+    username: '',
+    firstName: '',
+    lastName: '',
+    password: '',
+    contact: '',
+    role: ''
   };
 
   function handleOnSubmit(event) {

@@ -61,22 +61,37 @@ export default function CreateFormComponent(props) {
   ////console.log('random: ' + random);
 
   let theRental = {
-    address: random + ' ' + street[random2],
-    bath: '10',
-    bed: '20',
-    city: city[random2],
-    contactinfo: 'jonnybranstorm@mansionrents.com',
-    contactname: 'Jimmy Mogul',
-    cooling: 'true',
-    description: desc[randomDesc],
-    heating: 'true',
+    // address: random + ' ' + street[random2],
+    // bath: '10',
+    // bed: '20',
+    // city: city[random2],
+    // contactinfo: 'jonnybranstorm@mansionrents.com',
+    // contactname: 'Jimmy Mogul',
+    // cooling: 'true',
+    // description: desc[randomDesc],
+    // heating: 'true',
+    // id: '',
+    // parking: '5 car garage',
+    // photourl: photourl,
+    // price: 3500 + random3,
+    // sqft: '15930',
+    // year: '2001',
+    address: ' ',
+    bath: '',
+    bed: '',
+    city: '',
+    contactinfo: '',
+    contactname: '',
+    cooling: '',
+    description: '',
+    heating: '',
     id: '',
-    parking: '5 car garage',
+    parking: '',
     photourl: photourl,
-    price: 3500 + random3,
-    sqft: '15930',
-    year: '2001',
-    agentId: props.authenticatedUser
+    price: 0,
+    sqft: '',
+    year: ''
+    // agentId: props.authenticatedUser
   };
 
   if (action === 'update') {
@@ -146,7 +161,7 @@ export default function CreateFormComponent(props) {
         <form className="col s12" onSubmit={handleOnSubmit}>
           <div className="row">
             <div className="input-field col s3">
-              Street Address: {props.authenticatedUser}
+              Street Address:
               <input required placeholder={theRental.address} name="address" id="address" type="text" className="validate" />
               {/* <label for="address"> </label> */}
             </div>
