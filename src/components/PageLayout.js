@@ -51,6 +51,7 @@ export default function PageLayout(props) {
           userRole={props.userRole}
           userName={props.userName}
           history={props.history}
+          getPrefs={props.getPrefs}
         />}
       {props.showLoginForm &&
         <LoginUserComponent

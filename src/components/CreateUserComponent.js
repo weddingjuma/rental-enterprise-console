@@ -17,7 +17,7 @@ export default function CreateUserComponent(props) {
     lastName: '',
     password: '',
     contact: '',
-    role: ''
+    role: 'agent'
   };
 
   function handleOnSubmit(event) {
@@ -31,8 +31,8 @@ export default function CreateUserComponent(props) {
       firstName: $form.firstName.value ? $form.firstName.value : $form.firstName.placeholder,
       lastName: $form.lastName.value ? $form.lastName.value : $form.lastName.placeholder,
       password: $form.password.value ? $form.password.value : $form.password.placeholder,
-      contact: $form.contact.value ? $form.contact.value : $form.contact.placeholder,
-      role: $form.role.value ? $form.role.value : $form.role.placeholder
+      contact: $form.contact.value ? $form.contact.value : $form.contact.placeholder
+      // , role: $form.role.value ? $form.role.value : $form.role.placeholder
     };
 
     //alert('user creation: ', newUser.username);
@@ -69,7 +69,7 @@ export default function CreateUserComponent(props) {
         </div>
         <div className="row">
           <div className="input-field col s3">
-            User ID :
+            User Name :
             <input required placeholder={theUser.username} name="username" id="username" type="text" className="validate" />
           </div>
           <div className="input-field col s3">
@@ -93,7 +93,7 @@ export default function CreateUserComponent(props) {
           <div className="input-field col s3">
             Password:
             <input required placeholder={theUser.password} name="password" type="text" className="validate" />
-            <input placeholder={theUser.role} name="role" type="hidden" className="validate" />
+            {/* <input placeholder={theUser.role} name="role" type="hidden" className="validate" /> */}
           </div>
         </div>
 

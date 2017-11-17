@@ -14,7 +14,7 @@ export default function getAllPrefsProcess() {
       token: env.WTN_APP_AIRTABLE_TOKEN
     })
       .then(rentals => {
-        dispatch({ type: 'GET_PREFS', rentals, showUserForm: false, loginError: '' });
+        dispatch({ type: 'GET_PREFS', rentals, showUserForm: false, loginError: '', showForm: false });
         dispatch({ type: 'LOGIN_RESET', loginError: '' });
 
         return rentals;

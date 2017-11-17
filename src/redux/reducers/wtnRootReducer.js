@@ -257,8 +257,8 @@ export default function wtnRootReducer(
     //////////////////////////////////////////////////////////////////////////////////////////
 
     case 'GET_PREFS':
-      ////console.log('GET_PREFS');
-      ////console.log(action.rentals);
+      console.log('GET_PREFS');
+      console.log(action.showForm);
 
       let resetSearch = {
         keyword: 'all',
@@ -268,7 +268,7 @@ export default function wtnRootReducer(
       ////console.log(currentState.search);
       ////console.log(resetSearch);
 
-      return { ...currentState, rentals: action.rentals, search: resetSearch };
+      return { ...currentState, rentals: action.rentals, search: resetSearch, showForm: false };
     ////////////////////////////////
     case 'GET_RENTAL':
       ////console.log('GET_PREFS');
@@ -283,6 +283,18 @@ export default function wtnRootReducer(
       ////console.log('CREATE_RENTAL');
 
       return { ...currentState, rentals: [action.newRental, ...currentState.rentals], showReport: action.showReport, showForm: action.showForm };
+
+    case 'DELETE_RENTAL':
+      console.log('DELETE_RENTAL...............', action.newRental);
+      // 1) get the current state of 'rentals'
+      let updatedRentals = currentState.rentals;
+      // 2) Create a new arry of 'rentals' based on the 'rental id' and 'rental'
+      updatedRentals = updatedRentals.filter(
+        rental => rental.id !== action.newRental.id //
+      );
+
+      console.log('DELETE UPDATED RENTALS ..................', updatedRentals);
+      return { ...currentState, rentals: updatedRentals, showReport: action.showReport, showForm: action.showForm };
 
     // UPDATE_RENTAL /////////////////////////
     case 'UPDATE_RENTAL':
