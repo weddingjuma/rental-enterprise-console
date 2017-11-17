@@ -61,36 +61,36 @@ export default function CreateFormComponent(props) {
   ////console.log('random: ' + random);
 
   let theRental = {
-    address: random + ' ' + street[random2],
-    bath: '10',
-    bed: '20',
-    city: city[random2],
-    contactinfo: 'jonnybranstorm@mansionrents.com',
-    contactname: 'Jimmy Mogul',
-    cooling: 'true',
-    description: desc[randomDesc],
-    heating: 'true',
-    id: '',
-    parking: '5 car garage',
-    photourl: photourl,
-    price: 3500 + random3,
-    sqft: '15930',
-    year: '2001',
-    // address: ' ',
-    // bath: '',
-    // bed: '',
-    // city: '',
-    // contactinfo: '',
-    // contactname: '',
-    // cooling: '',
-    // description: '',
-    // heating: '',
+    // address: random + ' ' + street[random2],
+    // bath: '10',
+    // bed: '20',
+    // city: city[random2],
+    // contactinfo: 'jonnybranstorm@mansionrents.com',
+    // contactname: 'Jimmy Mogul',
+    // cooling: 'true',
+    // description: desc[randomDesc],
+    // heating: 'true',
     // id: '',
-    // parking: '',
+    // parking: '5 car garage',
     // photourl: photourl,
-    // price: 0,
-    // sqft: '',
-    // year: '',
+    // price: 3500 + random3,
+    // sqft: '15930',
+    // year: '2001',
+    address: ' ',
+    bath: '',
+    bed: '',
+    city: '',
+    contactinfo: '',
+    contactname: '',
+    cooling: '',
+    description: '',
+    heating: '',
+    id: '',
+    parking: '',
+    photourl: photourl,
+    price: 0,
+    sqft: '',
+    year: '',
     agentId: props.authenticatedUser
   };
 
@@ -157,8 +157,11 @@ export default function CreateFormComponent(props) {
 
   function handleReset(event) {
     event.preventDefault();
-
-    props.getPrefs();
+    if (action === 'update') {
+      props.history.push('/main');
+    } else {
+      props.getPrefs();
+    }
   }
 
   return (
@@ -193,16 +196,14 @@ export default function CreateFormComponent(props) {
           </div>
 
           <div className="row">
-            <div className="input-field col s3">
+            {/* <div className="input-field col s3">
               Contact Name:
               <input placeholder={theRental.contactname} name="contactname" id="businessType" type="text" className="validate" />
-              {/* <label for="contactname"> </label> */}
-            </div>
+             </div>
             <div className="input-field col s3">
               Contact Info:
               <input placeholder={theRental.contactinfo} name="contactinfo" id="searchParam" type="text" className="validate" />
-              {/* <label for="contactinfo"> </label> */}
-            </div>
+             </div> */}
             {/* </div>
 
         <div className="row"> */}
@@ -215,6 +216,20 @@ export default function CreateFormComponent(props) {
               Heating/Cooling:
               <input placeholder={theRental.cooling} name="cooling" id="searchParam" type="text" className="validate" />
               {/* <label for="heating/cooling"> </label> */}
+            </div>
+
+            <div className="input-field col s3">
+              Parking:
+              <input placeholder={theRental.parking} name="parking" id="searchParam" type="text" className="validate" />
+              <input placeholder={theRental.id} name="id" id="searchParam" type="hidden" className="validate" />
+              <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="hidden" className="validate" />
+              <input placeholder={theRental.contactinfo} name="contactinfo" id="searchParam" type="hidden" className="validate" />
+              <input placeholder={theRental.contactname} name="contactname" id="businessType" type="hidden" className="validate" />
+            </div>
+            <div className="input-field col s3">
+              Year Built:
+              <input required placeholder={theRental.year} name="year" id="searchParam" type="number" className="validate" />
+              {/* <label for="year"> </label> */}
             </div>
           </div>
 
@@ -245,21 +260,9 @@ export default function CreateFormComponent(props) {
               />
               {/* <label for="price"> </label> */}
             </div>
-            <div className="input-field col s3">
-              Year Built:
-              <input required placeholder={theRental.year} name="year" id="searchParam" type="number" className="validate" />
-              {/* <label for="year"> </label> */}
-            </div>
           </div>
 
           <div className="row">
-            <div className="input-field col s3">
-              Parking:
-              <input placeholder={theRental.parking} name="parking" id="searchParam" type="text" className="validate" />
-              <input placeholder={theRental.id} name="id" id="searchParam" type="hidden" className="validate" />
-              <input placeholder={theRental.agentId} name="agentId" id="searchParam" type="hidden" className="validate" />
-            </div>
-
             {/* </div>
 
         <div className="row"> */}

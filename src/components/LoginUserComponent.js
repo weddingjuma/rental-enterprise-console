@@ -7,8 +7,8 @@ const history = createHistory();
 
 export default function LoginUserComponent(props) {
   let theUser = {
-    username: '',
-    password: ''
+    username: 'admin',
+    password: 'welcome'
   };
 
   function handleOnSubmit(event) {

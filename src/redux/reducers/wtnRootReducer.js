@@ -20,8 +20,8 @@ export default function wtnRootReducer(
     showLoginForm: false,
     showUserForm: false,
 
-    authenticatedUser: 'Bguest_user',
-    userRole: 'guest_roles',
+    authenticatedUser: 'guest_user',
+    userRole: 'guest_role',
     userName: 'guest_user',
     //1 rentals objects from DB store in state
     rentals: [],

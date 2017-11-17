@@ -30,6 +30,7 @@ import HomeComponent from './components/HomeComponent';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 import { isEmpty } from './utils/empUtil';
+import decode from 'jwt-decode';
 
 const history = createBrowserHistory();
 
@@ -64,9 +65,12 @@ export default class App extends Component {
   // 8) REMOVE InboxPage component
   //and replace with PROVIDER/CONTAINER
   // <div tag w <Provider w store w <InboxPageContainer
+  //const { sub: user } = decode(authentication.token);
 
   render() {
     console.log('APP.js ', this.props.authentication);
+    // console.log('APP JS DECODE ', decode(this.props.authentication.token));
+
     return (
       // 4C STUFF
       <div className="App">

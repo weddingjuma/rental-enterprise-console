@@ -122,11 +122,11 @@ export default function BusinessItemDetailComponent(props) {
             </tbody>
           </table>
         </div>
-        <div className="card-action">
+        {/* <div className="card-action">
           <p>
             Agent ID: {props.rental.agentId} <a href="mailto:{props.rental.contactinfo}">{props.rental.contactinfo}</a>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
