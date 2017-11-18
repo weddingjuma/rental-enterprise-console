@@ -22,7 +22,7 @@ export default function CreateFormComponent(props) {
     disabled = 'disabled';
   }
   // userprefs.forEach(function(pref, i) {
-  //   ////console.log('hi');
+  //    console.log('hi');
   //   //console.log(pref.prefname);
   // });
   let random = Math.floor(Math.random() * 6) + 1;
@@ -58,39 +58,40 @@ export default function CreateFormComponent(props) {
     'Kenny Rogers lived here with his family.',
     "Van Damme's first home. Lowered due to damages from his kicks."
   ];
-  ////console.log('random: ' + random);
+  console.log('random: ' + random);
 
   let theRental = {
-    // address: random + ' ' + street[random2],
-    // bath: '10',
-    // bed: '20',
-    // city: city[random2],
-    // contactinfo: 'jonnybranstorm@mansionrents.com',
-    // contactname: 'Jimmy Mogul',
-    // cooling: 'true',
-    // description: desc[randomDesc],
-    // heating: 'true',
-    // id: '',
-    // parking: '5 car garage',
-    // photourl: photourl,
-    // price: 3500 + random3,
-    // sqft: '15930',
-    // year: '2001',
-    address: ' ',
-    bath: '',
-    bed: '',
-    city: '',
-    contactinfo: '',
-    contactname: '',
-    cooling: '',
-    description: '',
-    heating: '',
+    address: 'your address', //random + ' ' + street[random2],
+    bath: '1',
+    bed: '1',
+    city: city[random2],
+    contactinfo: 'jonnybranstorm@mansionrents.com',
+    contactname: 'Jimmy Mogul',
+    cooling: 'true',
+    description: desc[randomDesc],
+    heating: 'true',
     id: '',
-    parking: '',
+    parking: '5 car garage',
     photourl: photourl,
-    price: 0,
-    sqft: '',
-    year: '',
+    price: 3500 + random3,
+    sqft: '15930',
+    year: '2001',
+    /////
+    // address: ' ',
+    // bath: '',
+    // bed: '',
+    // city: '',
+    // contactinfo: '',
+    // contactname: '',
+    // cooling: '',
+    // description: '',
+    // heating: '',
+    // id: '',
+    // parking: '',
+    // photourl: photourl,
+    // price: 0,
+    // sqft: '',
+    // year: '',
     agentId: props.authenticatedUser
   };
 
@@ -108,7 +109,7 @@ export default function CreateFormComponent(props) {
   function handleOnSubmit(event) {
     event.preventDefault();
     const $form = event.target;
-    ////console.log('onSubmit', action);
+    console.log('onSubmit', action);
 
     let newRental = {};
     newRental = {
@@ -129,14 +130,14 @@ export default function CreateFormComponent(props) {
       parking: $form.parking.value ? $form.parking.value : $form.parking.placeholder,
       agentId: $form.agentId.value ? $form.agentId.value : $form.agentId.placeholder
     };
-    ////console.log('xxxxxxxxxxxx', newRental);
+    console.log('xxxxxxxxxxxx', newRental);
     if (action === 'add') {
-      ////console.log('ADD');
+      console.log('ADD');
       props.onSubmit(newRental).then(() => {
         props.history.push('/main');
       });
     } else if (action === 'update') {
-      ////console.log('update call');
+      console.log('update call');
       props.updateRental(newRental).then(() => {
         console.log('UPDATE HIST', history.location);
         props.history.push('/main');
@@ -149,7 +150,7 @@ export default function CreateFormComponent(props) {
   function deleteItem(event) {
     event.preventDefault();
 
-    ////console.log('DELETE.............................');
+    console.log('DELETE.............................');
     // //console.log(event.target.deleteButton.value);
     props.deleteRental(props.rental);
     props.history.push('/main');
@@ -171,12 +172,12 @@ export default function CreateFormComponent(props) {
           <div className="row">
             <div className="input-field col s3">
               Street Address:
-              <input required placeholder={theRental.address} name="address" id="address" type="text" className="validate" />
+              <input requiredNot placeholder={theRental.address} name="address" id="address" type="text" className="validate" />
               {/* <label for="address"> </label> */}
             </div>
             <div className="input-field col s3">
               City:
-              <input required placeholder={theRental.city} name="city" type="text" className="brand-logo center" />
+              <input requiredNot placeholder={theRental.city} name="city" type="text" className="brand-logo center" />
               {/* <label className="active" for="city" /> */}
               {/* placeholder="City: (Leave blank for default)" id="city" type="text" className="validate" /> */}
             </div>
@@ -190,7 +191,7 @@ export default function CreateFormComponent(props) {
             </div>
             <div className="input-field col s3">
               Sqft:
-              <input required placeholder={theRental.sqft} name="sqft" id="searchParam" type="number" className="validate" />
+              <input requiredNot placeholder={theRental.sqft} name="sqft" id="searchParam" type="number" className="validate" />
               {/* <label for="sqft"> </label> */}
             </div>
           </div>
@@ -228,7 +229,7 @@ export default function CreateFormComponent(props) {
             </div>
             <div className="input-field col s3">
               Year Built:
-              <input required placeholder={theRental.year} name="year" id="searchParam" type="number" className="validate" />
+              <input requiredNot placeholder={theRental.year} name="year" id="searchParam" type="number" className="validate" />
               {/* <label for="year"> </label> */}
             </div>
           </div>
@@ -236,12 +237,12 @@ export default function CreateFormComponent(props) {
           <div className="row">
             <div className="input-field col s3">
               Bed:
-              <input required placeholder={theRental.bed} name="bed" id="businessType" type="number" className="validate" />
+              <input requiredNot placeholder={theRental.bed} name="bed" id="businessType" type="number" className="validate" />
               {/* <label for="bed"> </label> */}
             </div>
             <div className="input-field col s3">
               Bath:
-              <input required placeholder={theRental.bath} name="bath" id="searchParam" type="number" className="validate" />
+              <input requiredNot placeholder={theRental.bath} name="bath" id="searchParam" type="number" className="validate" />
               {/* <label for="bath"> </label> */}
             </div>
             {/* </div>
@@ -250,7 +251,7 @@ export default function CreateFormComponent(props) {
             <div className="input-field col s3">
               Price:
               <input
-                required
+                requiredNot
                 placeholder={theRental.price}
                 name="price"
                 // patterns="\d{2}"

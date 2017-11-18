@@ -12,10 +12,10 @@ import LoginUserComponent from './LoginUserComponent';
 
 export default function PageLayout(props) {
   //
-  console.log('PAGE LAYOUT COMP');
-  console.log(props.showUserForm);
-  console.log(props.showLoginForm);
-  console.log(props.rentals);
+ console.log('PAGE LAYOUT COMP');
+ console.log(props.showUserForm);
+ console.log(props.showLoginForm);
+ console.log(props.rentals);
   // //console.log(props.items);
   //console.log('SHOWFORM?', props);
   ///  let title = 'add';

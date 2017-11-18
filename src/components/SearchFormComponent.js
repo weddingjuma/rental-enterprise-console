@@ -7,14 +7,14 @@ const history = createHistory();
 
 export default function SearchFormComponent(props) {
   //  if (!props.item) return null;
-  console.log('SEARCHFORMCOMP');
-  console.log('Auth User ', props.authenticatedUser);
+ console.log('SEARCHFORMCOMP');
+ console.log('Auth User ', props.authenticatedUser);
 
   // //console.log(rentals);
-  console.log(props);
+ console.log(props);
 
   // userprefs.forEach(function(pref, i) {
-  //   ////console.log('hi');
+  //    console.log('hi');
   //   //console.log(pref.prefname);
   // });
 

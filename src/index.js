@@ -9,11 +9,11 @@ console.log('INDEX .......................................... ');
 
 //const store = setupStore();
 async function render() {
-  console.log('INDEX 2 ................');
+  //  console.log('INDEX 2 ................');
   const authentication = await checkAuth({
     baseUrl: env.API_BASE_URL
   });
-  console.log('INDEX AUTH', authentication);
+  //console.log('INDEX AUTH', authentication);
   ReactDOM.render(<App authentication={authentication} />, document.getElementById('root'));
 }
 

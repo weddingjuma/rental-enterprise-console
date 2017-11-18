@@ -14,8 +14,8 @@ import getAllPrefsProcess from '../thunks/getAllPrefsProcess';
 
 // 4C) mapStateToProps function
 function mapStateToProps(state, ownProps) {
-  console.log('BuSINESS_PAGECONTAINTER MAPTOSTATE');
-  console.log(state);
+ console.log('BuSINESS_PAGECONTAINTER MAPTOSTATE');
+ console.log(state);
   return {
     rentals: state.rentals,
     items: state.items,

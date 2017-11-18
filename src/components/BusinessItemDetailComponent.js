@@ -19,7 +19,7 @@ export default function BusinessItemDetailComponent(props) {
     //onAddItem(item.id);
     props.onShowForm2();
   }
-  ////console.log('rental' + props.rental.photourl);
+  console.log('rental' + props.rental.photourl);
   let photourl = 'https://photos.zillowstatic.com/p_h/ISxbboalrrrdoj1000000000.jpg';
   if (props.rental.photoUrl !== 'undefined') {
     photourl = props.rental.photoUrl;

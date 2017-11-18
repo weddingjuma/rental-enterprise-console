@@ -2,9 +2,9 @@ import updateMessage from '../../requests/updateMessage';
 
 export default function updateMessagesProcess(updateType, labels) {
   return (dispatch, getState, env) => {
-    ////console.log('DELETE PROCESS');
+     console.log('DELETE PROCESS');
     // dispatch({ type: 'CREATE_MESSAGE' });
-    ////console.log('hi ' + updateType);
+     console.log('hi ' + updateType);
     let changes = {};
     if (updateType === 'star') {
       changes = { starred: true };
@@ -18,7 +18,7 @@ export default function updateMessagesProcess(updateType, labels) {
       changes = { labels: labels.toString() };
     }
     //console.log('the labels' + labels);
-    ////console.log(getState().selectedMessageIds);
+     console.log(getState().selectedMessageIds);
     let newMessages = [];
 
     getState().selectedMessageIds.forEach(itemId => {
@@ -35,8 +35,8 @@ export default function updateMessagesProcess(updateType, labels) {
 
             if (!theMessage.labels.includes(labels)) {
               retLabels.push(labels);
-    ////console.log('ret' + labels);
-    ////console.log(retLabels);
+     console.log('ret' + labels);
+     console.log(retLabels);
             }
           }
           return retLabels;
@@ -50,15 +50,15 @@ export default function updateMessagesProcess(updateType, labels) {
         let theLabels = getState().messages.find(theMessage => {
           let retLabels = theMessage.labels;
           if (theMessage.id === itemId) {
-  ////console.log('matched .................');
-  ////console.log(theMessage.labels);
+   console.log('matched .................');
+   console.log(theMessage.labels);
 
             retLabels = theMessage.labels;
 
             if (theMessage.labels.includes(labels)) {
               retLabels.splice(retLabels.indexOf(labels), 1);
-    ////console.log('ret' + labels);
-    ////console.log(retLabels);
+     console.log('ret' + labels);
+     console.log(retLabels);
             }
           }
           return retLabels;
@@ -73,7 +73,7 @@ export default function updateMessagesProcess(updateType, labels) {
         token: env.AIRTABLE_TOKEN
       }) // set the SESSION from the updated message
         .then(message => {
-          ////console.log('upProcess: ' + itemId);
+           console.log('upProcess: ' + itemId);
           // //console.log(updateType);
           // //console.log(message);
 

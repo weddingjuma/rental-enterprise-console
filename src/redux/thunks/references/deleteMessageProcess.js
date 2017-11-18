@@ -2,7 +2,7 @@ import deleteMessage from '../../requests/deleteMessage';
 
 export default function deleteMessageProcess(itemId) {
   return (dispatch, getState, env) => {
-    ////console.log('DELETE PROCESS');
+     console.log('DELETE PROCESS');
     // dispatch({ type: 'CREATE_MESSAGE' });
     return deleteMessage(itemId, {
       databaseId: env.AIRTABLE_DATABASE_ID,

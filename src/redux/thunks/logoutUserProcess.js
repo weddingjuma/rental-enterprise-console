@@ -2,7 +2,7 @@ import decode from 'jwt-decode';
 //import loginUser from '../../requests/loginUser';
 
 export default function logoutUserProcess(id, password) {
-  console.log('LOG OUT PROCESS');
+ console.log('LOG OUT PROCESS');
 
   return (dispatch, getState, env) => {
     // dispatch({ type: 'CREATE_MESSAGE' });
@@ -19,7 +19,7 @@ export default function logoutUserProcess(id, password) {
     }); // end of dispatch
     localStorage.removeItem('token');
     localStorage.removeItem('userName');
-    console.log('logout ', localStorage.getItem('token'));
+   console.log('logout ', localStorage.getItem('token'));
     return 'hi';
     // )
     // .catch(error => {

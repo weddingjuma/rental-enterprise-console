@@ -69,7 +69,7 @@ export default class App extends Component {
 
   render() {
     console.log('APP.js ', this.props.authentication);
-    // console.log('APP JS DECODE ', decode(this.props.authentication.token));
+    //console.log('APP JS DECODE ', decode(this.props.authentication.token));
 
     return (
       // 4C STUFF
@@ -179,7 +179,7 @@ export default class App extends Component {
 // // 4) Set up store
 //
 // function getInitialState(authentication) {
-//   console.log('APP GET INIT STATE ', authentication, '.........................');
+//  console.log('APP GET INIT STATE ', authentication, '.........................');
 //   const { sub: user } = decode(authentication.token);
 //
 //   return isEmpty(authentication)
@@ -204,7 +204,7 @@ export default class App extends Component {
 //   // 8) REMOVE InboxPage component
 //   //and replace with PROVIDER/CONTAINER
 //   // <div tag w <Provider w store w <InboxPageContainer
-//   // console.log('APP RENDER', props)
+//   //console.log('APP RENDER', props)
 //   render() {
 //     return (
 //       // 4C STUFF

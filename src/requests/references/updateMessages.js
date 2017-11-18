@@ -1,5 +1,5 @@
 export default function updateMessage(messageId, changes, { databaseId, token }) {
-  ////console.log('updateMessage');
+   console.log('updateMessage');
 
   return fetch(`https://api.airtable.com/v0/${databaseId}/messages/${messageId}`, {
     method: 'PATCH',
@@ -29,8 +29,8 @@ export default function updateMessage(messageId, changes, { databaseId, token })
       };
     })
     .then(message => {
-      ////console.log('UpdateMsg message');
-      ////console.log(message);
+       console.log('UpdateMsg message');
+       console.log(message);
       return message;
     });
 } // end of function

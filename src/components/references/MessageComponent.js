@@ -12,7 +12,7 @@ export default function MessageComponent({
 }) {
   //
   let readStatus = 'unread';
-  ////console.log('message? ' + message.read);
+   console.log('message? ' + message.read);
   if (message.read === true) {
     readStatus = 'read';
   }
@@ -27,7 +27,7 @@ export default function MessageComponent({
     selectedStatus = '';
     checkStatus = '';
   }
-  ////console.log('selected ' + selected);
+   console.log('selected ' + selected);
 
   function handleClick(event) {
     event.preventDefault();
@@ -65,7 +65,7 @@ export default function MessageComponent({
   if (!message.labels) {
     message.labels = [];
   }
-  ////console.log(message.subject + ' ' + message.starred);
+   console.log(message.subject + ' ' + message.starred);
   let responsible = '';
   if (message.id === 'error') {
     if (message.subject.substring(0, 3) === '404') {

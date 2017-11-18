@@ -4,11 +4,11 @@ import PageLayout from './PageLayout';
 
 export default function Page(props) {
   //
-  console.log('PAGE COMPONENT');
+ console.log('PAGE COMPONENT');
   //console.log('RENTALS: ', props.rentals);
-  console.log(props);
+ console.log(props);
 
-  ////console.log('IndexPage SELECTED: ' + props.selectedMessageIds);
+   console.log('IndexPage SELECTED: ' + props.selectedMessageIds);
   return (
     <PageLayout
       // PASS state stuff

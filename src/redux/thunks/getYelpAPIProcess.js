@@ -3,7 +3,7 @@ import getYelpAPI from '../../requests/getYelpAPI';
 export default function getYelpAPIPocess() {
   return (dispatch, getState, env) => {
     return getYelpAPI(1).then(data => {
-      console.log('in thunk', data);
+     console.log('in thunk', data);
       dispatch({
         type: 'GET_YELP',
         yelpObject: data

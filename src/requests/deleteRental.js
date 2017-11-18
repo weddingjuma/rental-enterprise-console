@@ -1,7 +1,7 @@
 import env from '../env';
 
 export default function deleteRental(rentalId, { databaseId, token }) {
-  ////console.log('deteMessag');
+   console.log('deteMessag');
 
   return fetch(`${env.API_BASE_URL}/rentals/${rentalId}`, {
     //  return fetch(`https://api.airtable.com/v0/${databaseId}/rentals/${rentalId}`, {
@@ -14,7 +14,7 @@ export default function deleteRental(rentalId, { databaseId, token }) {
     .then(response => response.json())
     .then(data => {
       // //console.log(messageId);
-      ////console.log('deleteRental Method');
+       console.log('deleteRental Method');
       // //console.log(data);
       return data;
     }); // end of then

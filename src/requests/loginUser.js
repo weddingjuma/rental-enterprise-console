@@ -22,12 +22,12 @@ export default function loginUser(user) {
         return response.json();
       })
       // .then(token => {
-      //   console.log('TOKEN FROM LOGIN');
-      //   console.log(token);
+      //  console.log('TOKEN FROM LOGIN');
+      //  console.log(token);
       //   return token;
       // })
       .catch(function(error) {
-        ////console.log('error ' + error.message);
+        console.log('error ' + error.message);
         return [{ id: 'error', subject: error.message }];
       })
   );
@@ -35,7 +35,7 @@ export default function loginUser(user) {
 
 function handleErrors(response) {
   if (!response.ok) {
-    ////console.log(response);
+    console.log(response);
     throw Error(response.status + ' ' + response.statusText + ' error');
   }
   return response;

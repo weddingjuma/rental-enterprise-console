@@ -18,14 +18,14 @@ import getByIdProcess from '../thunks/getByIdProcess';
 
 // 4C) mapStateToProps function /////////////////////////////////////
 function mapStateToProps(state, ownProps) {
-  console.log('4A BUSINESSDETAILSCONTAINER mapStateToProps');
-  console.log(state);
+ console.log('4A BUSINESSDETAILSCONTAINER mapStateToProps');
+ console.log(state);
 
   // 1 get the rental
   ///  const { rentals } = state;
   // 2 get the id from the parrams
   ///  const { rentalId } = ownProps.match.params;
-  console.log('OWNPROPS ', ownProps);
+ console.log('OWNPROPS ', ownProps);
   // 3 get the rental based on the rental id
 
   //const rental = rentals[rentalId] || 'null';
@@ -52,8 +52,8 @@ function mapStateToProps(state, ownProps) {
 
 /////////////////////////////////////
 function mapDispatchToProps(dispatch, ownProps) {
-  console.log('4B BUSINESSDETAILSCONTAINER MapDIspatchToProps');
-  console.log(ownProps);
+ console.log('4B BUSINESSDETAILSCONTAINER MapDIspatchToProps');
+ console.log(ownProps);
 
   return {
     /*
@@ -75,12 +75,12 @@ function mapDispatchToProps(dispatch, ownProps) {
 
     deleteRental: rental => {
       let newRental = rental;
-      ////console.log('DELETE CONTAINER ', rental);
+       console.log('DELETE CONTAINER ', rental);
       return dispatch(deleteRentalProcess(newRental, true));
     },
     showRental: rental => {
       let newRental = rental;
-      ////console.log('DELETE CONTAINER ', rental);
+       console.log('DELETE CONTAINER ', rental);
       return dispatch(getByIdProcess(newRental, true));
     }
   };

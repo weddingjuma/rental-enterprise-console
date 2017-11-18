@@ -191,7 +191,7 @@ describe('a shallow test for MessageComponent', () => {
   }); // end of it
 
   it('Subject rendered ', () => {
-    ////console.log('hi : ' + shallowWrapper2.find('a.msg').text());
+     console.log('hi : ' + shallowWrapper2.find('a.msg').text());
     expect(shallowWrapper2.find('a.msg').text()).toEqual(message.subject);
   }); // end of it
 
@@ -310,12 +310,12 @@ describe('a shallow test for Messages Component ', () => {
   });
 
   it('5 should test if onSelectMessage function was fired', () => {
-    ////console.log(fullWrapper.find('.something').first().debug());
+     console.log(fullWrapper.find('.something').first().debug());
     fullWrapper.find('.checkBox').first().simulate('change');
     expect(onSelectMessage).toHaveBeenCalled();
   });
   it('6 should test if onDeselectMessage function was fired', () => {
-    ////console.log(fullWrapper.find('.something').at(1).debug());
+     console.log(fullWrapper.find('.something').at(1).debug());
     fullWrapper.find('.checkBox').at(1).simulate('change');
     expect(onDeselectMessage).toHaveBeenCalled();
   });

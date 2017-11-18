@@ -4,8 +4,8 @@ import LoginPageLayout from './LoginPageLayout';
 
 export default function Page(props) {
   //
-  console.log('LOGIN PAGE COMPONENT');
-  console.log(props);
+ console.log('LOGIN PAGE COMPONENT');
+ console.log(props);
 
   return (
     <LoginPageLayout //

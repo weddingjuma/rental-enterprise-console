@@ -15,7 +15,7 @@ export default function BusinessComponent(props) {
   //let title = 'Propertie$';
   if (props.rentals && Array.isArray(props.rentals)) {
     // //console.log('hiya');
-    //  console.log(props.rentals);
+    // console.log(props.rentals);
 
     return (
       <div className="menuItems BusinessComponent">

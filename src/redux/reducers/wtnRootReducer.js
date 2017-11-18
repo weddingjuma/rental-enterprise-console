@@ -119,15 +119,15 @@ export default function wtnRootReducer(
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     case 'SET_SEARCH':
       // filter here/////////////////////
-      ////console.log('SET_SEARCH ......................', currentState.rentals);
-      ////console.log(currentState.search.price);
+      console.log('SET_SEARCH ......................', currentState.rentals);
+      console.log(currentState.search.price);
 
       // filter by price /////////////////////
       var filterRentals = currentState.rentals;
       if (currentState.search.price === 1000) {
-        ////console.log('PRICE FILTER .............................');
+        console.log('PRICE FILTER .............................');
         filterRentals = currentState.rentals.filter(rental => {
-          ////console.log('PRICE/SEARCH ........................' + rental.price + ' ' + currentState.search.price);
+          console.log('PRICE/SEARCH ........................' + rental.price + ' ' + currentState.search.price);
           return Number(rental.price) > Number(currentState.search.price);
         });
       }
@@ -136,13 +136,13 @@ export default function wtnRootReducer(
 
     case 'SET_SEARCH_SORT':
       // filter here/////////////////////
-      ////console.log('SET_SEARCH_SORT ......................', currentState.rentals);
-      ////console.log(currentState.search.price);
+      console.log('SET_SEARCH_SORT ......................', currentState.rentals);
+      console.log(currentState.search.price);
 
       // sort by price /////////////////////
       // if (currentState.search.sort === 'price') {
       filterRentals = currentState.rentals;
-      ////console.log('PRICE SORT .............................', typeof filterRentals[0].price === 'number');
+      console.log('PRICE SORT .............................', typeof filterRentals[0].price === 'number');
       const foo = [...currentState.rentals];
       const newFilterRentals = foo.sort((a, b) => {
         return Number(a.price) - Number(b.price);
@@ -155,40 +155,40 @@ export default function wtnRootReducer(
         // return 0;
       });
       // }
-      ////console.log(filterRentals, 'this should be sorte');
+      console.log(filterRentals, 'this should be sorte');
 
       return { ...currentState, search: action.search, rentals: newFilterRentals };
 
     case 'SET_SEARCH_WORD':
       // filter here/////////////////////
-      ////console.log('SET_SEARCH_WORD......................', currentState.rentals);
-      ////console.log(currentState.search.price);
+      console.log('SET_SEARCH_WORD......................', currentState.rentals);
+      console.log(currentState.search.price);
 
       // // search by keyword //////////////////////////
       if (currentState.search.keyword !== 'all') {
-        ////console.log('KEYWORD SEARCH .............................');
+        console.log('KEYWORD SEARCH .............................');
         filterRentals = currentState.rentals;
 
         filterRentals = filterRentals.filter(rental => {
-          ////console.log('KEYWORD STUFF................');
-          ////console.log(rental.description.indexOf(currentState.search.keyword) >= 0);
+          console.log('KEYWORD STUFF................');
+          console.log(rental.description.indexOf(currentState.search.keyword) >= 0);
           return rental.description.indexOf(currentState.search.keyword) >= 0;
         });
-        ////console.log(filterRentals.length);
+        console.log(filterRentals.length);
       }
       return { ...currentState, search: action.search, rentals: filterRentals };
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     case 'RESET_SEARCH':
-      ////console.log('RESET SEARCH');
+      console.log('RESET SEARCH');
       return { ...currentState, rentals: action.rentals };
 
     case 'SHOW_FORM':
-      ////console.log('SHOW_FORM');
+      console.log('SHOW_FORM');
 
       return { ...currentState, showForm: action.showForm };
 
     case 'SHOW_FORM2':
-      ////console.log('SHOW_FORM2');
+      console.log('SHOW_FORM2');
 
       return { ...currentState, showForm2: action.showForm2 };
     //////////////////////////////////////////////////////////////////////////////////////////
@@ -265,22 +265,22 @@ export default function wtnRootReducer(
         sort: 'all',
         price: 0
       };
-      ////console.log(currentState.search);
-      ////console.log(resetSearch);
+      console.log(currentState.search);
+      console.log(resetSearch);
 
       return { ...currentState, rentals: action.rentals, search: resetSearch, showForm: false };
     ////////////////////////////////
     case 'GET_RENTAL':
-      ////console.log('GET_PREFS');
-      ////console.log(action.rentals);
+      console.log('GET_PREFS');
+      console.log(action.rentals);
 
-      ////console.log(currentState.search);
-      ////console.log(resetSearch);
+      console.log(currentState.search);
+      console.log(resetSearch);
 
       return { ...currentState, currentRental: action.rental };
 
     case 'CREATE_RENTAL':
-      ////console.log('CREATE_RENTAL');
+      console.log('CREATE_RENTAL');
 
       return { ...currentState, rentals: [action.newRental, ...currentState.rentals], showReport: action.showReport, showForm: action.showForm };
 
@@ -298,7 +298,7 @@ export default function wtnRootReducer(
 
     // UPDATE_RENTAL /////////////////////////
     case 'UPDATE_RENTAL':
-      ////console.log('UPDATE_RENTAL');
+      console.log('UPDATE_RENTAL');
 
       // 1) get the current state of 'rentals'
       let newRentals = currentState.rentals;
@@ -309,7 +309,7 @@ export default function wtnRootReducer(
             ? action.updatedRental //(message.starred = true) //
             : rental
       );
-      ////console.log(newRentals);
+      console.log(newRentals);
       // 3) return the 'currentState' and 'rentals' with the 'newRentals'
       return { ...currentState, rentals: newRentals, showReport: action.showReport };
 

@@ -18,8 +18,8 @@ export default function getById(id) {
   5. use 'inspect' on Chrome in
   6. 'Network' look for 'rentals'
   7. Click on it to see the 'Response' if it return any data
-  8. Use console.log and view in the 'console' of the browser
-  9. To view API console.log, view the server
+  8. Userequired and view in the 'console' of the browser
+  9. To view APIrequired, view the server
 
   */
   // AIRTABLE
@@ -40,7 +40,7 @@ export default function getById(id) {
         return response.json();
       })
       // .then(data => {
-      //   console.log('THE DATA: ', data);
+      //  console.log('THE DATA: ', data);
       //   return data.records.map(record => ({
       //     id: record.id,
       //     address: record.address,
@@ -58,16 +58,16 @@ export default function getById(id) {
       //     parking: record.parking,
       //     heating: record.heating
       //   }));
-      //   ////console.log(data);
+      //    console.log(data);
 
       // }) // end of then
       .then(rentals => {
-        //  console.log('RENTAL IN GETBYID');
-        //  console.log(rentals);
+        // console.log('RENTAL IN GETBYID');
+        // console.log(rentals);
         return rentals;
       })
       .catch(function(error) {
-        ////console.log('error ' + error.message);
+         console.log('error ' + error.message);
         return [{ id: 'error', subject: error.message }];
       })
   );
@@ -75,7 +75,7 @@ export default function getById(id) {
 
 function handleErrors(response) {
   if (!response.ok) {
-    ////console.log(response);
+     console.log(response);
     throw Error(response.status + ' ' + response.statusText + ' error');
   }
   return response;

@@ -12,7 +12,7 @@ export default function BusinessItemComponent(props) {
   //   props.onShowForm();
   // }
   //console.log('BUSINESSITEMCOMPONENT', props);
-  ////console.log(rental);
+  //console.log(rental);
   // //console.log(rental.address);
   // //console.log(rental.photourl);
   // //console.log(rental.price);
@@ -22,7 +22,7 @@ export default function BusinessItemComponent(props) {
   //   event.preventDefault();
   //   onAddItem(item.id);
   // }
-  ////console.log('rental' + rental.photourl);
+  //console.log('rental' + rental.photourl);
   //  let photourl = 'https://photos.zillowstatic.com/p_h/ISxbboalrrrdoj1000000000.jpg';
   // if (props.rental.photourl !== 'undefined') {
   //   photourl = props.rental.photourl;
