@@ -11,7 +11,7 @@ export default function getByIdProcess(id) {
     // //console.log(env.WTN_APP_AIRTABLE_TOKEN);
     return getById(id)
       .then(rental => {
-        dispatch({ type: 'GET_RENTAL', rental });
+        dispatch({ type: 'GET_RENTAL', rental, showForm2: false });
         return rental;
       })
       .catch(error => {

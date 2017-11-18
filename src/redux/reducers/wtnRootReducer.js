@@ -277,7 +277,7 @@ export default function wtnRootReducer(
       console.log(currentState.search);
       console.log(resetSearch);
 
-      return { ...currentState, currentRental: action.rental };
+      return { ...currentState, currentRental: action.rental, showForm2: false };
 
     case 'CREATE_RENTAL':
       console.log('CREATE_RENTAL');
