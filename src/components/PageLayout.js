@@ -12,8 +12,8 @@ import LoginUserComponent from './LoginUserComponent';
 
 export default function PageLayout(props) {
   //
-  console.log('PAGE LAYOUT COMP');
-  console.log(props);
+ //mc//console.log('PAGE LAYOUT COMP');
+ //mc//console.log(props);
   //console.log(props.showLoginForm);
   //console.log(props.rentals);
   // //console.log(props.items);

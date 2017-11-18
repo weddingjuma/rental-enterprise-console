@@ -11,8 +11,8 @@ export default function HeaderComponent(props) {
   //   props.onShowForm();
   // }
 
-  console.log('HEADERCOMP');
-  console.log(props);
+ //mc//console.log('HEADERCOMP');
+ //mc//console.log(props);
   return (
     <header id="pageHeader" className="navbar-fixed">
       <nav className="blue">

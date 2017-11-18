@@ -9,9 +9,9 @@ export default function deleteRentalProcess(newRental, showReport) {
     })
       .then(newRental => {
         dispatch({ type: 'DELETE_RENTAL', newRental: newRental, showReport: true });
-     console.log('deleteRental');
-     console.log(getState());
-     console.log('bye');
+    //mc//console.log('deleteRental');
+    //mc//console.log(getState());
+    //mc//console.log('bye');
         return newRental;
       })
       .catch(error => {

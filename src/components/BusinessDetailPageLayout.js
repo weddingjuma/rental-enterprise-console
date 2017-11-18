@@ -23,10 +23,10 @@ export default function BusinessDetailPageLayout({
 }) {
   //
 
- console.log('BUSINESS DETAIL LAYOUT.....................');
+  //mc//console.log('BUSINESS DETAIL LAYOUT.....................');
   //console.log(props);
- console.log(rental);
- console.log(showForm2);
+  //mc//console.log(rental);
+  //mc//console.log(showForm2);
 
   //console.log(onShowForm2);
   //console.log(updateRental);

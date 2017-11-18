@@ -31,7 +31,7 @@ export default function ToolbarComponent({
 
   let unread = messages.filter(message => !message.read).length;
 
-   console.log('unread ' + unread);
+  //mc//console.log('unread ' + unread);
   // FUnctions /////////////////////////////
   function handleOnOpenComposeForm(event) {
     event.preventDefault();
@@ -39,7 +39,7 @@ export default function ToolbarComponent({
   }
   function handleOnSelectAllMessages(event) {
     //event.preventDefault();
-     console.log('MESSAGE COUNT: ' + selectedMessageCount);
+    //mc//console.log('MESSAGE COUNT: ' + selectedMessageCount);
     if (selectedMessageCount === 0) {
       onSelectAllMessages();
     } else {

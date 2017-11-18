@@ -5,11 +5,11 @@ import App from './App';
 import checkAuth from './utils/checkAuth';
 import env from './env';
 //import setupStore from './redux/setupStore';
-console.log('INDEX .......................................... ');
+//console.log('INDEX .......................................... ');
 
 //const store = setupStore();
 async function render() {
-  //  console.log('INDEX 2 ................');
+  // //mc//console.log('INDEX 2 ................');
   const authentication = await checkAuth({
     baseUrl: env.API_BASE_URL
   });

@@ -68,7 +68,7 @@ export default class App extends Component {
   //const { sub: user } = decode(authentication.token);
 
   render() {
-    console.log('APP.js ', this.props.authentication);
+   //mc//console.log('APP.js ', this.props.authentication);
     //console.log('APP JS DECODE ', decode(this.props.authentication.token));
 
     return (
@@ -179,7 +179,7 @@ export default class App extends Component {
 // // 4) Set up store
 //
 // function getInitialState(authentication) {
-//  console.log('APP GET INIT STATE ', authentication, '.........................');
+// //mc//console.log('APP GET INIT STATE ', authentication, '.........................');
 //   const { sub: user } = decode(authentication.token);
 //
 //   return isEmpty(authentication)

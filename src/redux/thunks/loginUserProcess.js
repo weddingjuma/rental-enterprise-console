@@ -2,7 +2,7 @@ import decode from 'jwt-decode';
 import loginUser from '../../requests/loginUser';
 
 export default function loginUserProcess(id, password) {
-  console.log('LOGIN USER PROCESS');
+ //mc//console.log('LOGIN USER PROCESS');
 
   return (dispatch, getState, env) => {
     // dispatch({ type: 'CREATE_MESSAGE' });
@@ -12,15 +12,15 @@ export default function loginUserProcess(id, password) {
     // //console.log(env.WTN_APP_AIRTABLE_TOKEN);
     return loginUser(id, password)
       .then(authentication => {
-        console.log('LOGIN TOKEN: ', authentication, '-', authentication.token);
+       //mc//console.log('LOGIN TOKEN: ', authentication, '-', authentication.token);
         // set token to localStorage
         localStorage.setItem('token', authentication.token);
-        console.log('id ', id.username);
+       //mc//console.log('id ', id.username);
         let userName = id.username;
         localStorage.setItem('userName', userName);
         // get the user ID
         const { sub: user } = decode(authentication.token);
-        console.log('USER ID', user);
+       //mc//console.log('USER ID', user);
         //
         // add 'token' to dispatch and return 'token' and user
         dispatch({

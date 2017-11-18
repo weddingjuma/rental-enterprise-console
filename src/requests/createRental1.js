@@ -1,9 +1,9 @@
 import env from '../env';
 
 export default function createRental(rental, { databaseId, token }) {
-   console.log('updateMessage');
+  //mc//console.log('updateMessage');
 
- console.log('CREATE_RENTALS FUNC');
+//mc//console.log('CREATE_RENTALS FUNC');
   //console.log('BEFORE', rental);
 
   // 1. get the 'rental' object
@@ -26,7 +26,7 @@ export default function createRental(rental, { databaseId, token }) {
     heating: 'true',
     parking: rental.parking
   };
-  // console.log('AFTER', rental);
+  ////mc//console.log('AFTER', rental);
 
   //token = localStorage.getItem('token');
   //console.log('TOKEN', token);
@@ -43,7 +43,7 @@ export default function createRental(rental, { databaseId, token }) {
       .then(handleErrors)
       .then(response => response.json())
       // .then(record => {
-      //    console.log(record);
+      //   //mc//console.log(record);
       //   return {
       //     id: record.id,
       //     address: record.fields.address,
@@ -62,19 +62,19 @@ export default function createRental(rental, { databaseId, token }) {
       //   };
       // })
       // .then(rental => {
-      //    console.log('UpdateMsg message');
-      //    console.log(message);
+      //   //mc//console.log('UpdateMsg message');
+      //   //mc//console.log(message);
       //   return rental;
       // })
       .catch(function(error) {
-         console.log(error);
+        //mc//console.log(error);
       })
   );
 } // end of function
 
 function handleErrors(response) {
   if (!response.ok) {
-     console.log(response);
+    //mc//console.log(response);
     throw Error(response.status + ' ' + response.statusText + ' error');
   }
   return response;

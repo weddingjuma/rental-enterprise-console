@@ -5,15 +5,15 @@ export default function updateMessage(rentalId, rental, { databaseId, token }) {
   //console.log(rentalId);
   //console.log(changes);
 
-  console.log('UPDATE_RENTALS FUNC');
-  console.log('BEFORE', rental);
+  //mc//console.log('UPDATE_RENTALS FUNC');
+  //mc//console.log('BEFORE', rental);
   rental = {
     // id: $form.id.value ? $form.id.value : $form.id.placeholder,
     address: rental.address,
     city: rental.city,
     state: 'CA',
     photoUrl: rental.photourl,
-    agentId: 1,
+    agentId: rental.agentId,
     // contactname: rental.contactname,
     // contactinfo: rental.contactinfo,
     description: rental.description,
@@ -26,12 +26,12 @@ export default function updateMessage(rentalId, rental, { databaseId, token }) {
     heating: 'true',
     parking: rental.parking
   };
-  console.log('AFTER', rental);
+  //mc//console.log('AFTER', rental);
 
-  console.log('RENTAL IN REQ API: ', rental);
+  //mc//console.log('RENTAL IN REQ API: ', rental);
   // return fetch(`https://api.airtable.com/v0/${databaseId}/rentals/${rentalId}`, {
   token = localStorage.getItem('token');
-  console.log('TOKEN', token);
+  //mc//console.log('TOKEN', token);
   return fetch(`${env.API_BASE_URL}/rentals/${rentalId}`, {
     method: 'PATCH',
 
@@ -44,7 +44,7 @@ export default function updateMessage(rentalId, rental, { databaseId, token }) {
   })
     .then(response => response.json())
     .then(record => {
-      console.log('updateRental Record');
+      //mc//console.log('updateRental Record');
       //console.log(changes);
       return rental;
       // {
@@ -65,7 +65,7 @@ export default function updateMessage(rentalId, rental, { databaseId, token }) {
       // };
     })
     .then(rental => {
-      console.log('UpdateMsg message');
+      //mc//console.log('UpdateMsg message');
       //console.log(message);
       return rental;
     });

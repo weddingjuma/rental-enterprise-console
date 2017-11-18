@@ -25,11 +25,11 @@ describe('BusinessPageLayout', () => {
 
   // test React element
   it('should get one React Element', () => {
-   console.log('WRAPPER', wrapper.props());
+  //mc//console.log('WRAPPER', wrapper.props());
     expect(wrapper.props().rental).toEqual(rental);
   });
 
   it('shouldrequired the shallowWrapper object', () => {
-   console.log(wrapper.debug());
+  //mc//console.log(wrapper.debug());
   });
 }); // end of test

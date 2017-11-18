@@ -1,10 +1,10 @@
 import env from '../env';
 
 export default function createRental(rental, { databaseId, token }) {
-   console.log('updateMessage');
+  //mc//console.log('updateMessage');
 
- console.log('CREATE_RENTALS FUNC');
- console.log('BEFORE', rental);
+//mc//console.log('CREATE_RENTALS FUNC');
+//mc//console.log('BEFORE', rental);
 
   // 1. get the 'rental' object
   rental = {
@@ -26,10 +26,10 @@ export default function createRental(rental, { databaseId, token }) {
     heating: 'true',
     parking: rental.parking
   };
- console.log('AFTER', rental);
+//mc//console.log('AFTER', rental);
 
   token = localStorage.getItem('token');
- console.log('TOKEN', token);
+//mc//console.log('TOKEN', token);
   return (
     fetch(`${env.API_BASE_URL}/rentals`, {
       // return fetch(`https://api.airtable.com/v0/${databaseId}/rentals`, {
@@ -44,7 +44,7 @@ export default function createRental(rental, { databaseId, token }) {
       .then(response => response.json())
       // // Don't uncomment
       // .then(record => {
-      //  console.log('RECORD', record);
+      // //mc//console.log('RECORD', record);
       //   return {
       //     id: record.id,
       //     address: record.fields.address,
@@ -63,19 +63,19 @@ export default function createRental(rental, { databaseId, token }) {
       //   };
       // })
       // .then(rental => {
-      //    console.log('UpdateMsg message');
-      //  console.log('RETURN RENTAL', rental);
+      //   //mc//console.log('UpdateMsg message');
+      // //mc//console.log('RETURN RENTAL', rental);
       //   return rental;
       // })
       .catch(function(error) {
-         console.log(error);
+        //mc//console.log(error);
       })
   );
 } // end of function
 
 function handleErrors(response) {
   if (!response.ok) {
-     console.log(response);
+    //mc//console.log(response);
     throw Error(response.status + ' ' + response.statusText + ' error');
   }
   return response;

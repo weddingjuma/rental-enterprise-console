@@ -40,7 +40,7 @@ export default function getById(id) {
         return response.json();
       })
       // .then(data => {
-      //  console.log('THE DATA: ', data);
+      // //mc//console.log('THE DATA: ', data);
       //   return data.records.map(record => ({
       //     id: record.id,
       //     address: record.address,
@@ -58,16 +58,16 @@ export default function getById(id) {
       //     parking: record.parking,
       //     heating: record.heating
       //   }));
-      //    console.log(data);
+      //   //mc//console.log(data);
 
       // }) // end of then
       .then(rentals => {
-        // console.log('RENTAL IN GETBYID');
-        // console.log(rentals);
+        ////mc//console.log('RENTAL IN GETBYID');
+        ////mc//console.log(rentals);
         return rentals;
       })
       .catch(function(error) {
-         console.log('error ' + error.message);
+        //mc//console.log('error ' + error.message);
         return [{ id: 'error', subject: error.message }];
       })
   );
@@ -75,7 +75,7 @@ export default function getById(id) {
 
 function handleErrors(response) {
   if (!response.ok) {
-     console.log(response);
+    //mc//console.log(response);
     throw Error(response.status + ' ' + response.statusText + ' error');
   }
   return response;

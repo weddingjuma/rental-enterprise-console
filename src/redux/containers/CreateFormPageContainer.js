@@ -60,7 +60,7 @@ function mapDispatchToProps(dispatch, ownProps) {
     // 3 deleteRental
     deleteRental: rental => {
       let newRental = rental;
-       console.log('DELETE CONTAINER ', rental);
+      //mc//console.log('DELETE CONTAINER ', rental);
       return dispatch(deleteRentalProcess(newRental, true));
     },
 

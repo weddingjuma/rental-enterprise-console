@@ -13,7 +13,7 @@ export default function getMessages({ databaseId, token }) {
     .then(handleErrors)
     .then(response => response.json())
     .then(data => {
-       console.log(data);
+      //mc//console.log(data);
       return data.records.map(record => ({
         id: record.id,
         body: record.fields.body,
@@ -24,8 +24,8 @@ export default function getMessages({ databaseId, token }) {
       }));
     }) // end of then
     .then(messages => {
-       console.log('FINAL');
-       console.log(messages);
+      //mc//console.log('FINAL');
+      //mc//console.log(messages);
       return messages;
     })
     .catch(function(error) {

@@ -15,8 +15,8 @@ import { withRouter } from 'react-router-dom';
 
 // 4C) mapStateToProps function
 function mapStateToProps(state, ownProps) {
- console.log('CREATEUSERCONTAINTER MAPTOSTATE');
- console.log(state);
+//mc//console.log('CREATEUSERCONTAINTER MAPTOSTATE');
+//mc//console.log(state);
   return {
     // authenticatedUser
     authenticatedUser: state.authenticatedUser,

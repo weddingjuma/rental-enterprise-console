@@ -6,8 +6,8 @@ import LoginUserComponent from './LoginUserComponent';
 
 export default function PageLayout(props) {
   //
- console.log('LOGIN PAGE LAYOUT COMP');
- console.log(props);
+//mc//console.log('LOGIN PAGE LAYOUT COMP');
+//mc//console.log(props);
 
   return (
     <div className="PageLayout">

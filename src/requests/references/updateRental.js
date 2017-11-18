@@ -56,8 +56,8 @@ export default function updateMessage(rentalId, changes, { databaseId, token }) 
       };
     })
     .then(rental => {
-       console.log('UpdateMsg message');
-       console.log(message);
+      //mc//console.log('UpdateMsg message');
+      //mc//console.log(message);
       return rental;
     });
 } // end of function

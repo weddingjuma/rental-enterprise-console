@@ -26,7 +26,7 @@ storiesOf('BusinessItemComponent', module) //
     <BusinessItemComponent
       item={item}
       onAddItem={itemId => {
-   console.log('hiya 2 ' + itemId);
+  //mc//console.log('hiya 2 ' + itemId);
       }}
     />
   ) //
@@ -35,7 +35,7 @@ storiesOf('BusinessItemComponent', module) //
     <BusinessItemComponent
       item={item}
       onAddItem={itemId => {
-   console.log('Hiya' + itemId);
+  //mc//console.log('Hiya' + itemId);
       }}
     />
   ) //

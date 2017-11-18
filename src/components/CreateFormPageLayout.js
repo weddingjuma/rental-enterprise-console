@@ -9,8 +9,8 @@ import CreateFormComponent from './CreateFormComponent';
 
 export default function CreateFormPageLayout(props) {
   //
- console.log('CREATEFORM LAYOUT.............');
- console.log(props.history);
+//mc//console.log('CREATEFORM LAYOUT.............');
+//mc//console.log(props.history);
   // //console.log(props.items);
   // //console.log(props.rental);
   // //console.log(props);

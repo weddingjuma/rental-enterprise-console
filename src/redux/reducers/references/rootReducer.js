@@ -45,7 +45,7 @@ export default function rootReducer(
       //console.log('SELECTALL');
       let newArr = currentState.messages.map(message => message.id);
       //console.log(newArr);
-       console.log(newArr.length);
+      //mc//console.log(newArr.length);
       return { ...currentState, selectedMessageIds: newArr, selectedMessageCount: newArr.length };
 
     case 'DESELECT_ALL_MESSAGES':

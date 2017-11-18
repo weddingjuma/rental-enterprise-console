@@ -5,10 +5,10 @@ import { isEmpty } from '../utils/empUtil';
 
 export default async function checkAuth({ baseUrl }) {
   try {
-   console.log('CHECK AUTH ............. ');
+  //mc//console.log('CHECK AUTH ............. ');
 
     const token = localStorage.getItem('token');
-   console.log('CHECK AUTH TOKEN ', token);
+  //mc//console.log('CHECK AUTH TOKEN ', token);
     if (isEmpty(token)) {
       localStorage.removeItem('token');
       localStorage.removeItem('userName');

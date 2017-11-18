@@ -13,7 +13,7 @@ export default function getMessages() {
     .then(handleErrors)
     .then(response => response.json())
     .then(data => {
-       console.log(data);
+      //mc//console.log(data);
       return data.records.map(record => ({
         id: record.id,
         body: record.fields.body,
@@ -24,19 +24,19 @@ export default function getMessages() {
       }));
     }) // end of then
     .then(messages => {
-       console.log('FINAL');
-       console.log(messages);
+      //mc//console.log('FINAL');
+      //mc//console.log(messages);
       return messages;
     })
     .catch(function(error) {
- console.log('error ' + error.message);
+//mc//console.log('error ' + error.message);
       return [{ id: 'error', subject: error.message }];
     });
 } // end of function
 
 function handleErrors(response) {
   if (!response.ok) {
- console.log(response);
+//mc//console.log(response);
     throw Error(response.status + ' ' + response.statusText + ' error');
   }
   return response;

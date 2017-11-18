@@ -15,14 +15,14 @@ export default function CreateFormComponent(props) {
   //if (!item) return null;
   let action = props.action;
 
-  console.log('CREATE_FORM_COMPONENT >>>>>>>>>>>>>>>>' + action);
-  console.log(props);
+  //mc//console.log('CREATE_FORM_COMPONENT >>>>>>>>>>>>>>>>' + action);
+  //mc//console.log(props);
   let disabled = '';
   if (action === 'add') {
     disabled = 'disabled';
   }
   // userprefs.forEach(function(pref, i) {
-  //    console.log('hi');
+  //   //mc//console.log('hi');
   //   //console.log(pref.prefname);
   // });
   let random = Math.floor(Math.random() * 6) + 1;
@@ -35,30 +35,8 @@ export default function CreateFormComponent(props) {
   let street = ['Rai St', 'Aridana Ave', 'Cassandra Ct', 'Megan Dr', 'Lisa Ln', 'Julia Pkwy', 'Scarlett St'];
 
   let photourl = '/images/' + randomImg + '.jpg';
-  let desc = [
-    'This is a great home for the whole family. Richard Brookstone and offered at a great discount!  ',
-    'After ex tennis star Ralph Pandi is renting his mansion he got at a celebrity auction at a great price.    ',
-    'Of homes owned by Eddie Merryment is being rented at a reduced price. Please contact the agent for a showing!',
-    'No this was not the home owned by Sandra Bullock, but she did put a bid on it. ',
-    ' Needs some new marble floor, upgrade wired system to bluetooth and upgrade the 10,000 watt stereo ',
-    'Ric Flair owned home sold the Dwayne Johnson who is filming his new movie and needs a renter who can housesit this nice home.  ',
-    'Look no further than this beautiful home owned by Hollywood celebrities and B+ rock stars who are also  students at Galvanize.',
-    'Formerly home of the hair band Bed Bugs and Spider. Walls are still intact. Floors damaged by alcohol.   ',
-    "Chris Rock's former home sold after her roast to mafia king William Shatner sued her for bad jokes about his toupee. ",
-    'This home was owned by Edward Monroe who is the son of a famoust actress.',
-    "Do not miss this home! Once used to film Jacky Chan and Chris Tucker movie 'Slow Hour 2'",
-    'Owned by former president Bill Clinton as a personal mancave.',
-    'This is ready to move in for a big family!',
-    "Oh no the didn'! This home has to go now!",
-    'For anyone who wants to negotiate...four words TALK TO THE HAND!',
-    'Why not just treat yourself to this mansion?',
-    "Rent as as, if you are going to negotiate, DON'T GO THERE!",
-    'Been programming at Galanize or Google too much? Why not spend your millions here?',
-    'Owned by Clint Eastwood. Excuse the bullet holes.',
-    'Kenny Rogers lived here with his family.',
-    "Van Damme's first home. Lowered due to damages from his kicks."
-  ];
-  console.log('random: ' + random);
+  let desc = ['Your description here.  '];
+  //mc//console.log('random: ' + random);
 
   let theRental = {
     address: 'your address', //random + ' ' + street[random2],
@@ -68,10 +46,10 @@ export default function CreateFormComponent(props) {
     contactinfo: 'jonnybranstorm@mansionrents.com',
     contactname: 'Jimmy Mogul',
     cooling: 'true',
-    description: desc[randomDesc],
+    description: desc[0],
     heating: 'true',
     id: '',
-    parking: '5 car garage',
+    parking: 'garage',
     photourl: photourl,
     price: 1,
     sqft: '1',
@@ -94,7 +72,7 @@ export default function CreateFormComponent(props) {
     // year: '',
     agentId: props.authenticatedUser
   };
-
+  //  console.log('AGENT ID', theRental.agentId);
   if (action === 'update') {
     theRental = props.rental;
   }
@@ -109,7 +87,7 @@ export default function CreateFormComponent(props) {
   function handleOnSubmit(event) {
     event.preventDefault();
     const $form = event.target;
-    console.log('onSubmit', action);
+    //mc//console.log('onSubmit', action);
 
     let newRental = {};
     newRental = {
@@ -130,16 +108,16 @@ export default function CreateFormComponent(props) {
       parking: $form.parking.value ? $form.parking.value : $form.parking.placeholder,
       agentId: $form.agentId.value ? $form.agentId.value : $form.agentId.placeholder
     };
-    console.log('xxxxxxxxxxxx', newRental);
+    //mc//console.log('xxxxxxxxxxxx', newRental);
     if (action === 'add') {
-      console.log('ADD');
+      //mc//console.log('ADD');
       props.onSubmit(newRental).then(() => {
         props.history.push('/main');
       });
     } else if (action === 'update') {
-      console.log('update call');
+      //mc//console.log('update call');
       props.updateRental(newRental).then(() => {
-        console.log('UPDATE HIST', history.location);
+        //mc//console.log('UPDATE HIST', history.location);
         props.history.push('/main');
       });
     }
@@ -150,7 +128,7 @@ export default function CreateFormComponent(props) {
   function deleteItem(event) {
     event.preventDefault();
 
-    console.log('DELETE.............................');
+    //mc//console.log('DELETE.............................');
     // //console.log(event.target.deleteButton.value);
     props.deleteRental(props.rental);
     props.history.push('/main');

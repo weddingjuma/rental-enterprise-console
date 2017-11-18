@@ -2,9 +2,9 @@ import updateMessage from '../../requests/updateMessage';
 
 export default function updateMessageProcess(itemId, updateType, labels) {
   return (dispatch, getState, env) => {
-     console.log('DELETE PROCESS');
+    //mc//console.log('DELETE PROCESS');
     // dispatch({ type: 'CREATE_MESSAGE' });
-     console.log('hi ' + updateType);
+    //mc//console.log('hi ' + updateType);
     let changes = {};
     if (updateType === 'star') {
       changes = { starred: true };

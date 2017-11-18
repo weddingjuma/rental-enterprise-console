@@ -8,7 +8,7 @@ const history = createHistory();
 
 //export default function CreateFormComponent({ rental, deleteRental, onSubmit }) {
 export default function CreateUserComponent(props) {
-  // console.log('CREATE USER COMP', props);
+  ////mc//console.log('CREATE USER COMP', props);
   let random = Math.floor(Math.random() * 300);
   let theUser = {
     // username: 'jake' + randm,
@@ -23,7 +23,7 @@ export default function CreateUserComponent(props) {
   function handleOnSubmit(event) {
     event.preventDefault();
     const $form = event.target;
-    //   console.log('onSubmit', action);
+    //  //mc//console.log('onSubmit', action);
 
     let newUser = {};
     newUser = {
@@ -39,7 +39,7 @@ export default function CreateUserComponent(props) {
     //console.log('USER CREATION FORM', newUser);
     // UNCOMMENT TO CREATE USER
     props.createUser(newUser).then(msg => {
-      console.log('MSG....', msg);
+     //mc//console.log('MSG....', msg);
       if (msg === 'createUserError') {
         props.history.push('/register');
       } else {
@@ -49,7 +49,7 @@ export default function CreateUserComponent(props) {
   }
 
   let errorMsg = '';
-  console.log('loginError ', props.loginError);
+ //mc//console.log('loginError ', props.loginError);
   if (props.loginError === 'createUserError') {
     errorMsg = 'Invalid user ID. Use different ID.';
   }

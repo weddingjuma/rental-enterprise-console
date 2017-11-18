@@ -10,22 +10,22 @@ export default function getYelpAPI(pokemonId) {
       return response.json();
     })
     .then(data => {
- console.log(data);
-       console.log('this is rel data', data.sprites.front_default);
+//mc//console.log(data);
+      //mc//console.log('this is rel data', data.sprites.front_default);
       return data;
     })
     .catch(error => {
- console.log('Request failed', error);
+//mc//console.log('Request failed', error);
     });
 }
 // export default function getYelpAPI(pokemonId) {
 //   return fetch(`http://pokeapi.co/api/v2/pokemon/${pokemonId}/`)
 //     .then(response => {
-//  console.log('getPokemonImage response: ', response);
+// //mc//console.log('getPokemonImage response: ', response);
 //       return response.json();
 //     })
 //     .then(data => {
-//  console.log('this is rel data', data.sprites.front_default);
+// //mc//console.log('this is rel data', data.sprites.front_default);
 //       return data;
 //     });
 // }

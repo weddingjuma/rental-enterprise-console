@@ -1,5 +1,5 @@
 export default function createMessage(message) {
-   console.log('updateMessage');
+  //mc//console.log('updateMessage');
 
   return fetch('https://api.airtable.com/v0/appnspObUvyNgSocu/messages/', {
     method: 'POST',
@@ -25,8 +25,8 @@ export default function createMessage(message) {
       };
     })
     .then(message => {
-       console.log('UpdateMsg message');
-       console.log(message);
+      //mc//console.log('UpdateMsg message');
+      //mc//console.log(message);
       return message;
     });
 } // end of function

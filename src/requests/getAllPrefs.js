@@ -40,7 +40,7 @@ export default function getAllPrefs({ databaseId, token }) {
         return response.json();
       })
       // .then(data => {
-      //  console.log('THE DATA: ', data);
+      // //mc//console.log('THE DATA: ', data);
       //   return data.records.map(record => ({
       //     id: record.id,
       //     address: record.address,
@@ -58,7 +58,7 @@ export default function getAllPrefs({ databaseId, token }) {
       //     parking: record.parking,
       //     heating: record.heating
       //   }));
-      //    console.log(data);
+      //   //mc//console.log(data);
 
       // }) // end of then
       .then(rentals => {
@@ -67,7 +67,7 @@ export default function getAllPrefs({ databaseId, token }) {
         return rentals;
       })
       .catch(function(error) {
-         console.log('error ' + error.message);
+        //mc//console.log('error ' + error.message);
         return [{ id: 'error', subject: error.message }];
       })
   );
@@ -75,7 +75,7 @@ export default function getAllPrefs({ databaseId, token }) {
 
 function handleErrors(response) {
   if (!response.ok) {
-     console.log(response);
+    //mc//console.log(response);
     throw Error(response.status + ' ' + response.statusText + ' error');
   }
   return response;

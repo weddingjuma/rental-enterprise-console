@@ -9,7 +9,7 @@ import ComposeFormComponent from './components/ComposeFormComponent';
 export default function InboxPage(props) {
   //
 
-   console.log('INBOX SELECTED' + props.selectedMessageIds);
+  //mc//console.log('INBOX SELECTED' + props.selectedMessageIds);
   return (
     <div className="InboxPageLayout">
       <ToolbarComponent //

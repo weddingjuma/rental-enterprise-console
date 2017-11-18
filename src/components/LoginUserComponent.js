@@ -21,11 +21,11 @@ export default function LoginUserComponent(props) {
       password: $form.password.value ? $form.password.value : $form.password.placeholder
     };
 
-    console.log('USER LOGIN FORM', loginUser);
-    console.log(props);
+   //mc//console.log('USER LOGIN FORM', loginUser);
+   //mc//console.log(props);
 
     props.loginUser(loginUser).then(msg => {
-      console.log('msg ', msg);
+     //mc//console.log('msg ', msg);
       if (msg === 'loginError') {
         props.history.push('/login');
       } else {

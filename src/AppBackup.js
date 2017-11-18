@@ -97,7 +97,7 @@ export default class App extends Component {
 
   // 3D _onDeselectMessage >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _onDeselectMessage = itemId => {
-     console.log('onDeselectMessage');
+    //mc//console.log('onDeselectMessage');
     this.props.store.dispatch({ type: 'DESELECT_MESSAGE', itemId });
   };
   /// DONE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -138,20 +138,20 @@ export default class App extends Component {
     this.props.store.dispatch({ type: 'COMPOSE', showComposeForm: true });
 
     //Ask why this is false after setting true. works fine though ?????????????
- console.log(this.state.showComposeForm);
+//mc//console.log(this.state.showComposeForm);
   };
   /// DONE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   // 8D _onSelectAllMessages >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _onSelectAllMessages = () => {
-     console.log('_onSelectAllMessages');
+    //mc//console.log('_onSelectAllMessages');
     this.props.store.dispatch({ type: 'SELECT_ALL_MESSAGES' });
   };
   /// DONE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   // 9D _onDeselectAllMessages >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _onDeselectAllMessages = () => {
-     console.log('_onDeselectAllMessages');
+    //mc//console.log('_onDeselectAllMessages');
     this.props.store.dispatch({ type: 'DESELECT_ALL_MESSAGES' });
   };
 
@@ -159,7 +159,7 @@ export default class App extends Component {
 
   // 10D _onMarkAsReadSelectedMessages >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _onMarkAsReadSelectedMessages = () => {
-     console.log('_onMarkAsReadSelectedMessages');
+    //mc//console.log('_onMarkAsReadSelectedMessages');
     this.state.selectedMessagesIds.forEach(itemId => {
       this._onMarkAsReadMessage(itemId);
     });
@@ -170,7 +170,7 @@ export default class App extends Component {
   // 11D _onMarkAsUnreadSelectedMessages >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _onMarkAsUnreadSelectedMessages = () => {
     //  //console.log('_onMarkAsUnreadSelectedMessagesi');
-     console.log(this.state.messages);
+    //mc//console.log(this.state.messages);
     this.state.selectedMessagesIds.forEach(itemId => {
       this._onMarkAsUnReadMessage(itemId);
     });
@@ -178,7 +178,7 @@ export default class App extends Component {
 
   // 12D _onApplyLabelSelectedMessages >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _onApplyLabelSelectedMessages = label => {
- console.log(this.state.selectedMessagesIds);
+//mc//console.log(this.state.selectedMessagesIds);
     // this.state.selectedMessagesIds.forEach(itemId => {
     //   this.props.store.dispatch(updateMessageProcess(itemId, label));
     // });
@@ -199,7 +199,7 @@ export default class App extends Component {
 
   // 13D _onRemoveLabelSelectedMessages >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _onRemoveLabelSelectedMessages = label => {
-     console.log('onRemoveLabelSelectedMessages');
+    //mc//console.log('onRemoveLabelSelectedMessages');
 
     this.state.messages.forEach(message => {
       // get the msgId
@@ -218,18 +218,18 @@ export default class App extends Component {
   // DONE ////////////
   // 14D _onDeleteSelectedMessages >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _onDeleteSelectedMessages = () => {
-     console.log('_onDeleteSelectedMessages');
+    //mc//console.log('_onDeleteSelectedMessages');
     this.state.selectedMessageIds.forEach(itemId => {
-       console.log(message.id);
+      //mc//console.log(message.id);
       //  let itemId = message.id;
-       console.log('item id: ' + itemId);
+      //mc//console.log('item id: ' + itemId);
       this.props.store.dispatch(deleteMessageProcess(itemId));
     }); // end of forEach
   };
   // DONE /////////////////////////
   // 15 _onSubmit >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _onSubmit = ({ subject, body }) => {
-     console.log('onSubmit 1');
+    //mc//console.log('onSubmit 1');
 
     // 1 set the object
     // 2 pass it to createMessage()
@@ -249,7 +249,7 @@ export default class App extends Component {
 
   // 16D _onCancel >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _onCancel = () => {
-     console.log('onCancel ');
+    //mc//console.log('onCancel ');
     this.props.store.dispatch({ type: 'COMPOSE', showComposeForm: false });
 
     //   this.setState({
@@ -260,7 +260,7 @@ export default class App extends Component {
 
   // // 17 _checkItem >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   _checkItem(itemId, type) {
- console.log('type: ' + type);
+//mc//console.log('type: ' + type);
   }
   /////////
 } // end of App Component

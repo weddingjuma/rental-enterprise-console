@@ -8,8 +8,8 @@ import BusinessComponent from './BusinessComponent';
 
 export default function BusinessPageLayout(props) {
   //
- console.log('BUSINESS LAYOUT................');
- console.log(props.authenticatedUser);
+//mc//console.log('BUSINESS LAYOUT................');
+//mc//console.log(props.authenticatedUser);
   //console.log(props.items);
   let title = 'Report';
   return (

@@ -10,12 +10,12 @@ export default function BusinessComponent(props) {
   //   props.onShowForm();
   // }
 
-  console.log('BUSINESSCOMPONENT');
-  console.log(props.rentals);
+ //mc//console.log('BUSINESSCOMPONENT');
+ //mc//console.log(props.rentals);
   //let title = 'Propertie$';
   if (props.rentals && Array.isArray(props.rentals)) {
     // //console.log('hiya');
-    // console.log(props.rentals);
+    ////mc//console.log(props.rentals);
 
     return (
       <div className="menuItems BusinessComponent">

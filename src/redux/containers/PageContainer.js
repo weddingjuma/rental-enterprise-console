@@ -26,8 +26,8 @@ import getByIdProcess from '../thunks/getByIdProcess';
 
 // 4C) mapStateToProps function
 function mapStateToProps(state, ownProps) {
- console.log('PAGECONTAINTER MAPTOSTATE');
- console.log(state);
+//mc//console.log('PAGECONTAINTER MAPTOSTATE');
+//mc//console.log(state);
   return {
     rentals: state.rentals,
     items: state.items,
@@ -114,7 +114,7 @@ function mapDispatchToProps(dispatch, ownProps) {
     //  deleteRental
     deleteRental: rental => {
       let newRental = rental;
-       console.log('DELETE CONTAINER ', rental);
+      //mc//console.log('DELETE CONTAINER ', rental);
       return dispatch(deleteRentalProcess(newRental, true));
     },
 

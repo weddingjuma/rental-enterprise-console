@@ -16,8 +16,8 @@ import loginUserProcess from '../thunks/loginUserProcess';
 
 // 4C) mapStateToProps function
 function mapStateToProps(state, ownProps) {
-  console.log('LOGINUSER_CONTAINTER MAPTOSTATE....................');
-  console.log(state);
+ //mc//console.log('LOGINUSER_CONTAINTER MAPTOSTATE....................');
+ //mc//console.log(state);
   return {
     // authenticatedUser
     authenticatedUser: state.authenticatedUser,
