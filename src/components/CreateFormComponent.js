@@ -64,7 +64,7 @@ export default function CreateFormComponent(props) {
     address: 'your address', //random + ' ' + street[random2],
     bath: '1',
     bed: '1',
-    city: city[random2],
+    city: 'your city',
     contactinfo: 'jonnybranstorm@mansionrents.com',
     contactname: 'Jimmy Mogul',
     cooling: 'true',
@@ -73,8 +73,8 @@ export default function CreateFormComponent(props) {
     id: '',
     parking: '5 car garage',
     photourl: photourl,
-    price: 3500 + random3,
-    sqft: '15930',
+    price: 1,
+    sqft: '1',
     year: '2001',
     /////
     // address: ' ',
@@ -172,12 +172,12 @@ export default function CreateFormComponent(props) {
           <div className="row">
             <div className="input-field col s3">
               Street Address:
-              <input requiredNot placeholder={theRental.address} name="address" id="address" type="text" className="validate" />
+              <input required placeholder={theRental.address} name="address" id="address" type="text" className="validate" />
               {/* <label for="address"> </label> */}
             </div>
             <div className="input-field col s3">
               City:
-              <input requiredNot placeholder={theRental.city} name="city" type="text" className="brand-logo center" />
+              <input required placeholder={theRental.city} name="city" type="text" className="brand-logo center" />
               {/* <label className="active" for="city" /> */}
               {/* placeholder="City: (Leave blank for default)" id="city" type="text" className="validate" /> */}
             </div>
@@ -191,7 +191,7 @@ export default function CreateFormComponent(props) {
             </div>
             <div className="input-field col s3">
               Sqft:
-              <input requiredNot placeholder={theRental.sqft} name="sqft" id="searchParam" type="number" className="validate" />
+              <input required placeholder={theRental.sqft} name="sqft" id="searchParam" type="number" className="validate" />
               {/* <label for="sqft"> </label> */}
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function CreateFormComponent(props) {
             </div>
             <div className="input-field col s3">
               Year Built:
-              <input requiredNot placeholder={theRental.year} name="year" id="searchParam" type="number" className="validate" />
+              <input required placeholder={theRental.year} name="year" id="searchParam" type="number" className="validate" />
               {/* <label for="year"> </label> */}
             </div>
           </div>
@@ -237,12 +237,12 @@ export default function CreateFormComponent(props) {
           <div className="row">
             <div className="input-field col s3">
               Bed:
-              <input requiredNot placeholder={theRental.bed} name="bed" id="businessType" type="number" className="validate" />
+              <input required placeholder={theRental.bed} name="bed" id="businessType" type="number" className="validate" />
               {/* <label for="bed"> </label> */}
             </div>
             <div className="input-field col s3">
               Bath:
-              <input requiredNot placeholder={theRental.bath} name="bath" id="searchParam" type="number" className="validate" />
+              <input required placeholder={theRental.bath} name="bath" id="searchParam" type="number" className="validate" />
               {/* <label for="bath"> </label> */}
             </div>
             {/* </div>
@@ -251,7 +251,7 @@ export default function CreateFormComponent(props) {
             <div className="input-field col s3">
               Price:
               <input
-                requiredNot
+                required
                 placeholder={theRental.price}
                 name="price"
                 // patterns="\d{2}"
